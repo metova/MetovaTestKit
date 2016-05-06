@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A3CFEFB1CDD5F37003EF6F0 /* MetovaTestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A3CFF021CDD5F37003EF6F0 /* MetovaTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */; };
+		4A3CFF071CDD5F37003EF6F0 /* MetovaTestKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CFF061CDD5F37003EF6F0 /* MetovaTestKitTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A3CFF031CDD5F37003EF6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A3CFEEE1CDD5F37003EF6F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A3CFEF61CDD5F37003EF6F0;
+			remoteInfo = MetovaTestKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetovaTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetovaTestKit.h; sourceTree = "<group>"; };
+		4A3CFEFC1CDD5F37003EF6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A3CFF011CDD5F37003EF6F0 /* MetovaTestKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetovaTestKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A3CFF061CDD5F37003EF6F0 /* MetovaTestKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetovaTestKitTests.swift; sourceTree = "<group>"; };
+		4A3CFF081CDD5F37003EF6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A3CFEF31CDD5F37003EF6F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A3CFEFE1CDD5F37003EF6F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A3CFF021CDD5F37003EF6F0 /* MetovaTestKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A3CFEED1CDD5F37003EF6F0 = {
+			isa = PBXGroup;
+			children = (
+				4A3CFEF91CDD5F37003EF6F0 /* MetovaTestKit */,
+				4A3CFF051CDD5F37003EF6F0 /* MetovaTestKitTests */,
+				4A3CFEF81CDD5F37003EF6F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A3CFEF81CDD5F37003EF6F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */,
+				4A3CFF011CDD5F37003EF6F0 /* MetovaTestKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A3CFEF91CDD5F37003EF6F0 /* MetovaTestKit */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */,
+				4A3CFEFC1CDD5F37003EF6F0 /* Info.plist */,
+			);
+			path = MetovaTestKit;
+			sourceTree = "<group>";
+		};
+		4A3CFF051CDD5F37003EF6F0 /* MetovaTestKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CFF061CDD5F37003EF6F0 /* MetovaTestKitTests.swift */,
+				4A3CFF081CDD5F37003EF6F0 /* Info.plist */,
+			);
+			path = MetovaTestKitTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4A3CFEF41CDD5F37003EF6F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A3CFEFB1CDD5F37003EF6F0 /* MetovaTestKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4A3CFEF61CDD5F37003EF6F0 /* MetovaTestKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A3CFF0B1CDD5F37003EF6F0 /* Build configuration list for PBXNativeTarget "MetovaTestKit" */;
+			buildPhases = (
+				4A3CFEF21CDD5F37003EF6F0 /* Sources */,
+				4A3CFEF31CDD5F37003EF6F0 /* Frameworks */,
+				4A3CFEF41CDD5F37003EF6F0 /* Headers */,
+				4A3CFEF51CDD5F37003EF6F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetovaTestKit;
+			productName = MetovaTestKit;
+			productReference = 4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4A3CFF001CDD5F37003EF6F0 /* MetovaTestKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A3CFF0E1CDD5F37003EF6F0 /* Build configuration list for PBXNativeTarget "MetovaTestKitTests" */;
+			buildPhases = (
+				4A3CFEFD1CDD5F37003EF6F0 /* Sources */,
+				4A3CFEFE1CDD5F37003EF6F0 /* Frameworks */,
+				4A3CFEFF1CDD5F37003EF6F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A3CFF041CDD5F37003EF6F0 /* PBXTargetDependency */,
+			);
+			name = MetovaTestKitTests;
+			productName = MetovaTestKitTests;
+			productReference = 4A3CFF011CDD5F37003EF6F0 /* MetovaTestKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A3CFEEE1CDD5F37003EF6F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Metova;
+				TargetAttributes = {
+					4A3CFEF61CDD5F37003EF6F0 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					4A3CFF001CDD5F37003EF6F0 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 4A3CFEF11CDD5F37003EF6F0 /* Build configuration list for PBXProject "MetovaTestKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4A3CFEED1CDD5F37003EF6F0;
+			productRefGroup = 4A3CFEF81CDD5F37003EF6F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A3CFEF61CDD5F37003EF6F0 /* MetovaTestKit */,
+				4A3CFF001CDD5F37003EF6F0 /* MetovaTestKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A3CFEF51CDD5F37003EF6F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A3CFEFF1CDD5F37003EF6F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A3CFEF21CDD5F37003EF6F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A3CFEFD1CDD5F37003EF6F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A3CFF071CDD5F37003EF6F0 /* MetovaTestKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A3CFF041CDD5F37003EF6F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A3CFEF61CDD5F37003EF6F0 /* MetovaTestKit */;
+			targetProxy = 4A3CFF031CDD5F37003EF6F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4A3CFF091CDD5F37003EF6F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4A3CFF0A1CDD5F37003EF6F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A3CFF0C1CDD5F37003EF6F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MetovaTestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = metova.MetovaTestKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4A3CFF0D1CDD5F37003EF6F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MetovaTestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = metova.MetovaTestKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4A3CFF0F1CDD5F37003EF6F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MetovaTestKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = metova.MetovaTestKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4A3CFF101CDD5F37003EF6F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MetovaTestKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = metova.MetovaTestKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A3CFEF11CDD5F37003EF6F0 /* Build configuration list for PBXProject "MetovaTestKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A3CFF091CDD5F37003EF6F0 /* Debug */,
+				4A3CFF0A1CDD5F37003EF6F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A3CFF0B1CDD5F37003EF6F0 /* Build configuration list for PBXNativeTarget "MetovaTestKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A3CFF0C1CDD5F37003EF6F0 /* Debug */,
+				4A3CFF0D1CDD5F37003EF6F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4A3CFF0E1CDD5F37003EF6F0 /* Build configuration list for PBXNativeTarget "MetovaTestKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A3CFF0F1CDD5F37003EF6F0 /* Debug */,
+				4A3CFF101CDD5F37003EF6F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A3CFEEE1CDD5F37003EF6F0 /* Project object */;
+}
