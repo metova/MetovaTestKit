@@ -27,4 +27,8 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-import Foundation
+import XCTest
+
+public func MTKCatchException(@noescape block: () -> Void) -> NSException? {
+    return ExceptionTester.catchExceptionInBlock(block)
+}

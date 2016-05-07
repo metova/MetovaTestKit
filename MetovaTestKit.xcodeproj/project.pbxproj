@@ -10,9 +10,10 @@
 		4A3CFEFB1CDD5F37003EF6F0 /* MetovaTestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A3CFF021CDD5F37003EF6F0 /* MetovaTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */; };
 		4A3CFF071CDD5F37003EF6F0 /* MetovaTestKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CFF061CDD5F37003EF6F0 /* MetovaTestKitTests.swift */; };
-		4A3CFF221CDD60CA003EF6F0 /* ObjectiveCExceptionTester.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A3CFF201CDD60CA003EF6F0 /* ObjectiveCExceptionTester.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A3CFF231CDD60CA003EF6F0 /* ObjectiveCExceptionTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CFF211CDD60CA003EF6F0 /* ObjectiveCExceptionTester.m */; };
-		4A3CFF261CDD60EF003EF6F0 /* ExceptionTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CFF251CDD60EF003EF6F0 /* ExceptionTesting.swift */; };
+		4A3CFFBD1CDD7B60003EF6F0 /* ObjectiveCExceptionTester.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A3CFF201CDD60CA003EF6F0 /* ObjectiveCExceptionTester.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A3CFFC31CDE12CF003EF6F0 /* ExceptionTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CFFC21CDE12CF003EF6F0 /* ExceptionTesting.swift */; };
+		4A3CFFCB1CDE1473003EF6F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CFFCA1CDE1473003EF6F0 /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,9 @@
 		4A3CFF181CDD6043003EF6F0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4A3CFF201CDD60CA003EF6F0 /* ObjectiveCExceptionTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveCExceptionTester.h; path = ExceptionTesting/ObjectiveCExceptionTester.h; sourceTree = "<group>"; };
 		4A3CFF211CDD60CA003EF6F0 /* ObjectiveCExceptionTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectiveCExceptionTester.m; path = ExceptionTesting/ObjectiveCExceptionTester.m; sourceTree = "<group>"; };
-		4A3CFF251CDD60EF003EF6F0 /* ExceptionTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionTesting.swift; path = ExceptionTesting/ExceptionTesting.swift; sourceTree = "<group>"; };
 		4A3CFFB81CDD74A8003EF6F0 /* MetovaTestKit.podspec */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = MetovaTestKit.podspec; sourceTree = "<group>"; tabWidth = 4; };
+		4A3CFFC21CDE12CF003EF6F0 /* ExceptionTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionTesting.swift; sourceTree = "<group>"; };
+		4A3CFFCA1CDE1473003EF6F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3CFFCB1CDE1473003EF6F0 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +74,7 @@
 				4A3CFEF91CDD5F37003EF6F0 /* MetovaTestKit */,
 				4A3CFF051CDD5F37003EF6F0 /* MetovaTestKitTests */,
 				4A3CFEF81CDD5F37003EF6F0 /* Products */,
+				4A3CFFCC1CDE1480003EF6F0 /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,11 +124,19 @@
 		4A3CFF241CDD60CE003EF6F0 /* ExceptionTesting */ = {
 			isa = PBXGroup;
 			children = (
-				4A3CFF251CDD60EF003EF6F0 /* ExceptionTesting.swift */,
+				4A3CFFC21CDE12CF003EF6F0 /* ExceptionTesting.swift */,
 				4A3CFF201CDD60CA003EF6F0 /* ObjectiveCExceptionTester.h */,
 				4A3CFF211CDD60CA003EF6F0 /* ObjectiveCExceptionTester.m */,
 			);
 			name = ExceptionTesting;
+			sourceTree = "<group>";
+		};
+		4A3CFFCC1CDE1480003EF6F0 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CFFCA1CDE1473003EF6F0 /* XCTest.framework */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3CFEFB1CDD5F37003EF6F0 /* MetovaTestKit.h in Headers */,
-				4A3CFF221CDD60CA003EF6F0 /* ObjectiveCExceptionTester.h in Headers */,
+				4A3CFFBD1CDD7B60003EF6F0 /* ObjectiveCExceptionTester.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3CFF261CDD60EF003EF6F0 /* ExceptionTesting.swift in Sources */,
+				4A3CFFC31CDE12CF003EF6F0 /* ExceptionTesting.swift in Sources */,
 				4A3CFF231CDD60CA003EF6F0 /* ObjectiveCExceptionTester.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +390,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MetovaTestKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -397,6 +413,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MetovaTestKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
