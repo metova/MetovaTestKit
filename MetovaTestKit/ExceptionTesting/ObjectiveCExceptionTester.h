@@ -1,5 +1,5 @@
 //
-//  MetovaTestKit.h
+//  ObjectiveCExceptionTester.h
 //  MetovaTestKit
 //
 //  Created by Nick Griffith on 5/6/16.
@@ -27,14 +27,8 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-//! Project version number for MetovaTestKit.
-FOUNDATION_EXPORT double MetovaTestKitVersionNumber;
+@interface ObjectiveCExceptionTester : NSObject
 
-//! Project version string for MetovaTestKit.
-FOUNDATION_EXPORT const unsigned char MetovaTestKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <MetovaTestKit/PublicHeader.h>
-
-#import "ObjectiveCExceptionTester.h"
+@end

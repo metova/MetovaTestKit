@@ -1,9 +1,8 @@
 //
-//  MetovaTestKit.h
-//  MetovaTestKit
+//  Package.swift
+//  DataManager
 //
-//  Created by Nick Griffith on 5/6/16.
-//  Copyright © 2016 Metova. All rights reserved.
+//  Copyright (c) 2016 Metova Inc.
 //
 //  MIT License
 //
@@ -27,14 +26,8 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+import PackageDescription
 
-//! Project version number for MetovaTestKit.
-FOUNDATION_EXPORT double MetovaTestKitVersionNumber;
-
-//! Project version string for MetovaTestKit.
-FOUNDATION_EXPORT const unsigned char MetovaTestKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <MetovaTestKit/PublicHeader.h>
-
-#import "ObjectiveCExceptionTester.h"
+let package = Package(
+    name: "MTK"
+)
