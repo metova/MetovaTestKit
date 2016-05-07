@@ -41,7 +41,7 @@ import XCTest
  - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`'s are not caught by this test.
  */
 public func MTKCatchException(@noescape testBlock: () -> Void) -> NSException? {
-    return ExceptionTester.catchExceptionInBlock(testBlock)
+    return __MTKExceptionTester.__catchExceptionInBlock(testBlock)
 }
 
 /**
