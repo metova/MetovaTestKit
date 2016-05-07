@@ -35,7 +35,8 @@
     @try {
         block();
         return nil;
-    } @catch (NSException *exception) {
+    }
+    @catch (NSException *exception) {
         return exception;
     }
 }
