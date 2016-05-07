@@ -158,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A3CFF0B1CDD5F37003EF6F0 /* Build configuration list for PBXNativeTarget "MetovaTestKit" */;
 			buildPhases = (
+				4A8AD4E51CDEA0F90085984D /* TODO Warnings */,
 				4A3CFF291CDD6630003EF6F0 /* SwiftLint */,
 				4A3CFEF21CDD5F37003EF6F0 /* Sources */,
 				4A3CFEF31CDD5F37003EF6F0 /* Frameworks */,
@@ -259,6 +260,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect && swiftlint\nelse\n    cat << EOM\nerror: SwiftLint not installed.\n\nYou can install SwiftLint via Homebrew:\n\n$ brew update\n$ brew install swiftlint\n\nFor more information, visit https://github.com/realm/SwiftLint\nEOM\n    exit 1\nfi";
+		};
+		4A8AD4E51CDEA0F90085984D /* TODO Warnings */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "TODO Warnings";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nKEYWORDS=\"TODO:\"\nfind \"${SRCROOT}/MetovaTestKit\" \"${SRCROOT}/MetovaTestKitTests\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.mm\" -or -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
