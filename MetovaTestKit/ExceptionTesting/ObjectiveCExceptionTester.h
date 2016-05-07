@@ -29,6 +29,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ObjectiveCExceptionTester : NSObject
+@interface ExceptionTester : NSObject
+
+/**
+ *  Executes a block of code.  If an exception is thrown, it is caught and returned.  Otherwise, `nil` is returned.
+ *
+ *  @param block The code to execute.
+ *
+ *  @return The exception thrown by the block argument, or `nil` if no exception is thrown.
+ */
++ (NSException * _Nullable)catchExceptionInBlock:(__attribute__((noescape)) void (^ _Nonnull)(void))block;
 
 @end

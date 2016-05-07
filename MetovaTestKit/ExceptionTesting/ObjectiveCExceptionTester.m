@@ -29,8 +29,16 @@
 
 #import "ObjectiveCExceptionTester.h"
 
-@implementation ObjectiveCExceptionTester
+@implementation ExceptionTester
 
-
++ (NSException * _Nullable)catchExceptionInBlock:(__attribute__((noescape)) void (^ _Nonnull)(void))block {
+    @try {
+        block();
+        return nil;
+    }
+    @catch (NSException *exception) {
+        return exception;
+    }
+}
 
 @end
