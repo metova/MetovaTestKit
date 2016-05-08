@@ -1,5 +1,5 @@
 //
-//  MetovaTestKit.h
+//  ObjectiveCExceptionTester.m
 //  MetovaTestKit
 //
 //  Created by Nick Griffith on 5/6/16.
@@ -27,15 +27,18 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
-#import <XCTest/XCTest.h>
-
-//! Project version number for MetovaTestKit.
-FOUNDATION_EXPORT double MetovaTestKitVersionNumber;
-
-//! Project version string for MetovaTestKit.
-FOUNDATION_EXPORT const unsigned char MetovaTestKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <MetovaTestKit/PublicHeader.h>
-
 #import "MTKExceptionTester.h"
+
+@implementation __MTKExceptionTester
+
++ (NSException * _Nullable)__catchExceptionInBlock:(__attribute__((noescape)) void (^ _Nonnull)(void))block {
+    @try {
+        block();
+        return nil;
+    }
+    @catch (NSException *exception) {
+        return exception;
+    }
+}
+
+@end

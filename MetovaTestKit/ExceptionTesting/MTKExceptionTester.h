@@ -1,5 +1,5 @@
 //
-//  ObjectiveCExceptionTester.m
+//  ObjectiveCExceptionTester.h
 //  MetovaTestKit
 //
 //  Created by Nick Griffith on 5/6/16.
@@ -27,18 +27,17 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "ObjectiveCExceptionTester.h"
+#import <Foundation/Foundation.h>
 
-@implementation ExceptionTester
+@interface __MTKExceptionTester : NSObject
 
-+ (NSException * _Nullable)catchExceptionInBlock:(__attribute__((noescape)) void (^ _Nonnull)(void))block {
-    @try {
-        block();
-        return nil;
-    }
-    @catch (NSException *exception) {
-        return exception;
-    }
-}
+/**
+ *  Executes a block of code.  If an exception is thrown, it is caught and returned.  Otherwise, `nil` is returned.
+ *
+ *  @param block The code to execute.
+ *
+ *  @return The exception thrown by the block argument, or `nil` if no exception is thrown.
+ */
++ (NSException * _Nullable)__catchExceptionInBlock:(__attribute__((noescape)) void (^ _Nonnull)(void))block;
 
 @end

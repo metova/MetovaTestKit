@@ -1,8 +1,8 @@
 //
-//  ObjectiveCExceptionTester.h
+//  MTKTestable+UIViewController.swift
 //  MetovaTestKit
 //
-//  Created by Nick Griffith on 5/6/16.
+//  Created by Nick Griffith on 5/7/16.
 //  Copyright © 2016 Metova. All rights reserved.
 //
 //  MIT License
@@ -27,17 +27,19 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+import UIKit
 
-@interface ExceptionTester : NSObject
-
-/**
- *  Executes a block of code.  If an exception is thrown, it is caught and returned.  Otherwise, `nil` is returned.
- *
- *  @param block The code to execute.
- *
- *  @return The exception thrown by the block argument, or `nil` if no exception is thrown.
- */
-+ (NSException * _Nullable)catchExceptionInBlock:(__attribute__((noescape)) void (^ _Nonnull)(void))block;
-
-@end
+public extension MTKTestable where Self: UIViewController {
+    
+    /**
+     Instantiates a new testable instance of a `UIViewController` or subclass using `instanceForTesting`, executes `loadView` & `viewDidLoad` to prepare the view controller for testing, and then runs the `testBlock` with this new instance.
+     
+     - parameter testBlock: The block of tests to run.
+     */
+    static func test(@noescape testBlock: (Self) -> Void) {
+        let testVC = instanceForTesting()
+        testVC.loadView()
+        testVC.viewDidLoad()
+        testBlock(testVC)
+    }
+}
