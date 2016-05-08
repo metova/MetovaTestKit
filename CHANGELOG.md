@@ -1,5 +1,9 @@
 # Metova Test Kit CHANGELOG
 
+## 0.1.4
+
+- Fixed links in CONTRIBUTING.md
+
 ## 0.1.3
 
 - Fixing CocoaPods README badges.
