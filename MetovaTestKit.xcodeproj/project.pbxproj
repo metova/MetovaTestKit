@@ -16,6 +16,9 @@
 		4A8AD4E91CDEA2A30085984D /* MTKTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4E81CDEA2A30085984D /* MTKTestable.swift */; };
 		4A8AD4EB1CDEA2B60085984D /* MTKExceptionTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4EA1CDEA2B60085984D /* MTKExceptionTesting.swift */; };
 		4A8AD4ED1CDEA53A0085984D /* MTKTestable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4EC1CDEA53A0085984D /* MTKTestable+UIViewController.swift */; };
+		4A8AD4F11CDEB6C30085984D /* TestableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4EF1CDEB6C30085984D /* TestableViewController.swift */; };
+		4A8AD4F21CDEB6C30085984D /* TestableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F01CDEB6C30085984D /* TestableViewController.xib */; };
+		4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		4A8AD4E81CDEA2A30085984D /* MTKTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTKTestable.swift; path = ViewControllerTesting/MTKTestable.swift; sourceTree = "<group>"; };
 		4A8AD4EA1CDEA2B60085984D /* MTKExceptionTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTKExceptionTesting.swift; path = ExceptionTesting/MTKExceptionTesting.swift; sourceTree = "<group>"; };
 		4A8AD4EC1CDEA53A0085984D /* MTKTestable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MTKTestable+UIViewController.swift"; path = "ViewControllerTesting/MTKTestable+UIViewController.swift"; sourceTree = "<group>"; };
+		4A8AD4EF1CDEB6C30085984D /* TestableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestableViewController.swift; path = SupportingTestFiles/TestableViewController.swift; sourceTree = "<group>"; };
+		4A8AD4F01CDEB6C30085984D /* TestableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestableViewController.xib; path = SupportingTestFiles/TestableViewController.xib; sourceTree = "<group>"; };
+		4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableProtocolTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3CFF241CDD60CE003EF6F0 /* ExceptionTesting */,
-				4A8AD4E71CDEA27E0085984D /* ViewControllerTesting */,
+				4A8AD4E71CDEA27E0085984D /* Testable */,
 				4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */,
 				4A3CFEFC1CDD5F37003EF6F0 /* Info.plist */,
 			);
@@ -105,8 +111,10 @@
 		4A3CFF051CDD5F37003EF6F0 /* MetovaTestKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				4A8AD4EE1CDEB6300085984D /* Supporting Test Files */,
 				4A3CFF081CDD5F37003EF6F0 /* Info.plist */,
 				4A3CFFCD1CDE1548003EF6F0 /* ExceptionTestingTests.swift */,
+				4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */,
 			);
 			path = MetovaTestKitTests;
 			sourceTree = "<group>";
@@ -144,13 +152,22 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		4A8AD4E71CDEA27E0085984D /* ViewControllerTesting */ = {
+		4A8AD4E71CDEA27E0085984D /* Testable */ = {
 			isa = PBXGroup;
 			children = (
 				4A8AD4E81CDEA2A30085984D /* MTKTestable.swift */,
 				4A8AD4EC1CDEA53A0085984D /* MTKTestable+UIViewController.swift */,
 			);
-			name = ViewControllerTesting;
+			name = Testable;
+			sourceTree = "<group>";
+		};
+		4A8AD4EE1CDEB6300085984D /* Supporting Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A8AD4EF1CDEB6C30085984D /* TestableViewController.swift */,
+				4A8AD4F01CDEB6C30085984D /* TestableViewController.xib */,
+			);
+			name = "Supporting Test Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8AD4F21CDEB6C30085984D /* TestableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8AD4F11CDEB6C30085984D /* TestableViewController.swift in Sources */,
+				4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */,
 				4A3CFFCE1CDE1548003EF6F0 /* ExceptionTestingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
