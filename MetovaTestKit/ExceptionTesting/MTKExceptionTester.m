@@ -27,10 +27,14 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "ObjectiveCExceptionTester.h"
+#import "MTKExceptionTester.h"
 
-@implementation ObjectiveCExceptionTester
-
-
-
-@end
+NSException * __nullable MTKCatchException(__attribute__((noescape)) void (^ __nonnull testBlock)()) {
+    @try {
+        testBlock();
+        return nil;
+    }
+    @catch (NSException *exception) {
+        return exception;
+    }
+}

@@ -7,6 +7,7 @@ disabled_rules: # rule identifiers to exclude from running
   - file_length # This rule counts white space and comments.  Re-enabled when we've fixed it to not do that.
   - nesting
 opt_in_rules: # some rules are only opt-in
+  - missing_docs
   - empty_count
   - force_unwrapping
 
