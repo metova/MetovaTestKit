@@ -3,6 +3,7 @@
 ## 0.1.3
 
 - Fixing CocoaPods README badges.
+- Adding .travis.yml
 
 ## 0.1.2
 
