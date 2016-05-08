@@ -55,6 +55,8 @@
 		4A8AD4EF1CDEB6C30085984D /* TestableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestableViewController.swift; path = SupportingTestFiles/TestableViewController.swift; sourceTree = "<group>"; };
 		4A8AD4F01CDEB6C30085984D /* TestableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestableViewController.xib; path = SupportingTestFiles/TestableViewController.xib; sourceTree = "<group>"; };
 		4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableProtocolTests.swift; sourceTree = "<group>"; };
+		4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		4A8AD4F71CDEE4220085984D /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +127,11 @@
 				4A3CFF121CDD6043003EF6F0 /* .gitignore */,
 				4A3CFF131CDD6043003EF6F0 /* .slather.yml */,
 				4A3CFF141CDD6043003EF6F0 /* .swiftlint.yml */,
+				4A8AD4F71CDEE4220085984D /* .travis.yml */,
 				4A3CFF151CDD6043003EF6F0 /* CHANGELOG.md */,
 				4A3CFF161CDD6043003EF6F0 /* LICENSE */,
 				4A3CFF171CDD6043003EF6F0 /* Package.swift */,
+				4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */,
 				4A3CFF181CDD6043003EF6F0 /* README.md */,
 				4A3CFFB81CDD74A8003EF6F0 /* MTK.podspec */,
 			);
