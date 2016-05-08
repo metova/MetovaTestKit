@@ -4,6 +4,7 @@
 
 - Fixing CocoaPods README badges.
 - Adding .travis.yml
+- Travis-CI is now running.
 
 ## 0.1.2
 
