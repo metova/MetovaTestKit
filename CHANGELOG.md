@@ -1,5 +1,9 @@
 # Metova Test Kit CHANGELOG
 
+## 0.1.5
+
+- Expanding code coverage
+
 ## 0.1.4
 
 - Fixed links in CONTRIBUTING.md
