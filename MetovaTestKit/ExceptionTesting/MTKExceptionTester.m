@@ -29,16 +29,12 @@
 
 #import "MTKExceptionTester.h"
 
-@implementation __MTKExceptionTester
-
-+ (NSException * _Nullable)__catchExceptionInBlock:(__attribute__((noescape)) void (^ _Nonnull)(void))block {
+NSException * __nullable MTKCatchException(__attribute__((noescape)) void (^ __nonnull testBlock)()) {
     @try {
-        block();
+        testBlock();
         return nil;
     }
     @catch (NSException *exception) {
         return exception;
     }
 }
-
-@end

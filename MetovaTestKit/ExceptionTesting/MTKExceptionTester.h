@@ -29,15 +29,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface __MTKExceptionTester : NSObject
-
 /**
- *  Executes a block of code.  If an exception is thrown, it is caught and returned.  Otherwise, `nil` is returned.
- *
- *  @param block The code to execute.
- *
- *  @return The exception thrown by the block argument, or `nil` if no exception is thrown.
- */
-+ (NSException * _Nullable)__catchExceptionInBlock:(__attribute__((noescape)) void (^ _Nonnull)(void))block;
+ Synchronously tests the provided block for exceptions.  If it would throw an exception, it catches the exception and returns it.
+ 
+ @param testBlock: The block to test.
 
-@end
+ @return The caught exception.  If no exception was thrown, returns `nil`.
+ 
+ @warning You should not rely on `XCTestExpectation` fulfillment in this block.  If an exception is thrown before fulfillment, the expectation will never be fulfilled.  `XCTestExpectation` should be unnecessary as the block is executed synchronously.
+ 
+ @warning This will only catch Objective-C-style exceptions.  Swift's `fatalError`'s are not caught by this test.
+ 
+ */
+NSException * __nullable MTKCatchException(__attribute__((noescape)) void (^ __nonnull testBlock)());

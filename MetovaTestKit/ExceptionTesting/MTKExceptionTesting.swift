@@ -30,21 +30,6 @@
 import XCTest
 
 /**
- Synchronously tests the provided block for exceptions.  If it would throw an exception, it catches the exception and returns it.
- 
- - parameter testBlock: The block to test.
- 
- - returns: The caught exception.  If no exception was thrown, returns `nil`.
- 
- - warning: You should not rely on `XCTestExpectation` fulfillment in this block.  If an exception is thrown before fulfillment, the expectation will never be fulfilled.  `XCTestExpectation` should be unnecessary as the block is executed synchronously.
- 
- - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`'s are not caught by this test.
- */
-public func MTKCatchException(@noescape testBlock: () -> Void) -> NSException? {
-    return __MTKExceptionTester.__catchExceptionInBlock(testBlock)
-}
-
-/**
  Synchronously tests the provided block for exceptions.  If it would throw an exception, the exception is caught and the test fails.  Otherwise, the test passes.
  
  - parameter message:   The message to log upon test failure.
