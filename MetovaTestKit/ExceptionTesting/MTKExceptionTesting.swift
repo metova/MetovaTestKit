@@ -43,17 +43,10 @@ import XCTest
  */
 public func MTKAssertNoException(@autoclosure message message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape testBlock: () -> Void) {
   
-    let message = message()
+    let message = message() ?? "Caught exception while executing test block."
     let didPass = MTKCatchException(testBlock) == nil
     
-    
-    if let message = message {
-        XCTAssert(didPass, message, file: file, line: line)
-    }
-    else {
-        // TODO: In the case of a `nil` message, come up with our own custom default message that describes the problem.
-        XCTAssert(didPass, file: file, line: line)
-    }
+    XCTAssert(didPass, message, file: file, line: line)
 }
 
 /**
@@ -70,14 +63,8 @@ public func MTKAssertNoException(@autoclosure message message: () -> String? = n
  */
 public func MTKAssertException(@autoclosure message message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape testBlock: () -> Void) {
     
-    let message = message()
+    let message = message() ?? "Did not catch exception while executing test block."
     let didPass = MTKCatchException(testBlock) != nil
     
-    if let message = message {
-        XCTAssert(didPass, message, file: file, line: line)
-    }
-    else {
-        // TODO: In the case of a `nil` message, come up with our own custom default message that describes the problem.
-        XCTAssert(didPass, file: file, line: line)
-    }
+    XCTAssert(didPass, message, file: file, line: line)
 }
