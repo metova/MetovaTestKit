@@ -46,7 +46,7 @@
 		4A3CFF181CDD6043003EF6F0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4A3CFF201CDD60CA003EF6F0 /* MTKExceptionTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTKExceptionTester.h; path = ExceptionTesting/MTKExceptionTester.h; sourceTree = "<group>"; };
 		4A3CFF211CDD60CA003EF6F0 /* MTKExceptionTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTKExceptionTester.m; path = ExceptionTesting/MTKExceptionTester.m; sourceTree = "<group>"; };
-		4A3CFFB81CDD74A8003EF6F0 /* MetovaTestKit.podspec */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = MetovaTestKit.podspec; sourceTree = "<group>"; tabWidth = 4; };
+		4A3CFFB81CDD74A8003EF6F0 /* MTK.podspec */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = MTK.podspec; sourceTree = "<group>"; tabWidth = 4; };
 		4A3CFFCA1CDE1473003EF6F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4A3CFFCD1CDE1548003EF6F0 /* ExceptionTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionTestingTests.swift; sourceTree = "<group>"; };
 		4A8AD4E81CDEA2A30085984D /* MTKTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTKTestable.swift; path = ViewControllerTesting/MTKTestable.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				4A3CFF161CDD6043003EF6F0 /* LICENSE */,
 				4A3CFF171CDD6043003EF6F0 /* Package.swift */,
 				4A3CFF181CDD6043003EF6F0 /* README.md */,
-				4A3CFFB81CDD74A8003EF6F0 /* MetovaTestKit.podspec */,
+				4A3CFFB81CDD74A8003EF6F0 /* MTK.podspec */,
 			);
 			name = "Related Files";
 			sourceTree = "<group>";
@@ -449,7 +449,7 @@
 				);
 				INFOPLIST_FILE = MetovaTestKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = metova.MetovaTestKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -475,7 +475,7 @@
 				);
 				INFOPLIST_FILE = MetovaTestKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = metova.MetovaTestKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
