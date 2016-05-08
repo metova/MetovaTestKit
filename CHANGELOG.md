@@ -4,6 +4,7 @@
 
 - Fixed links in CONTRIBUTING.md
 - Added slather gem for code coverage reporting via Coveralls
+- Code coverage reporting is working now
 
 ## 0.1.3
 
