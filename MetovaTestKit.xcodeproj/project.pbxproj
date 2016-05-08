@@ -55,6 +55,7 @@
 		4A8AD4EF1CDEB6C30085984D /* TestableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestableViewController.swift; path = SupportingTestFiles/TestableViewController.swift; sourceTree = "<group>"; };
 		4A8AD4F01CDEB6C30085984D /* TestableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestableViewController.xib; path = SupportingTestFiles/TestableViewController.xib; sourceTree = "<group>"; };
 		4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableProtocolTests.swift; sourceTree = "<group>"; };
+		4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +129,7 @@
 				4A3CFF151CDD6043003EF6F0 /* CHANGELOG.md */,
 				4A3CFF161CDD6043003EF6F0 /* LICENSE */,
 				4A3CFF171CDD6043003EF6F0 /* Package.swift */,
+				4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */,
 				4A3CFF181CDD6043003EF6F0 /* README.md */,
 				4A3CFFB81CDD74A8003EF6F0 /* MTK.podspec */,
 			);

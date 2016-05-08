@@ -120,6 +120,8 @@ Metova Test Kit is owned and maintained by [Metova Inc.](https://metova.com)
 
 [Contributors](https://github.com/Metova/MetovaTestKit/graphs/contributors)
 
+If you would like to contribute to Metova Test Kit, see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
+
 ## License
 
 Metova Test Kit is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
