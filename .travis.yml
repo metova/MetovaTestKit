@@ -29,4 +29,4 @@ script:
     fi
 after_success:
  - bundle binstub slather
- - bin/slather coverage --binary-basename DataManager
+ - bin/slather coverage --binary-basename MetovaTestKit
