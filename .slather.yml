@@ -1,5 +1,5 @@
 coverage_service: coveralls
 xcodeproj: MetovaTestKit.xcodeproj
-scheme: MetovaTestKit\ iOS
+scheme: MetovaTestKit
 ignore:
 # No ignores for now

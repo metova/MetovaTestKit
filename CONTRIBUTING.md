@@ -1,5 +1,5 @@
-*Current Develop Status:* [![Build Status](https://travis-ci.org/metova/DataManager.svg?branch=develop)](https://travis-ci.org/metova/DataManager/branches)
-[![Coverage Status](https://coveralls.io/repos/github/metova/DataManager/badge.svg?branch=develop)](https://coveralls.io/github/metova/DataManager?branch=develop)
+*Current Develop Status:* [![Build Status](https://travis-ci.org/metova/MetovaTestKit.svg?branch=develop)](https://travis-ci.org/metova/MetovaTestKit/branches)
+[![Coverage Status](https://coveralls.io/repos/github/metova/MetovaTestKit/badge.svg?branch=develop)](https://coveralls.io/github/metova/MetovaTestKit?branch=develop)
 
 # Contributions
 
