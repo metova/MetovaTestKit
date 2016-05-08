@@ -1,10 +1,10 @@
 # Metova Test Kit
 
 [![Build Status](https://travis-ci.org/metova/MetovaTestKit.svg)](https://travis-ci.org/metova/MetovaTestKit)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MetovaTestKit.svg)](https://img.shields.io/cocoapods/v/MetovaTestKit.svg)
-[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/MetovaTestKit.svg)](http://cocoadocs.org/docsets/MetovaTestKit/)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MTK.svg)](https://img.shields.io/cocoapods/v/MTK.svg)
+[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/MTK.svg)](http://cocoadocs.org/docsets/MTK/)
 [![Coverage Status](https://coveralls.io/repos/github/metova/MetovaTestKit/badge.svg?branch=master)](https://coveralls.io/github/metova/MetovaTestKit?branch=master)
-[![Platform](https://img.shields.io/cocoapods/p/MetovaTestKit.svg?style=flat)](http://cocoadocs.org/docsets/MetovaTestKit)
+[![Platform](https://img.shields.io/cocoapods/p/MTK.svg?style=flat)](http://cocoadocs.org/docsets/MTK)
 [![Twitter](https://img.shields.io/badge/twitter-@Metova-3CAC84.svg)](http://twitter.com/metova)
 
 Metova Test Kit is a collection of useful test helpers, primarily designed around turning crashing tests into failing tests.
