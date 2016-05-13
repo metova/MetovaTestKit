@@ -102,11 +102,21 @@ MTKAssertException(message: "No exception was thrown.") {
 }
 ```
 
-You can also use `MTKCatchException` to obtain a thrown exception to verify it was the correct exception.
+These methods do return the thrown exception in case you need more information about it.
 
 ```swift
-let exception = MTKCatchException {
-    // code that may or may not throw an exception 
+guard let exception = MTKAssertException(testBlock: throwingBlock) else {
+    XCTFail("Block failed to throw an exception")
+    return
+}
+
+// More assertion about the given exception that was returned
+```
+
+```swift
+if let exception = MTKAssertNoException(testBlock: blockThatShouldntThrow) {
+    XCTFail("Block should not have thrown but instead threw \(exception)")
+    return
 }
 ```
 
