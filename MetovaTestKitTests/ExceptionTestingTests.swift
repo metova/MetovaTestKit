@@ -12,49 +12,6 @@ import XCTest
 
 class ExceptionTestingTests: XCTestCase {
 
-    func testCatchExceptionReturnsNil() {
-        
-        var didReachEnd: Bool?
-        
-        let exception = MTKCatchException {
-            didReachEnd = false
-            
-            didReachEnd = true
-        }
-
-        guard let endReached = didReachEnd else {
-            XCTFail("Test block was not executed.")
-            return
-        }
-        
-        XCTAssertTrue(endReached)
-        
-        XCTAssertNil(exception)
-    }
-    
-    func testCatchExceptionCatchesCorrectException() {
-        
-        var didReachEnd: Bool?
-        
-        let exception = MTKCatchException {
-            didReachEnd = false
-            
-            let arr = NSArray()
-            arr.objectAtIndex(3)
-            
-            didReachEnd = true
-        }
-        
-        guard let endReached = didReachEnd else {
-            XCTFail("Test block was not executed.")
-            return
-        }
-        
-        XCTAssertFalse(endReached)
-        
-        XCTAssertNotNil(exception)
-    }
-    
     func testAssertNoExceptionPasses() {
         
         var didReachEnd: Bool?
@@ -62,6 +19,9 @@ class ExceptionTestingTests: XCTestCase {
         MTKAssertNoException(message: "TEST MESSAGE") {
             didReachEnd = false
 
+            let arr: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
+            arr.objectAtIndex(3)
+            
             didReachEnd = true
         }
         
@@ -80,6 +40,9 @@ class ExceptionTestingTests: XCTestCase {
         MTKAssertNoException {
             didReachEnd = false
             
+            let arr: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
+            arr.objectAtIndex(3)
+            
             didReachEnd = true
         }
         
@@ -97,6 +60,16 @@ class ExceptionTestingTests: XCTestCase {
     
     func testAssertNoExceptionDefaultMessageFails() {
         // TODO: Same as above method, but use default for message argument.
+    }
+    
+    func testAssertNoExceptionReturnsNilWhenPassing() {
+        
+        let exception = MTKAssertNoException {
+            let arr: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
+            arr.objectAtIndex(3)
+        }
+        
+        XCTAssertNil(exception)
     }
     
     func testAssertExceptionPasses() {
@@ -148,4 +121,21 @@ class ExceptionTestingTests: XCTestCase {
     func testAssertExceptionDefaultMessageFails() {
         // TODO: Same as above method, but use default for message argument.
     }
+    
+    func testAssertExceptionCatchesCorrectException() {
+
+        let throwingBlock = {
+            let arr = NSArray()
+            arr.objectAtIndex(3)
+        }
+        
+        guard let exception = MTKAssertException(testBlock: throwingBlock) else {
+            XCTFail("Failed to catch exception")
+            return
+        }
+        
+        XCTAssertEqual(exception.name, "NSRangeException")
+        XCTAssertEqual(exception.reason, "*** -[__NSArray0 objectAtIndex:]: index 3 beyond bounds for empty NSArray")
+    }
+    
 }
