@@ -1,5 +1,10 @@
 # Metova Test Kit CHANGELOG
 
+## 0.1.6
+
+- Removed `MTKCatchException` from public scope.
+- Exception assertions will now return the exception they caught which caused them to pass/fail.
+
 ## 0.1.5
 
 - Expanding code coverage
