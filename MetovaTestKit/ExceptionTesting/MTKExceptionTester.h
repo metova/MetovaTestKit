@@ -27,6 +27,8 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#pragma GCC visibility push(hidden)
+
 #import <Foundation/Foundation.h>
 
 /**
@@ -42,3 +44,5 @@
  
  */
 NSException * __nullable MTKCatchException(__attribute__((noescape)) void (^ __nonnull testBlock)());
+
+#pragma GCC visibility pop

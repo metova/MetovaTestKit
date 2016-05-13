@@ -37,16 +37,20 @@ import XCTest
  - parameter line:      The line number the test is called from.
  - parameter testBlock: The block to test.
  
+ - returns: The caught exception.  If no exception was thrown, returns `nil`.
+ 
  - warning: You should not rely on `XCTestExpectation` fulfillment in this block.  If an exception is thrown before fulfillment, the expectation will never be fulfilled.  `XCTestExpectation` should be unnecessary as the block is executed synchronously.
  
- - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`'s are not caught by this test.
+ - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`s are not caught by this test.
  */
-public func MTKAssertNoException(@autoclosure message message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape testBlock: () -> Void) {
+public func MTKAssertNoException(@autoclosure message message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape testBlock: () -> Void) -> NSException? {
   
     let message = message() ?? "Caught exception while executing test block."
-    let didPass = MTKCatchException(testBlock) == nil
+    let exception = MTKCatchException(testBlock)
     
-    XCTAssert(didPass, message, file: file, line: line)
+    XCTAssertNil(exception, message, file: file, line: line)
+    
+    return exception
 }
 
 /**
@@ -57,14 +61,18 @@ public func MTKAssertNoException(@autoclosure message message: () -> String? = n
  - parameter line:      The line number the test is called from.
  - parameter testBlock: The block to test.
  
-- warning: You should not rely on `XCTestExpectation` fulfillment in this block.  If an exception is thrown before fulfillment, the expectation will never be fulfilled.  `XCTestExpectation` should be unnecessary as the block is executed synchronously.
+ - returns: The caught exception.  If no exception was thrown, returns `nil`.
  
- - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`'s are not caught by this test.
+ - warning: You should not rely on `XCTestExpectation` fulfillment in this block.  If an exception is thrown before fulfillment, the expectation will never be fulfilled.  `XCTestExpectation` should be unnecessary as the block is executed synchronously.
+ 
+ - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`s are not caught by this test.
  */
-public func MTKAssertException(@autoclosure message message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape testBlock: () -> Void) {
+public func MTKAssertException(@autoclosure message message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape testBlock: () -> Void) -> NSException? {
     
     let message = message() ?? "Did not catch exception while executing test block."
-    let didPass = MTKCatchException(testBlock) != nil
+    let exception = MTKCatchException(testBlock)
     
-    XCTAssert(didPass, message, file: file, line: line)
+    XCTAssertNotNil(exception, message, file: file, line: line)
+    
+    return exception
 }
