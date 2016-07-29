@@ -16,6 +16,7 @@
 		4A771F301D4C144400EFD0B8 /* MTKBrokenConstraintCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A771F2E1D4C144400EFD0B8 /* MTKBrokenConstraintCounter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A771F311D4C144400EFD0B8 /* MTKBrokenConstraintCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A771F2F1D4C144400EFD0B8 /* MTKBrokenConstraintCounter.m */; };
 		4A771F331D4C155700EFD0B8 /* MTKConstraintTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771F321D4C155700EFD0B8 /* MTKConstraintTester.swift */; };
+		4A771F351D4C173300EFD0B8 /* ConstraintTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771F341D4C173300EFD0B8 /* ConstraintTestingTests.swift */; };
 		4A8AD4E91CDEA2A30085984D /* MTKTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4E81CDEA2A30085984D /* MTKTestable.swift */; };
 		4A8AD4EB1CDEA2B60085984D /* MTKExceptionTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4EA1CDEA2B60085984D /* MTKExceptionTesting.swift */; };
 		4A8AD4ED1CDEA53A0085984D /* MTKTestable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4EC1CDEA53A0085984D /* MTKTestable+UIViewController.swift */; };
@@ -55,6 +56,7 @@
 		4A771F2E1D4C144400EFD0B8 /* MTKBrokenConstraintCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTKBrokenConstraintCounter.h; path = ConstraintTesting/MTKBrokenConstraintCounter.h; sourceTree = "<group>"; };
 		4A771F2F1D4C144400EFD0B8 /* MTKBrokenConstraintCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTKBrokenConstraintCounter.m; path = ConstraintTesting/MTKBrokenConstraintCounter.m; sourceTree = "<group>"; };
 		4A771F321D4C155700EFD0B8 /* MTKConstraintTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTKConstraintTester.swift; path = ConstraintTesting/MTKConstraintTester.swift; sourceTree = "<group>"; };
+		4A771F341D4C173300EFD0B8 /* ConstraintTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintTestingTests.swift; sourceTree = "<group>"; };
 		4A8AD4E81CDEA2A30085984D /* MTKTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTKTestable.swift; path = ViewControllerTesting/MTKTestable.swift; sourceTree = "<group>"; };
 		4A8AD4EA1CDEA2B60085984D /* MTKExceptionTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTKExceptionTesting.swift; path = ExceptionTesting/MTKExceptionTesting.swift; sourceTree = "<group>"; };
 		4A8AD4EC1CDEA53A0085984D /* MTKTestable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MTKTestable+UIViewController.swift"; path = "ViewControllerTesting/MTKTestable+UIViewController.swift"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				4A3CFF081CDD5F37003EF6F0 /* Info.plist */,
 				4A3CFFCD1CDE1548003EF6F0 /* ExceptionTestingTests.swift */,
 				4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */,
+				4A771F341D4C173300EFD0B8 /* ConstraintTestingTests.swift */,
 			);
 			path = MetovaTestKitTests;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A8AD4F11CDEB6C30085984D /* TestableViewController.swift in Sources */,
+				4A771F351D4C173300EFD0B8 /* ConstraintTestingTests.swift in Sources */,
 				4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */,
 				4A3CFFCE1CDE1548003EF6F0 /* ExceptionTestingTests.swift in Sources */,
 			);
