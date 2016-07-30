@@ -1,5 +1,9 @@
 # Metova Test Kit CHANGELOG
 
+## 0.2.1
+
+- Updating gemfile
+
 ## 0.2.0
 
 - Added `MTKAssertNoBrokenConstraints`
