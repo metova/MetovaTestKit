@@ -8,7 +8,7 @@
 
 import XCTest
 
-class TestableProtocolTests: XCTestCase {
+class TestableProtocolTests: MTKBaseTestCase {
     
     func testDidCallLoadView() {
         let expectation = expectationWithDescription("Block executed")
