@@ -1,5 +1,13 @@
 # Metova Test Kit CHANGELOG
 
+## 0.2.0
+
+- Added `MTKAssertNoBrokenConstraints`
+
+## 0.1.7
+
+- Fixed problem with Travis buildscript
+
 ## 0.1.6
 
 - Removed `MTKCatchException` from public scope.
