@@ -10,19 +10,92 @@ import XCTest
 
 @testable import MetovaTestKit
 
+extension NSLayoutConstraint {
+    
+    convenience init(view: UIView, width: CGFloat) {
+        self.init(item: view,
+            attribute: .Width,
+            relatedBy: .Equal,
+            toItem: nil,
+            attribute: .NotAnAttribute,
+            multiplier: 1.0,
+            constant: width
+        )
+    }
+    
+}
+
 class ConstraintTestingTests: MTKBaseTestCase {
 
     func testBrokenConstraintCount() {
         let count = MTKAssertNoBrokenConstraints {
-            // doing nothing should break no constraints
-            // TODO: Do some real UIView work that doesn't break constraints.
+            let window = UIWindow()
+            let view = UIView()
+            
+            window.addSubview(view)
+            
+            view.translatesAutoresizingMaskIntoConstraints = false
+            
+            view.addConstraint(NSLayoutConstraint(view: view, width: 200))
+            
+            view.updateConstraints()
         }
         
         XCTAssertEqual(0, count)
     }
     
     func testAssertNoBrokenConstraintsFails() {
-        // TODO: Find a way to verify that a broken constraint will cause MTKAssertNoBrokenConstraints to fail and cause THIS test to pass.
+        
+        let message = "Broken constraints!"
+        let description = "XCTAssertEqual failed: (\"Optional(0)\") is not equal to (\"Optional(2)\") - \(message)"
+        
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 54)) {
+            
+            let count = MTKAssertNoBrokenConstraints(message: message) {
+                let window = UIWindow()
+                let view = UIView()
+                
+                window.addSubview(view)
+                
+                view.translatesAutoresizingMaskIntoConstraints = false
+                
+                view.addConstraint(NSLayoutConstraint(view: view, width: 50))
+                view.addConstraint(NSLayoutConstraint(view: view, width: 100))
+                view.addConstraint(NSLayoutConstraint(view: view, width: 200))
+                
+                view.updateConstraints()
+            }
+            
+            XCTAssertEqual(2, count)
+        }
+        
+    }
+    
+    func testAssertNoBrokenConstraintsDefaultMessageFails() {
+        
+        let defaultMessage = "Found 2 broken constraints while executing test block."
+        let description = "XCTAssertEqual failed: (\"Optional(0)\") is not equal to (\"Optional(2)\") - \(defaultMessage)"
+        
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 81)) {
+            
+            let count = MTKAssertNoBrokenConstraints {
+                let window = UIWindow()
+                let view = UIView()
+                
+                window.addSubview(view)
+                
+                view.translatesAutoresizingMaskIntoConstraints = false
+                
+                view.addConstraint(NSLayoutConstraint(view: view, width: 50))
+                view.addConstraint(NSLayoutConstraint(view: view, width: 100))
+                view.addConstraint(NSLayoutConstraint(view: view, width: 200))
+                
+                view.updateConstraints()
+            }
+            
+            XCTAssertEqual(2, count)
+        }
+        
     }
 
 }
