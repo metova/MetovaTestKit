@@ -18,11 +18,13 @@ import XCTest
 
 struct TestFailureExpectation {
     
+    let message: String?
     let description: String?
     let filePath: String?
     let lineNumber: UInt?
     
-    init(description: String? = nil, filePath: String? = nil, lineNumber: UInt? = nil) {
+    init(message: String? = nil, description: String? = nil, filePath: String? = nil, lineNumber: UInt? = nil) {
+        self.message = message
         self.description = description
         self.filePath = filePath
         self.lineNumber = lineNumber
@@ -35,8 +37,10 @@ class MTKBaseTestCase: XCTestCase {
     private var expectingFailure: TestFailureExpectation?
     
     override func recordFailureWithDescription(description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
+        
         if let expectedFailure = expectingFailure where expected
-            && (expectedFailure.description == nil || expectedFailure.description == description)
+            && (expectedFailure.message == nil || description.hasSuffix(expectedFailure.message ?? ""))
+            && (expectedFailure.description == nil || description == expectedFailure.description)
             && (expectedFailure.filePath == nil || expectedFailure.filePath == filePath)
             && (expectedFailure.lineNumber == nil || expectedFailure.lineNumber == lineNumber) {
             
