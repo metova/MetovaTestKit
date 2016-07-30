@@ -55,11 +55,59 @@ class ExceptionTestingTests: MTKBaseTestCase {
     }
     
     func testAssertNoExceptionFails() {
-        // TODO: Find a way to verify that MTKAssertNoException fails.  I know it fails, but the only way I can get it to fail also fails *this* test itself.  How do we verify a test fails without failing the test that's testing it?
+        
+        let message = "Test Failed!"
+        let description = "XCTAssertNil failed: \"*** -[__NSArray0 objectAtIndex:]: index 3 beyond bounds for empty NSArray\" - \(message)"
+        
+        var didReachEnd: Bool?
+        
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 66)) {
+            
+            MTKAssertNoException(message: message) {
+                didReachEnd = false
+                
+                let arr: NSArray = []
+                arr.objectAtIndex(3)
+                
+                didReachEnd = true
+            }
+        }
+        
+        guard let endReached = didReachEnd else {
+            XCTFail("Test block was not executed.")
+            return
+        }
+        
+        XCTAssertFalse(endReached)
+        
     }
     
     func testAssertNoExceptionDefaultMessageFails() {
-        // TODO: Same as above method, but use default for message argument.
+        
+        let defaultMessage = "Caught exception while executing test block."
+        let description = "XCTAssertNil failed: \"*** -[__NSArray0 objectAtIndex:]: index 3 beyond bounds for empty NSArray\" - \(defaultMessage)"
+        
+        var didReachEnd: Bool?
+        
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 94)) {
+            
+            MTKAssertNoException {
+                didReachEnd = false
+                
+                let arr: NSArray = []
+                arr.objectAtIndex(3)
+                
+                didReachEnd = true
+            }
+        }
+        
+        guard let endReached = didReachEnd else {
+            XCTFail("Test block was not executed.")
+            return
+        }
+        
+        XCTAssertFalse(endReached)
+        
     }
     
     func testAssertNoExceptionReturnsNilWhenPassing() {
@@ -115,11 +163,65 @@ class ExceptionTestingTests: MTKBaseTestCase {
     }
     
     func testAssertExceptionFails() {
-        // TODO: Find a way to verify that MTKAssertException fails.  I know it fails, but the only way I can get it to fail also fails *this* test itself.  How do we verify a test fails without failing the test that's testing it?
+        
+        let message = "Test failed!"
+        let description = "XCTAssertNotNil failed - \(message)"
+        
+        var didReachEnd: Bool?
+
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 174)) {
+            
+            MTKAssertException(message: message) {
+                
+                didReachEnd = false
+                
+                let arr: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                arr.objectAtIndex(3)
+                
+                didReachEnd = true
+                
+            }
+            
+        }
+        
+        guard let endReached = didReachEnd else {
+            XCTFail("Test block was not executed.")
+            return
+        }
+        
+        XCTAssertTrue(endReached)
+        
     }
     
     func testAssertExceptionDefaultMessageFails() {
-        // TODO: Same as above method, but use default for message argument.
+        
+        let defaultMessage = "Did not catch exception while executing test block."
+        let description = "XCTAssertNotNil failed - \(defaultMessage)"
+        
+        var didReachEnd: Bool?
+        
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 205)) {
+            
+            MTKAssertException {
+                
+                didReachEnd = false
+                
+                let arr: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                arr.objectAtIndex(3)
+                
+                didReachEnd = true
+                
+            }
+            
+        }
+        
+        guard let endReached = didReachEnd else {
+            XCTFail("Test block was not executed.")
+            return
+        }
+        
+        XCTAssertTrue(endReached)
+        
     }
     
     func testAssertExceptionCatchesCorrectException() {
