@@ -1,5 +1,10 @@
 # Metova Test Kit CHANGELOG
 
+## 0.2.2
+
+- Resolved issue regarding testing functions that cause tests to fail.
+- Removed empty-first-line rule from .swiftlint.yml.
+
 ## 0.2.1
 
 - Updating gemfile
