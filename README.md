@@ -60,6 +60,33 @@ func testOutlets() {
 }
 ```
 
+#### Testing constraints
+
+You can use Metova Test Kit to assert that you do not have broken autolayout constraints.
+
+```swift
+MTKAssertNoBrokenConstraints {
+    // code that does anything that impacts the user interface
+    // including simply loading a view for the first time
+}
+```
+
+This assertion will fail for any broken constraints and report the number of constraints that broke during the test.  You can also pass a custom message.
+
+```swift
+MTKAssertNoBrokenConstraints(message: "Constraints were broken.") {
+    // code to test
+}
+```
+
+This test also returns a value with a count of the number of constraints broken.
+
+```swift
+let brokenConstraintCount = MTKAssertNoBrokenConstraints {
+    // code to test
+}
+```
+
 #### Testing exceptions
 
 You can use Metova Test Kit to assert that code that should not throw exceptions doesn't.  Without MTK, this would result in the entire test suite crashing.  With MTK, this is just a failed test, and you still get to run the rest of the test suite.

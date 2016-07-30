@@ -39,3 +39,4 @@ FOUNDATION_EXPORT const unsigned char MetovaTestKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <MetovaTestKit/PublicHeader.h>
 
 #import "MTKExceptionTester.h"
+#import "MTKBrokenConstraintCounter.h"
