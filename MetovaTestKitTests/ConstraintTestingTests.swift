@@ -10,7 +10,7 @@ import XCTest
 
 @testable import MetovaTestKit
 
-class ConstraintTestingTests: XCTestCase {
+class ConstraintTestingTests: MTKBaseTestCase {
 
     func testBrokenConstraintCount() {
         let count = MTKAssertNoBrokenConstraints {

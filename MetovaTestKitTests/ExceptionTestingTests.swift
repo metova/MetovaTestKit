@@ -10,7 +10,7 @@ import XCTest
 
 @testable import MetovaTestKit
 
-class ExceptionTestingTests: XCTestCase {
+class ExceptionTestingTests: MTKBaseTestCase {
 
     func testAssertNoExceptionPasses() {
         
