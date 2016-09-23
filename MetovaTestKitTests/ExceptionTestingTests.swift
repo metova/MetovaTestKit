@@ -20,7 +20,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
             didReachEnd = false
 
             let arr: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
-            arr.objectAtIndex(3)
+            arr.object(at: 3)
             
             didReachEnd = true
         }
@@ -41,7 +41,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
             didReachEnd = false
             
             let arr: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
-            arr.objectAtIndex(3)
+            arr.object(at: 3)
             
             didReachEnd = true
         }
@@ -67,7 +67,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
                 didReachEnd = false
                 
                 let arr: NSArray = []
-                arr.objectAtIndex(3)
+                arr.object(at: 3)
                 
                 didReachEnd = true
             }
@@ -79,7 +79,6 @@ class ExceptionTestingTests: MTKBaseTestCase {
         }
         
         XCTAssertFalse(endReached)
-        
     }
     
     func testAssertNoExceptionDefaultMessageFails() {
@@ -95,7 +94,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
                 didReachEnd = false
                 
                 let arr: NSArray = []
-                arr.objectAtIndex(3)
+                arr.object(at: 3)
                 
                 didReachEnd = true
             }
@@ -107,14 +106,13 @@ class ExceptionTestingTests: MTKBaseTestCase {
         }
         
         XCTAssertFalse(endReached)
-        
     }
     
     func testAssertNoExceptionReturnsNilWhenPassing() {
         
         let exception = MTKAssertNoException {
             let arr: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
-            arr.objectAtIndex(3)
+            arr.object(at: 3)
         }
         
         XCTAssertNil(exception)
@@ -128,7 +126,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
             didReachEnd = false
             
             let arr = NSArray()
-            arr.objectAtIndex(3)
+            arr.object(at: 3)
             
             didReachEnd = true
         }
@@ -149,7 +147,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
             didReachEnd = false
             
             let arr = NSArray()
-            arr.objectAtIndex(3)
+            arr.object(at: 3)
             
             didReachEnd = true
         }
@@ -176,12 +174,10 @@ class ExceptionTestingTests: MTKBaseTestCase {
                 didReachEnd = false
                 
                 let arr: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                arr.objectAtIndex(3)
+                arr.object(at: 3)
                 
                 didReachEnd = true
-                
             }
-            
         }
         
         guard let endReached = didReachEnd else {
@@ -190,7 +186,6 @@ class ExceptionTestingTests: MTKBaseTestCase {
         }
         
         XCTAssertTrue(endReached)
-        
     }
     
     func testAssertExceptionDefaultMessageFails() {
@@ -207,12 +202,10 @@ class ExceptionTestingTests: MTKBaseTestCase {
                 didReachEnd = false
                 
                 let arr: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                arr.objectAtIndex(3)
+                arr.object(at: 3)
                 
                 didReachEnd = true
-                
             }
-            
         }
         
         guard let endReached = didReachEnd else {
@@ -221,14 +214,13 @@ class ExceptionTestingTests: MTKBaseTestCase {
         }
         
         XCTAssertTrue(endReached)
-        
     }
     
     func testAssertExceptionCatchesCorrectException() {
 
         let throwingBlock = {
             let arr = NSArray()
-            arr.objectAtIndex(3)
+            arr.object(at: 3)
         }
         
         guard let exception = MTKAssertException(testBlock: throwingBlock) else {
@@ -236,8 +228,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
             return
         }
         
-        XCTAssertEqual(exception.name, "NSRangeException")
+        XCTAssertEqual(exception.name, NSExceptionName.rangeException)
         XCTAssertEqual(exception.reason, "*** -[__NSArray0 objectAtIndex:]: index 3 beyond bounds for empty NSArray")
     }
-    
 }

@@ -21,7 +21,7 @@ class TestableViewController: UIViewController {
     @IBOutlet weak var testButton: UIButton!
     
     required init() {
-        super.init(nibName: "TestableViewController", bundle: NSBundle(forClass: self.dynamicType))
+        super.init(nibName: "TestableViewController", bundle: Bundle(for: type(of: self)))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,11 +32,9 @@ class TestableViewController: UIViewController {
         super.viewDidLoad()
         
         testLabel.text = TestableViewController.TestLabelString
-        testButton.setTitle(TestableViewController.TestButtonString, forState: .Normal)
+        testButton.setTitle(TestableViewController.TestButtonString, for: .normal)
     }
 }
-
-
 
 // Implementing this method and marking conformance to MTKTestable protocol means we inherit the default implementation of the test(_:) method defined in the extension for the protocol for UIViewControllers.
 
@@ -45,5 +43,4 @@ extension TestableViewController: MTKTestable {
     static func instanceForTesting() -> Self {
         return self.init()
     }
-    
 }

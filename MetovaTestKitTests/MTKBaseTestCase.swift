@@ -29,16 +29,15 @@ struct TestFailureExpectation {
         self.filePath = filePath
         self.lineNumber = lineNumber
     }
-    
 }
 
 class MTKBaseTestCase: XCTestCase {
 
-    private var expectingFailure: TestFailureExpectation?
+    fileprivate var expectingFailure: TestFailureExpectation?
     
-    override func recordFailureWithDescription(description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
+    override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
         
-        if let expectedFailure = expectingFailure where expected
+        if let expectedFailure = expectingFailure, expected
             && (expectedFailure.message == nil || description.hasSuffix(expectedFailure.message ?? ""))
             && (expectedFailure.description == nil || description == expectedFailure.description)
             && (expectedFailure.filePath == nil || expectedFailure.filePath == filePath)
@@ -47,11 +46,12 @@ class MTKBaseTestCase: XCTestCase {
             expectingFailure = nil
         }
         else {
-            super.recordFailureWithDescription(description, inFile: filePath, atLine: lineNumber, expected: expected)
+            super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
         }
     }
     
-    func expectTestFailure(failure: TestFailureExpectation = TestFailureExpectation(), @autoclosure message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape inBlock testBlock: () -> Void) {
+    func expectTestFailure(_ failure: TestFailureExpectation = TestFailureExpectation(), message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, inBlock testBlock: () -> Void) {
+        
         expectingFailure = failure
         testBlock()
         
@@ -60,7 +60,5 @@ class MTKBaseTestCase: XCTestCase {
             let message = message() ?? "Failed to catch test failure in block."
             XCTFail(message, file: file, line: line)
         }
-        
     }
-    
 }

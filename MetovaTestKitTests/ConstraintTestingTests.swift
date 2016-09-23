@@ -14,20 +14,20 @@ extension NSLayoutConstraint {
     
     convenience init(view: UIView, width: CGFloat) {
         self.init(item: view,
-            attribute: .Width,
-            relatedBy: .Equal,
+            attribute: .width,
+            relatedBy: .equal,
             toItem: nil,
-            attribute: .NotAnAttribute,
+            attribute: .notAnAttribute,
             multiplier: 1.0,
             constant: width
         )
     }
-    
 }
 
 class ConstraintTestingTests: MTKBaseTestCase {
 
     func testBrokenConstraintCount() {
+        
         let count = MTKAssertNoBrokenConstraints {
             let window = UIWindow()
             let view = UIView()
@@ -68,7 +68,6 @@ class ConstraintTestingTests: MTKBaseTestCase {
             
             XCTAssertEqual(2, count)
         }
-        
     }
     
     func testAssertNoBrokenConstraintsDefaultMessageFails() {
@@ -95,7 +94,5 @@ class ConstraintTestingTests: MTKBaseTestCase {
             
             XCTAssertEqual(2, count)
         }
-        
     }
-
 }

@@ -1,5 +1,9 @@
 # Metova Test Kit CHANGELOG
 
+## 0.3.0
+
+- Converted to Swift 3.0.
+
 ## 0.2.2
 
 - Resolved issue regarding testing functions that cause tests to fail.

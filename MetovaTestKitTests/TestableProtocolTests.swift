@@ -11,7 +11,8 @@ import XCTest
 class TestableProtocolTests: MTKBaseTestCase {
     
     func testDidCallLoadView() {
-        let expectation = expectationWithDescription("Block executed")
+        
+        let expectation = self.expectation(description: "Block executed")
         
         TestableViewController.test { testVC in
             defer { expectation.fulfill() }
@@ -21,11 +22,12 @@ class TestableProtocolTests: MTKBaseTestCase {
             XCTAssertNotNil(testVC.testButton)
         }
         
-        waitForExpectationsWithTimeout(0, handler: nil)
+        waitForExpectations(timeout: 0, handler: nil)
     }
     
     func testDidCallViewDidLoad() {
-        let expectation = expectationWithDescription("Block executed")
+        
+        let expectation = self.expectation(description: "Block executed")
         
         TestableViewController.test { testVC in
             defer { expectation.fulfill() }
@@ -34,6 +36,6 @@ class TestableProtocolTests: MTKBaseTestCase {
             XCTAssertEqual(testVC.testButton.currentTitle, TestableViewController.TestButtonString)
         }
         
-        waitForExpectationsWithTimeout(0, handler: nil)
+        waitForExpectations(timeout: 0, handler: nil)
     }
 }

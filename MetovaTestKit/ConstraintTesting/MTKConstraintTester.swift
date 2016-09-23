@@ -18,7 +18,7 @@ import XCTest
  
  - returns: Number of broken constraints during test
  */
-public func MTKAssertNoBrokenConstraints(@autoclosure message message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape testBlock: () -> Void) -> UInt {
+public func MTKAssertNoBrokenConstraints(message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, testBlock: () -> Void) -> UInt {
     
     let brokenConstraintCount = MTKCountBrokenConstraints(testBlock)
     let message = message() ?? "Found \(brokenConstraintCount) broken constraints while executing test block."

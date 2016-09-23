@@ -72,7 +72,7 @@ public protocol MTKTestable {
      
      - parameter testBlock: A block of code containing tests to run.
      */
-    static func test(@noescape testBlock: (Self) -> Void)
+    static func test(_ testBlock: (Self) -> Void)
     
     /**
      Asks the `MTKTestable` type for a new instance in order to be used for testing.  This method should provide a new instance every time.
