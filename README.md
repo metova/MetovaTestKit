@@ -27,8 +27,8 @@ Metova Test Kit is intended to be used with unit testing targets.  To install it
 ```ruby
 target 'YourApp' do
   # Your app's pods:
+  pod DataManager
   pod ThunderCats
-  pod SwiftCats
   pod MetovaBase
 
   target 'YourAppTests' do
