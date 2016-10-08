@@ -47,7 +47,7 @@ class ConstraintTestingTests: MTKBaseTestCase {
     func testAssertNoBrokenConstraintsFails() {
         
         let message = "Broken constraints!"
-        let description = "XCTAssertEqual failed: (\"Optional(0)\") is not equal to (\"Optional(2)\") - \(message)"
+        let description = "XCTAssertEqual failed: (\"0\") is not equal to (\"2\") - \(message)"
         
         expectTestFailure(TestFailureExpectation(description: description, lineNumber: 54)) {
             
@@ -73,9 +73,9 @@ class ConstraintTestingTests: MTKBaseTestCase {
     func testAssertNoBrokenConstraintsDefaultMessageFails() {
         
         let defaultMessage = "Found 2 broken constraints while executing test block."
-        let description = "XCTAssertEqual failed: (\"Optional(0)\") is not equal to (\"Optional(2)\") - \(defaultMessage)"
+        let description = "XCTAssertEqual failed: (\"0\") is not equal to (\"2\") - \(defaultMessage)"
         
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 81)) {
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 80)) {
             
             let count = MTKAssertNoBrokenConstraints {
                 let window = UIWindow()
