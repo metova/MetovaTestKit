@@ -82,7 +82,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
         
         var didReachEnd: Bool?
         
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 66)) {
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 87)) {
             
             MTKAssertNoException(message: message) {
                 didReachEnd = false
@@ -109,7 +109,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
         
         var didReachEnd: Bool?
         
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 93)) {
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 114)) {
             
             MTKAssertNoException {
                 didReachEnd = false
@@ -188,7 +188,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
         
         var didReachEnd: Bool?
 
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 172)) {
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 193)) {
             
             MTKAssertException(message: message) {
                 
@@ -216,7 +216,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
         
         var didReachEnd: Bool?
         
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 200)) {
+        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 221)) {
             
             MTKAssertException {
                 
