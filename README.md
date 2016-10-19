@@ -1,6 +1,6 @@
 # Metova Test Kit
 
-[![Build Status](https://travis-ci.org/metova/MetovaTestKit.svg)](https://travis-ci.org/metova/MetovaTestKit)
+[![Build Status](https://travis-ci.org/metova/MetovaTestKit.svg?branch=master)](https://travis-ci.org/metova/MetovaTestKit)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MTK.svg)](https://img.shields.io/cocoapods/v/MTK.svg)
 [![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/MTK.svg)](http://cocoadocs.org/docsets/MTK/)
 [![Coverage Status](https://coveralls.io/repos/github/metova/MetovaTestKit/badge.svg?branch=master)](https://coveralls.io/github/metova/MetovaTestKit?branch=master)
