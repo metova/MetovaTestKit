@@ -5,6 +5,27 @@
 //  Created by Nick Griffith on 7/30/16.
 //  Copyright © 2016 Metova. All rights reserved.
 //
+//  MIT License
+//
+//  Permission is hereby granted, free of charge, to any person obtaining
+//  a copy of this software and associated documentation files (the
+//  "Software"), to deal in the Software without restriction, including
+//  without limitation the rights to use, copy, modify, merge, publish,
+//  distribute, sublicense, and/or sell copies of the Software, and to
+//  permit persons to whom the Software is furnished to do so, subject to
+//  the following conditions:
+//
+//  The above copyright notice and this permission notice shall be
+//  included in all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+//  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+//  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+//  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+//  LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+//  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+//  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+//
 
 /*
  
@@ -29,16 +50,15 @@ struct TestFailureExpectation {
         self.filePath = filePath
         self.lineNumber = lineNumber
     }
-    
 }
 
 class MTKBaseTestCase: XCTestCase {
 
-    private var expectingFailure: TestFailureExpectation?
+    fileprivate var expectingFailure: TestFailureExpectation?
     
-    override func recordFailureWithDescription(description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
+    override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
         
-        if let expectedFailure = expectingFailure where expected
+        if let expectedFailure = expectingFailure, expected
             && (expectedFailure.message == nil || description.hasSuffix(expectedFailure.message ?? ""))
             && (expectedFailure.description == nil || description == expectedFailure.description)
             && (expectedFailure.filePath == nil || expectedFailure.filePath == filePath)
@@ -47,11 +67,12 @@ class MTKBaseTestCase: XCTestCase {
             expectingFailure = nil
         }
         else {
-            super.recordFailureWithDescription(description, inFile: filePath, atLine: lineNumber, expected: expected)
+            super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
         }
     }
     
-    func expectTestFailure(failure: TestFailureExpectation = TestFailureExpectation(), @autoclosure message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape inBlock testBlock: () -> Void) {
+    func expectTestFailure(_ failure: TestFailureExpectation = TestFailureExpectation(), message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, inBlock testBlock: () -> Void) {
+        
         expectingFailure = failure
         testBlock()
         
@@ -60,7 +81,5 @@ class MTKBaseTestCase: XCTestCase {
             let message = message() ?? "Failed to catch test failure in block."
             XCTFail(message, file: file, line: line)
         }
-        
     }
-    
 }

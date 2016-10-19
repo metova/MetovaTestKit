@@ -13,7 +13,7 @@ Metova Test Kit is a collection of useful test helpers, primarily designed aroun
 
 ## Requirements
 
-- Swift 2.2
+- Swift 3.0
 - iOS 8.0
 
 -----
@@ -25,12 +25,16 @@ Metova Test Kit is available through [CocoaPods](http://cocoapods.org).
 Metova Test Kit is intended to be used with unit testing targets.  To install it, add MTK your project's Podfile:
 
 ```ruby
-# your app's pods
-# pod ThunderCats
-# pod SwiftCats
+target 'YourApp' do
+  # Your app's pods:
+  pod 'DataManager'
+  pod 'ThunderCats'
+  pod 'MetovaBase'
 
-target 'YourAppTests', :exclusive => true do
-  pod 'MTK'
+  target 'YourAppTests' do
+    inherit! :search_paths
+    pod 'MTK'
+  end
 end
 ```
 

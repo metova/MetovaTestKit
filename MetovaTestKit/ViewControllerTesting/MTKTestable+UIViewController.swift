@@ -36,7 +36,7 @@ public extension MTKTestable where Self: UIViewController {
      
      - parameter testBlock: The block of tests to run.
      */
-    static func test(@noescape testBlock: (Self) -> Void) {
+    static func test(_ testBlock: (Self) -> Void) {
         let testVC = instanceForTesting()
         testVC.loadView()
         testVC.viewDidLoad()
