@@ -35,7 +35,7 @@
  
  `test(_:)` should effectively follow this pattern:
  
-     static func test(@noescape testBlock: (Self) -> Void) {
+     static func test(_ testBlock: (Self) -> Void) {
  
          let testInstance = instanceForTesting()
  
@@ -67,12 +67,14 @@
  */
 public protocol MTKTestable {
     
+    associatedtype T: Any
+    
     /**
      Asks the `MTKTestable` type to run the given test block on an instance of the `MTKTestable` type.
      
      - parameter testBlock: A block of code containing tests to run.
      */
-    static func test(@noescape testBlock: (Self) -> Void)
+    static func test(_ testBlock: (T) -> Void)
     
     /**
      Asks the `MTKTestable` type for a new instance in order to be used for testing.  This method should provide a new instance every time.

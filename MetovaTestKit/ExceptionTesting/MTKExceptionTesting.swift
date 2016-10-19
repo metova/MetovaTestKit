@@ -43,7 +43,7 @@ import XCTest
  
  - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`s are not caught by this test.
  */
-public func MTKAssertNoException(@autoclosure message message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape testBlock: () -> Void) -> NSException? {
+@discardableResult public func MTKAssertNoException(message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, testBlock: () -> Void) -> NSException? {
   
     let message = message() ?? "Caught exception while executing test block."
     let exception = MTKCatchException(testBlock)
@@ -67,7 +67,7 @@ public func MTKAssertNoException(@autoclosure message message: () -> String? = n
  
  - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`s are not caught by this test.
  */
-public func MTKAssertException(@autoclosure message message: () -> String? = nil, file: StaticString = #file, line: UInt = #line, @noescape testBlock: () -> Void) -> NSException? {
+@discardableResult public func MTKAssertException(message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, testBlock: () -> Void) -> NSException? {
     
     let message = message() ?? "Did not catch exception while executing test block."
     let exception = MTKCatchException(testBlock)
