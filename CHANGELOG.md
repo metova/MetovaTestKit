@@ -1,6 +1,6 @@
 # Metova Test Kit CHANGELOG
 
-## 0.3.0
+## 1.0.0
 
 - Converted to Swift 3.0.
 
