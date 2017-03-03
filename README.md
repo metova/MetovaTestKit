@@ -1,4 +1,4 @@
-# Metova Test Kit
+[![MetovaTestKit](Assets/MetovaTestKit.png)](https://cocoapods.org/pods/MTK)
 
 [![Build Status](https://travis-ci.org/metova/MetovaTestKit.svg?branch=master)](https://travis-ci.org/metova/MetovaTestKit)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MTK.svg)](https://img.shields.io/cocoapods/v/MTK.svg)
@@ -162,6 +162,8 @@ Metova Test Kit is owned and maintained by [Metova Inc.](https://metova.com)
 [Contributors](https://github.com/Metova/MetovaTestKit/graphs/contributors)
 
 If you would like to contribute to Metova Test Kit, see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
+
+Metova Test Kit banner image and other assets provided by Christi Johnson.
 
 ## License
 
