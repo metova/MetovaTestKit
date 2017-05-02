@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MTK"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "Metova Test Kit"
 
   s.homepage = "http://metova.com"

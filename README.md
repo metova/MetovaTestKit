@@ -7,7 +7,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/MTK.svg?style=flat)](http://cocoadocs.org/docsets/MTK)
 [![Twitter](https://img.shields.io/badge/twitter-@Metova-3CAC84.svg)](http://twitter.com/metova)
 
-Metova Test Kit is a collection of useful test helpers, primarily designed around turning crashing tests into failing tests.
+MetovaTestKit is a collection of useful test helpers, primarily designed around turning crashing tests into failing tests.
 
 -----
 
@@ -22,7 +22,7 @@ Metova Test Kit is a collection of useful test helpers, primarily designed aroun
 
 Metova Test Kit is available through [CocoaPods](http://cocoapods.org).
 
-Metova Test Kit is intended to be used with unit testing targets.  To install it, add MTK your project's Podfile:
+Metova Test Kit is intended to be used with unit testing targets. To install it, add MTK your project's Podfile:
 
 ```ruby
 target 'YourApp' do
@@ -50,7 +50,7 @@ pod 'MTK', :git => 'https://github.com/metova/MetovaTestKit.git', :branch => 'de
 
 ## Usage
 
-#### MTKTestable
+### MTKTestable
 
 Metova Test Kit defines the `MTKTestable` protocol.  Correct implementation of this protocol allows for functional unit testing.  It abstracts away the set up and tear down code into extensions of the types you want to test, and allows for functional unit tests.
 
@@ -64,7 +64,18 @@ func testOutlets() {
 }
 ```
 
-#### Testing constraints
+### Testing UIKit
+#### Testing Individual Components
+##### UIControl
+ 
+With a single assertion, you can verify that your control actions are hooked up and that your target actually responds to the selector that will be sent to it. 
+
+```swift
+MTKAssertControl(testVC.loginButton, sends: #selector(LoginViewController.didTapLoginButton(_:)), to: testVC, for: .touchUpInside, "The login button should be hooked up to the login action.")
+ 
+```
+ 
+#### Testing Constraints
 
 You can use Metova Test Kit to assert that you do not have broken autolayout constraints.
 
@@ -91,7 +102,7 @@ let brokenConstraintCount = MTKAssertNoBrokenConstraints {
 }
 ```
 
-#### Testing exceptions
+### Testing Exceptions
 
 You can use Metova Test Kit to assert that code that should not throw exceptions doesn't.  Without MTK, this would result in the entire test suite crashing.  With MTK, this is just a failed test, and you still get to run the rest of the test suite.
 

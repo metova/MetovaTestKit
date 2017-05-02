@@ -1,9 +1,9 @@
 //
-//  ObjectiveCExceptionTester.h
+//  FailureRecordingTests.swift
 //  MetovaTestKit
 //
-//  Created by Nick Griffith on 5/6/16.
-//  Copyright © 2016 Metova. All rights reserved.
+//  Created by Logan Gauthier on 5/2/17.
+//  Copyright © 2017 Metova. All rights reserved.
 //
 //  MIT License
 //
@@ -27,22 +27,26 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#pragma GCC visibility push(hidden)
+import XCTest
 
-#import <Foundation/Foundation.h>
+@testable import MetovaTestKit
 
-/**
- Synchronously tests the provided block for exceptions.  If it would throw an exception, it catches the exception and returns it.
- 
- @param testBlock The block to test.
-
- @return The caught exception.  If no exception was thrown, returns `nil`.
- 
- @warning You should not rely on `XCTestExpectation` fulfillment in this block.  If an exception is thrown before fulfillment, the expectation will never be fulfilled.  `XCTestExpectation` should be unnecessary as the block is executed synchronously.
- 
- @warning This will only catch Objective-C-style exceptions.  Swift's `fatalError`'s are not caught by this test.
- 
- */
-NSException * __nullable MTKCatchException(__attribute__((noescape)) void (^ __nonnull testBlock)());
-
-#pragma GCC visibility pop
+class FailureRecordingTests: MTKBaseTestCase {
+    
+    func testFailureDescriptionFormation() {
+        
+        XCTAssertEqual(failureDescription(withMessage: "User Message", description: "Specific reason why test failed"), "Specific reason why test failed - User Message")
+        
+        XCTAssertEqual(failureDescription(withMessage: nil, description: "Specific reason why test failed"), "Specific reason why test failed")
+    }
+    
+    func testRecordingFailureWithMessageAndDescription() {
+        
+        let line: UInt = 100
+        let testFailureExpectation = TestFailureExpectation(description: "Description - Message", filePath: #file, lineNumber: line)
+        
+        expectTestFailure(testFailureExpectation) {
+            recordFailure(withMessage: "Message", description: "Description", inFile: #file, atLine: line, expected: true)
+        }
+    }
+}

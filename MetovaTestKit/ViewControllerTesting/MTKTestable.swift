@@ -67,14 +67,14 @@
  */
 public protocol MTKTestable {
     
-    associatedtype T: Any
+    associatedtype TestableItem: Any
     
     /**
      Asks the `MTKTestable` type to run the given test block on an instance of the `MTKTestable` type.
      
      - parameter testBlock: A block of code containing tests to run.
      */
-    static func test(_ testBlock: (T) -> Void)
+    static func test(_ testBlock: (TestableItem) -> Void)
     
     /**
      Asks the `MTKTestable` type for a new instance in order to be used for testing.  This method should provide a new instance every time.
