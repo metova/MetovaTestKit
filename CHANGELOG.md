@@ -1,5 +1,9 @@
 # Metova Test Kit CHANGELOG
 
+## 1.1.0
+
+- Added UIControl target/action test assertion.
+
 ## 1.0.0
 
 - Converted to Swift 3.0.
