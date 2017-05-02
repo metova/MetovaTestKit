@@ -42,9 +42,6 @@ variable_name:
     - rs
     - URI
     - URL
-type_name:
-  excluded:
-    - T
 trailing_newline: error
 comma: error
 colon: error

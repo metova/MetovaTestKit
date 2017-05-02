@@ -64,8 +64,9 @@ func testOutlets() {
 }
 ```
 
-### Testing UIKit Components
-#### UIControl
+### Testing UIKit
+#### Testing Individual Components
+##### UIControl
 
 ```swift
 MTKAssertControl(testVC.loginButton, sends: #selector(LoginViewController.didTapLoginButton(_:)), to: testVC, for: .touchUpInside, "The login button should be hooked up to the login action.")
