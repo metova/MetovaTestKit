@@ -25,7 +25,7 @@ script:
 
   # Run `pod lib lint` if specified
   - if [ $POD_LINT == "YES" ]; then
-      pod lib lint;
+      bundle exec pod lib lint;
     fi
 after_success:
  - bundle binstub slather

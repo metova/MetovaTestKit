@@ -34,7 +34,7 @@
 /**
  Synchronously tests the provided block for exceptions.  If it would throw an exception, it catches the exception and returns it.
  
- @param testBlock: The block to test.
+ @param testBlock The block to test.
 
  @return The caught exception.  If no exception was thrown, returns `nil`.
  
