@@ -30,18 +30,18 @@
 import XCTest
 
 /**
- Synchronously tests the provided block for exceptions.  If it would throw an exception, the exception is caught and the test fails.  Otherwise, the test passes.
+ Synchronously tests the provided block for exceptions. If it would throw an exception, the exception is caught and the test fails. Otherwise, the test passes.
  
  - parameter message:   The message to log upon test failure.
  - parameter file:      The file the test is called from.
  - parameter line:      The line number the test is called from.
  - parameter testBlock: The block to test.
  
- - returns: The caught exception.  If no exception was thrown, returns `nil`.
+ - returns: The caught exception. If no exception was thrown, returns `nil`.
  
- - warning: You should not rely on `XCTestExpectation` fulfillment in this block.  If an exception is thrown before fulfillment, the expectation will never be fulfilled.  `XCTestExpectation` should be unnecessary as the block is executed synchronously.
+ - warning: You should not rely on `XCTestExpectation` fulfillment in this block. If an exception is thrown before fulfillment, the expectation will never be fulfilled. `XCTestExpectation` should be unnecessary as the block is executed synchronously.
  
- - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`s are not caught by this test.
+ - warning: This will only catch Objective-C-style exceptions. Swift's `fatalError`s are not caught by this test.
  */
 @discardableResult public func MTKAssertNoException(message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, testBlock: () -> Void) -> NSException? {
   
@@ -54,18 +54,18 @@ import XCTest
 }
 
 /**
- Synchronously tests the provided block for exceptions.  If it does not throw an exception, the test fails.  If it would throw an exception, the exception is caught and the test passes.  Any code below the thrown exception is not executed.
+ Synchronously tests the provided block for exceptions. If it does not throw an exception, the test fails. If it would throw an exception, the exception is caught and the test passes. Any code below the thrown exception is not executed.
  
  - parameter message:   The message to log upon test failure.
  - parameter file:      The file the test is called from.
  - parameter line:      The line number the test is called from.
  - parameter testBlock: The block to test.
  
- - returns: The caught exception.  If no exception was thrown, returns `nil`.
+ - returns: The caught exception. If no exception was thrown, returns `nil`.
  
- - warning: You should not rely on `XCTestExpectation` fulfillment in this block.  If an exception is thrown before fulfillment, the expectation will never be fulfilled.  `XCTestExpectation` should be unnecessary as the block is executed synchronously.
+ - warning: You should not rely on `XCTestExpectation` fulfillment in this block. If an exception is thrown before fulfillment, the expectation will never be fulfilled. `XCTestExpectation` should be unnecessary as the block is executed synchronously.
  
- - warning: This will only catch Objective-C-style exceptions.  Swift's `fatalError`s are not caught by this test.
+ - warning: This will only catch Objective-C-style exceptions. Swift's `fatalError`s are not caught by this test.
  */
 @discardableResult public func MTKAssertException(message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, testBlock: () -> Void) -> NSException? {
     

@@ -52,7 +52,7 @@ pod 'MTK', :git => 'https://github.com/metova/MetovaTestKit.git', :branch => 'de
 
 ### MTKTestable
 
-Metova Test Kit defines the `MTKTestable` protocol.  Correct implementation of this protocol allows for functional unit testing.  It abstracts away the set up and tear down code into extensions of the types you want to test, and allows for functional unit tests.
+Metova Test Kit defines the `MTKTestable` protocol. Correct implementation of this protocol allows for functional unit testing. It abstracts away the set up and tear down code into extensions of the types you want to test, and allows for functional unit tests.
 
 ```swift
 func testOutlets() {
@@ -86,7 +86,7 @@ MTKAssertNoBrokenConstraints {
 }
 ```
 
-This assertion will fail for any broken constraints and report the number of constraints that broke during the test.  You can also pass a custom message.
+This assertion will fail for any broken constraints and report the number of constraints that broke during the test. You can also pass a custom message.
 
 ```swift
 MTKAssertNoBrokenConstraints(message: "Constraints were broken.") {
@@ -104,7 +104,7 @@ let brokenConstraintCount = MTKAssertNoBrokenConstraints {
 
 ### Testing Exceptions
 
-You can use Metova Test Kit to assert that code that should not throw exceptions doesn't.  Without MTK, this would result in the entire test suite crashing.  With MTK, this is just a failed test, and you still get to run the rest of the test suite.
+You can use Metova Test Kit to assert that code that should not throw exceptions doesn't. Without MTK, this would result in the entire test suite crashing. With MTK, this is just a failed test, and you still get to run the rest of the test suite.
 
 ```swift
 MTKAssertNoException {
@@ -124,7 +124,7 @@ MTKAssertNoException(message: "Exception was thrown.") {
 }
 ```
 
-You can also test code to verify that exceptions are thrown, and can do this without crashing your test suite.  If you do not care about the specific exception but only want to verify that the code block throws an exception, you can use `MTKAssertException`:
+You can also test code to verify that exceptions are thrown, and can do this without crashing your test suite. If you do not care about the specific exception but only want to verify that the code block throws an exception, you can use `MTKAssertException`:
 
 ```swift
 MTKAssertException {
@@ -162,7 +162,7 @@ if let exception = MTKAssertNoException(testBlock: blockThatShouldntThrow) {
 }
 ```
 
-If the closure did not throw an exception, the function returns `nil`.  Otherwise, it returns an instance of `NSException` which you can verify is the exception you expected your block to throw.
+If the closure did not throw an exception, the function returns `nil`. Otherwise, it returns an instance of `NSException` which you can verify is the exception you expected your block to throw.
 
 -----
 

@@ -4,7 +4,7 @@ disabled_rules: # rule identifiers to exclude from running
   - trailing_whitespace
   - statement_position
   - opening_brace
-  - file_length # This rule counts white space and comments.  Re-enabled when we've fixed it to not do that.
+  - file_length # This rule counts white space and comments. Re-enabled when we've fixed it to not do that.
   - nesting
 opt_in_rules: # some rules are only opt-in
   - missing_docs # There's currently a bug with the missing_docs rule resulting in false warnings. https://github.com/realm/SwiftLint/issues/811

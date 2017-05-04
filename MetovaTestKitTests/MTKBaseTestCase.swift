@@ -29,7 +29,7 @@
 
 /*
  
- This base test class allows us to verify that the various assertions we're creating through MTK actually throw failures.  The current implementation just allows one failed test per `expectTestFailure` block.  We can potentially modify this in the future, but I think for now, the expectation should be that tests are written expecting just one failure.  Any assertion failures after the first will fail as normal.
+ This base test class allows us to verify that the various assertions we're creating through MTK actually throw failures. The current implementation just allows one failed test per `expectTestFailure` block. We can potentially modify this in the future, but I think for now, the expectation should be that tests are written expecting just one failure. Any assertion failures after the first will fail as normal.
  
  The idea for this implementation came from an answer received on this Stack Overflow question: http://stackoverflow.com/q/38675192/2792531
  
