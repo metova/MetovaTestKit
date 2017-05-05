@@ -31,6 +31,9 @@ import Foundation
 
 extension Sequence where Iterator.Element == String {
     
+    /// Convenience method for generating a comma separated list of items in qutoes. The last item will be preceded with "and" as well as an Oxford comma.
+    ///
+    /// - Returns: A comma separated list of items where each item is surrounded by quotes.
     func commaSeparatedQuotedList() -> String {
         
         var itemsInQuotes = map { "\"\($0)\"" }

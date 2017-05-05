@@ -31,6 +31,14 @@ import XCTest
 
 extension XCTestCase {
     
+    /// Test that a segmented control has the expected segment titles in the expectd order. Passes if the segmented control has the specified segment titles in the specified order. Fails otherwise.
+    ///
+    /// - Parameters:
+    ///   - segmentedControl: The segmented control to test.
+    ///   - expectedTitles: The list of expected segment titles in the expected order.
+    ///   - failureMessage: The message to log upon failure.
+    ///   - file: The name of the file to report the failure for. The default value will report the file from which this method is called.
+    ///   - line: The line number to report the failure for. The default value will report the line number of the calling site.
     public func MTKAssertSegmentedControl(_ segmentedControl: UISegmentedControl, hasSegmentTitles expectedTitles: [String], _ failureMessage: @autoclosure () -> String? = nil, file: String = #file, line: UInt = #line) {
         
         let actualTitles = Array(0..<segmentedControl.numberOfSegments).flatMap { segmentedControl.titleForSegment(at: $0) }
