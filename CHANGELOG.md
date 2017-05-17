@@ -2,7 +2,8 @@
 
 ## 1.1.0
 
-- Added UIControl target/action test assertion.
+- Added assertion for UIControl target/action.
+- Added assertion for UISegmentedControl segment titles.
 
 ## 1.0.0
 

@@ -1,9 +1,9 @@
 //
-//  MTKConstraintTester.swift
+//  Array+Utilities.swift
 //  MetovaTestKit
 //
-//  Created by Nick Griffith on 7/29/16.
-//  Copyright © 2016 Metova. All rights reserved.
+//  Created by Logan Gauthier on 5/2/17.
+//  Copyright © 2017 Metova. All rights reserved.
 //
 //  MIT License
 //
@@ -27,27 +27,22 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-import XCTest
+import Foundation
 
-extension XCTestCase {
+extension Sequence where Iterator.Element == String {
     
-    /**
-     Synchronously tests the provided block for broken constraints. If any constraints are broken, the test fails. Otherwise, it passes.
-     
-     - parameter message:   The message to log upon test failure.
-     - parameter file:      The file the test is called from.
-     - parameter line:      The line number the test is called from.
-     - parameter testBlock: The block to test.
-     
-     - returns: Number of broken constraints during test
-     */
-    @discardableResult public func MTKAssertNoBrokenConstraints(message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, testBlock: () -> Void) -> UInt {
+    /// Convenience method for generating a comma separated list of items in qutoes. The last item will be preceded with "and" as well as an Oxford comma.
+    ///
+    /// - Returns: A comma separated list of items where each item is surrounded by quotes.
+    func commaSeparatedQuotedList() -> String {
         
-        let brokenConstraintCount = MTKCountBrokenConstraints(testBlock)
-        let message = message() ?? "Found \(brokenConstraintCount) broken constraints while executing test block."
+        var itemsInQuotes = map { "\"\($0)\"" }
         
-        XCTAssertEqual(0, brokenConstraintCount, message, file: file, line: line)
+        if itemsInQuotes.count > 1 {
+            let lastItem = itemsInQuotes.removeLast()
+            return itemsInQuotes.joined(separator: ", ") + ", and \(lastItem)"
+        }
         
-        return brokenConstraintCount
-    }    
+        return itemsInQuotes.joined(separator: ", ")
+    }
 }

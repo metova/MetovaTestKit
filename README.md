@@ -71,8 +71,15 @@ func testOutlets() {
 With a single assertion, you can verify that your control actions are hooked up and that your target actually responds to the selector that will be sent to it. 
 
 ```swift
-MTKAssertControl(testVC.loginButton, sends: #selector(LoginViewController.didTapLoginButton(_:)), to: testVC, for: .touchUpInside, "The login button should be hooked up to the login action.")
+MTKAssertControl(testVC.loginButton, sends: #selector(LoginViewController.didTapLoginButton(_:)), to: testVC, for: .touchUpInside, "The login button should be hooked up to the login action.") 
+```
  
+##### UISegmentedControl
+ 
+Verify that a `UISegmentedControl` has the segment titles you are expecting. 
+ 
+```swift
+MTKAssertSegmentedControl(segmentedControl, hasSegmentTitles: ["Followers", "Following"])
 ```
  
 #### Testing Constraints
