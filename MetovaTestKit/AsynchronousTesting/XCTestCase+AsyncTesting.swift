@@ -42,9 +42,7 @@ extension XCTestCase {
         
         let waitExpectation = expectation(description: "Waiting to resume tests.")
         
-        let delayTime = DispatchTime.now() + Double(Int64(timeInterval * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        
-        DispatchQueue.main.asyncAfter(deadline: delayTime) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval) {
             testAction()
             waitExpectation.fulfill()
         }

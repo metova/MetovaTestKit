@@ -4,6 +4,7 @@
 
 - Added assertion for UIControl target/action.
 - Added assertion for UISegmentedControl segment titles.
+- Added async testing utility.
 
 ## 1.0.0
 
