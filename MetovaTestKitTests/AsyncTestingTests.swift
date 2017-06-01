@@ -32,22 +32,90 @@ import XCTest
 @testable import MetovaTestKit
 
 class AsyncTestingTests: MTKBaseTestCase {
+    
+    // MARK: WaitDurationTester
+    
+    class WaitDurationTester {
+        
+        private var startTime: CFTimeInterval?
+        private var endTime: CFTimeInterval?
+        
+        func beginRecordingDuration() {
+            
+            startTime = CACurrentMediaTime()
+        }
+        
+        func endRecordingDuration(file: StaticString = #file, line: UInt = #line) {
+            
+            guard startTime != nil else {
+                XCTFail("Attempting to end duration recording prior to initiating it. You must call `beginRecordingDuration` before calling `endRecordingDuration`.", file: file, line: line)
+                return
+            }
+            
+            endTime = CACurrentMediaTime()
+        }
+        
+        func assertActualDurationMatches(expectedDuration: TimeInterval, file: StaticString = #file, line: UInt = #line) {
+            
+            guard let endTime = endTime, let startTime = startTime else {
+                XCTFail("Failed to capture the start or end time for calculating the wait duration.", file: file, line: line)
+                return
+            }
+            
+            let actualDuration = endTime - startTime
+            
+            XCTAssertEqualWithAccuracy(actualDuration, expectedDuration, accuracy: 0.1, file: file, line: line)
+        }
+    }
+    
+    // MARK: Tests
 
     func testSuccessfulAsyncTest() {
         
-        MTKPerformAsyncTest(after: 2) {
-            XCTAssertTrue(true)
+        func performTest(usingSpecificQueue queue: DispatchQueue? = nil, line: UInt = #line) {
+            
+            let waitDurationTester = WaitDurationTester()
+            waitDurationTester.beginRecordingDuration()
+
+            let testAction = {
+                waitDurationTester.endRecordingDuration(line: line)
+            }
+            
+            if let queue = queue {
+                MTKWaitThenContinueTest(after: 2, on: queue, testAction: testAction)
+            }
+            else {
+                MTKWaitThenContinueTest(after: 2, testAction: testAction)
+            }
+            
+            waitDurationTester.assertActualDurationMatches(expectedDuration: 2, line: line)
         }
+        
+        performTest()
+        performTest(usingSpecificQueue: .global())
     }
     
     func testAsyncTestFailsWhenAssertionFailsInTheTestActionClosure() {
         
-        let expectedFailure = TestFailureExpectation(description: "Description", filePath: "File", lineNumber: 1)
-        
-        expectTestFailure(expectedFailure) {
-            MTKPerformAsyncTest(after: 1) {
-                self.recordFailure(withDescription: "Description", inFile: "File", atLine: 1, expected: true)
+        func performTest(usingSpecificQueue queue: DispatchQueue? = nil, line: UInt = #line) {
+            
+            let expectedFailure = TestFailureExpectation(description: "Description", filePath: "File", lineNumber: 1)
+            
+            expectTestFailure(expectedFailure) {
+                
+                let waitDurationTester = WaitDurationTester()
+                waitDurationTester.beginRecordingDuration()
+                
+                MTKWaitThenContinueTest(after: 1) {
+                    waitDurationTester.endRecordingDuration(line: line)
+                    self.recordFailure(withDescription: "Description", inFile: "File", atLine: 1, expected: true)
+                }
+                
+                waitDurationTester.assertActualDurationMatches(expectedDuration: 1, line: line)
             }
         }
+        
+        performTest()
+        performTest(usingSpecificQueue: .global())
     }
 }
