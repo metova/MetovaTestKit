@@ -64,7 +64,7 @@ class AsyncTestingTests: MTKBaseTestCase {
             
             let actualDuration = endTime - startTime
             
-            XCTAssertEqualWithAccuracy(actualDuration, expectedDuration, accuracy: 0.3, file: file, line: line)
+            XCTAssertEqualWithAccuracy(actualDuration, expectedDuration, accuracy: 1.0, file: file, line: line)
             XCTAssertTrue(actualDuration >= expectedDuration, "Because the test action is dispatched after the expected duration, the actual recorded duration (\(actualDuration) seconds) should never be less than the expected duration (\(expectedDuration) seconds).")
         }
     }
@@ -83,13 +83,13 @@ class AsyncTestingTests: MTKBaseTestCase {
             }
             
             if let queue = queue {
-                MTKWaitThenContinueTest(after: 2, on: queue, testAction: testAction)
+                MTKWaitThenContinueTest(after: 10, on: queue, testAction: testAction)
             }
             else {
-                MTKWaitThenContinueTest(after: 2, testAction: testAction)
+                MTKWaitThenContinueTest(after: 10, testAction: testAction)
             }
             
-            waitDurationTester.assertActualDurationMatches(expectedDuration: 2, line: line)
+            waitDurationTester.assertActualDurationMatches(expectedDuration: 10, line: line)
         }
         
         performTest()
@@ -107,12 +107,12 @@ class AsyncTestingTests: MTKBaseTestCase {
                 let waitDurationTester = WaitDurationTester()
                 waitDurationTester.beginRecordingDuration()
                 
-                MTKWaitThenContinueTest(after: 1) {
+                MTKWaitThenContinueTest(after: 10) {
                     waitDurationTester.endRecordingDuration(line: line)
                     self.recordFailure(withDescription: "Description", inFile: "File", atLine: 1, expected: true)
                 }
                 
-                waitDurationTester.assertActualDurationMatches(expectedDuration: 1, line: line)
+                waitDurationTester.assertActualDurationMatches(expectedDuration: 10, line: line)
             }
         }
         
