@@ -182,7 +182,7 @@ testViewController.didTapSearchButton()
  
 XCTAssertFalse(testViewController.searchButton.isEnabled, "The search button should be disabled while a search request is taking place.")
  
-MTKPerformAsyncTest(after: 1) {
+MTKWaitThenContinueTest(after: 1) {
     XCTAssertTrue(testViewController.searchButton.isEnabled, "Once the request is complete, the search button should be re-enabled.") 
 }
 ```
