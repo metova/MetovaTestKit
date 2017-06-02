@@ -171,6 +171,22 @@ if let exception = MTKAssertNoException(testBlock: blockThatShouldntThrow) {
 
 If the closure did not throw an exception, the function returns `nil`. Otherwise, it returns an instance of `NSException` which you can verify is the exception you expected your block to throw.
 
+ 
+### Aynchronous Testing
+ 
+XCTest provides asynchronous testing capabilities using `expectation(description:)` and `waitForExpectations(timeout:handler:)`. However, when testing simple delayed asynchronous actions, this approach can be cumbersome and the intent might not be immediately obvious. Using MTK's `MTKPerformAsyncTest(after:testAction:)` utility method, these kinds of tests become simple and they read naturally.
+ 
+```swift
+mockUserSearchNetworkRequest(withResponseTime: 0.5)
+testViewController.didTapSearchButton()
+ 
+XCTAssertFalse(testViewController.searchButton.isEnabled, "The search button should be disabled while a search request is taking place.")
+ 
+MTKWaitThenContinueTest(after: 1) {
+    XCTAssertTrue(testViewController.searchButton.isEnabled, "Once the request is complete, the search button should be re-enabled.") 
+}
+```
+ 
 -----
 
 ## Credits

@@ -20,6 +20,20 @@
                ReferencedContainer = "container:MetovaTestKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4A3CFF001CDD5F37003EF6F0"
+               BuildableName = "MetovaTestKitTests.xctest"
+               BlueprintName = "MetovaTestKitTests"
+               ReferencedContainer = "container:MetovaTestKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

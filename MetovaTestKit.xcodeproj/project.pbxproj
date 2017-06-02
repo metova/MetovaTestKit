@@ -30,6 +30,8 @@
 		6E8D4B1E1EB8D660001284FD /* FailureRecordingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B1D1EB8D660001284FD /* FailureRecordingTests.swift */; };
 		6E8D4B221EB941B9001284FD /* XCTestCase+UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B211EB941B9001284FD /* XCTestCase+UISegmentedControl.swift */; };
 		6E8D4B241EB941F8001284FD /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B231EB941F8001284FD /* Array+Utilities.swift */; };
+		6EC1A6B01EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */; };
+		6EC1A6B31EBCE2E2000DEFA6 /* AsyncTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */; };
 		6EF9B23B1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9B23A1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		6E8D4B1D1EB8D660001284FD /* FailureRecordingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureRecordingTests.swift; sourceTree = "<group>"; };
 		6E8D4B211EB941B9001284FD /* XCTestCase+UISegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "XCTestCase+UISegmentedControl.swift"; path = "UIKitTesting/XCTestCase+UISegmentedControl.swift"; sourceTree = "<group>"; };
 		6E8D4B231EB941F8001284FD /* Array+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Utilities.swift"; path = "Internal/Array+Utilities.swift"; sourceTree = "<group>"; };
+		6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AsyncTesting.swift"; sourceTree = "<group>"; };
+		6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestingTests.swift; sourceTree = "<group>"; };
 		6EF9B23A1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControlTestingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +132,7 @@
 		4A3CFEF91CDD5F37003EF6F0 /* MetovaTestKit */ = {
 			isa = PBXGroup;
 			children = (
+				6EC1A6AE1EBCDD3F000DEFA6 /* AsynchronousTesting */,
 				6E8D4B041EB7AD1B001284FD /* Internal Utilities */,
 				6E8D4AFF1EB7AB70001284FD /* UIKitTesting */,
 				4A771F2D1D4C13FC00EFD0B8 /* ConstraintTesting */,
@@ -146,6 +151,7 @@
 				6E8D4B1B1EB8D5D0001284FD /* Test Data */,
 				6E8D4B1C1EB8D644001284FD /* Internal Utilities Tests */,
 				6E8D4B171EB81064001284FD /* UIKit Testing Tests */,
+				6EC1A6B11EBCE2C7000DEFA6 /* Asynchronous Testing Tests */,
 				4A3CFFCD1CDE1548003EF6F0 /* ExceptionTestingTests.swift */,
 				4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */,
 				4A771F341D4C173300EFD0B8 /* ConstraintTestingTests.swift */,
@@ -260,6 +266,22 @@
 				6E8D4B1D1EB8D660001284FD /* FailureRecordingTests.swift */,
 			);
 			name = "Internal Utilities Tests";
+			sourceTree = "<group>";
+		};
+		6EC1A6AE1EBCDD3F000DEFA6 /* AsynchronousTesting */ = {
+			isa = PBXGroup;
+			children = (
+				6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */,
+			);
+			path = AsynchronousTesting;
+			sourceTree = "<group>";
+		};
+		6EC1A6B11EBCE2C7000DEFA6 /* Asynchronous Testing Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */,
+			);
+			name = "Asynchronous Testing Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +440,7 @@
 				4A3CFF231CDD60CA003EF6F0 /* MTKExceptionTester.m in Sources */,
 				6E8D4B221EB941B9001284FD /* XCTestCase+UISegmentedControl.swift in Sources */,
 				6E8D4B081EB7C5DF001284FD /* XCTestCase+FailureRecording.swift in Sources */,
+				6EC1A6B01EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift in Sources */,
 				4A8AD4E91CDEA2A30085984D /* MTKTestable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +454,7 @@
 				4A771FC91D4D534200EFD0B8 /* MTKBaseTestCase.swift in Sources */,
 				6EF9B23B1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift in Sources */,
 				4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */,
+				6EC1A6B31EBCE2E2000DEFA6 /* AsyncTestingTests.swift in Sources */,
 				4A3CFFCE1CDE1548003EF6F0 /* ExceptionTestingTests.swift in Sources */,
 				6E8D4B0C1EB7CF68001284FD /* UIControlTestingTests.swift in Sources */,
 				6E8D4B1E1EB8D660001284FD /* FailureRecordingTests.swift in Sources */,
