@@ -29,6 +29,8 @@
 
 import XCTest
 
+@testable import MetovaTestKit
+
 // MARK: - TestViewController
 
 private class TestViewController: UIViewController {

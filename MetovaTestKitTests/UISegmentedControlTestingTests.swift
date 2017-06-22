@@ -29,6 +29,8 @@
 
 import XCTest
 
+@testable import MetovaTestKit
+
 class UISegmentedControlTestingTests: MTKBaseTestCase {
     
     func testSegmentTitlesAssertionSuccess() {
@@ -41,7 +43,7 @@ class UISegmentedControlTestingTests: MTKBaseTestCase {
         
         let segmentedControl = UISegmentedControl(items: ["Title 1", "Title 2"])
         
-        let failureExpectation = TestFailureExpectation(description: "Expected segmented control to have segment titles: \"Title 1\". Instead found \"Title 1\", and \"Title 2\".", filePath: #file)
+        let failureExpectation = TestFailureExpectation(description: "failed - Expected segmented control to have segment titles: \"Title 1\". Instead found \"Title 1\", and \"Title 2\".", filePath: #file)
         
         expectTestFailure(failureExpectation, message: "The control has an extra title that we're not expecting.") {
             MTKAssertSegmentedControl(segmentedControl, hasSegmentTitles: ["Title 1"])
@@ -52,7 +54,7 @@ class UISegmentedControlTestingTests: MTKBaseTestCase {
         
         let segmentedControl = UISegmentedControl(items: ["Title 1"])
         
-        let failureExpectation = TestFailureExpectation(description: "Expected segmented control to have segment titles: \"Title 1\", and \"Title 2\". Instead found \"Title 1\".", filePath: #file)
+        let failureExpectation = TestFailureExpectation(description: "failed - Expected segmented control to have segment titles: \"Title 1\", and \"Title 2\". Instead found \"Title 1\".", filePath: #file)
         
         expectTestFailure(failureExpectation, message: "The control is missing a title that we're expecting.") {
             MTKAssertSegmentedControl(segmentedControl, hasSegmentTitles: ["Title 1", "Title 2"])
@@ -63,7 +65,7 @@ class UISegmentedControlTestingTests: MTKBaseTestCase {
         
         let segmentedControl = UISegmentedControl(items: ["Title 1", "Title 2"])
         
-        let failureExpectation = TestFailureExpectation(description: "Expected segmented control to have segment titles: \"Title 1\", and \"Different Title\". Instead found \"Title 1\", and \"Title 2\".", filePath: #file)
+        let failureExpectation = TestFailureExpectation(description: "failed - Expected segmented control to have segment titles: \"Title 1\", and \"Different Title\". Instead found \"Title 1\", and \"Title 2\".", filePath: #file)
         
         expectTestFailure(failureExpectation, message: "One of the titles is different from the one we're expecting.") {
             MTKAssertSegmentedControl(segmentedControl, hasSegmentTitles: ["Title 1", "Different Title"])
@@ -74,7 +76,7 @@ class UISegmentedControlTestingTests: MTKBaseTestCase {
         
         let segmentedControl = UISegmentedControl(items: ["Title 1", "Title 2"])
         
-        let failureExpectation = TestFailureExpectation(description: "Expected segmented control to have segment titles: \"Title 2\", and \"Title 1\". Instead found \"Title 1\", and \"Title 2\".", filePath: #file)
+        let failureExpectation = TestFailureExpectation(description: "failed - Expected segmented control to have segment titles: \"Title 2\", and \"Title 1\". Instead found \"Title 1\", and \"Title 2\".", filePath: #file)
         
         expectTestFailure(failureExpectation, message: "The titles are in a different order than what we're expecting.") {
             MTKAssertSegmentedControl(segmentedControl, hasSegmentTitles: ["Title 2", "Title 1"])

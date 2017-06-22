@@ -1,5 +1,5 @@
 //
-//  XCTestCase+FailureRecording.swift
+//  FailureRecording.swift
 //  MetovaTestKit
 //
 //  Created by Logan Gauthier on 5/1/17.
@@ -29,21 +29,17 @@
 
 import XCTest
 
-extension XCTestCase {
+/// Convenience method for use within MTK assertions to record a failure with a description that includes the user's assertion message along with MTK's failure description.
+///
+/// - Parameters:
+///   - message: The user's assertion message.
+///   - description: The description of what specifically failed.
+///   - file: The name of the file from which the failure occurred.
+///   - line: The line number where the failure occurred.
+func MTKRecordFailure(withMessage message: String?, description: String, file: StaticString, line: UInt) {
     
-    /// Convenience method for use within MTK assertions to record a failure with a description that includes the user's assertion message along with MTK's failure description.
-    ///
-    /// - Parameters:
-    ///   - message: The user's assertion message.
-    ///   - description: The description of what specifically failed.
-    ///   - filePath: The name of the file from which the failure occurred.
-    ///   - lineNumber: The line number where the failure occurred.
-    ///   - expected: true if the failure being reported was the result of a failed assertion, false if it was the result of an uncaught exception.
-    func recordFailure(withMessage message: String?, description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
-        
-        let fullDescription = failureDescription(withMessage: message, description: description)
-        recordFailure(withDescription: fullDescription, inFile: filePath, atLine: lineNumber, expected: expected)
-    }
+    let fullDescription = failureDescription(withMessage: message, description: description)
+    XCTFail(fullDescription, file: file, line: line)
 }
 
 /// Convenience method for constructing a failure description that includes the user's assertion message along with the description of what specifically failed.

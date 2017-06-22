@@ -24,11 +24,11 @@
 		4A8AD4F11CDEB6C30085984D /* TestableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4EF1CDEB6C30085984D /* TestableViewController.swift */; };
 		4A8AD4F21CDEB6C30085984D /* TestableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F01CDEB6C30085984D /* TestableViewController.xib */; };
 		4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */; };
-		6E8D4B081EB7C5DF001284FD /* XCTestCase+FailureRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B071EB7C5DF001284FD /* XCTestCase+FailureRecording.swift */; };
+		6E8D4B081EB7C5DF001284FD /* FailureRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B071EB7C5DF001284FD /* FailureRecording.swift */; };
 		6E8D4B0C1EB7CF68001284FD /* UIControlTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B0B1EB7CF67001284FD /* UIControlTestingTests.swift */; };
-		6E8D4B191EB8138B001284FD /* XCTestCase+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B181EB8138B001284FD /* XCTestCase+UIControl.swift */; };
+		6E8D4B191EB8138B001284FD /* UIControlAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B181EB8138B001284FD /* UIControlAssertions.swift */; };
 		6E8D4B1E1EB8D660001284FD /* FailureRecordingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B1D1EB8D660001284FD /* FailureRecordingTests.swift */; };
-		6E8D4B221EB941B9001284FD /* XCTestCase+UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B211EB941B9001284FD /* XCTestCase+UISegmentedControl.swift */; };
+		6E8D4B221EB941B9001284FD /* UISegmentedControlAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B211EB941B9001284FD /* UISegmentedControlAssertions.swift */; };
 		6E8D4B241EB941F8001284FD /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B231EB941F8001284FD /* Array+Utilities.swift */; };
 		6EC1A6B01EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */; };
 		6EC1A6B31EBCE2E2000DEFA6 /* AsyncTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */; };
@@ -77,12 +77,12 @@
 		4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		4A8AD4F71CDEE4220085984D /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		4AB9A3E01CDF6AB00021B6B8 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; indentWidth = 2; path = Gemfile; sourceTree = "<group>"; };
-		6E8D4B071EB7C5DF001284FD /* XCTestCase+FailureRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "XCTestCase+FailureRecording.swift"; path = "Internal/XCTestCase+FailureRecording.swift"; sourceTree = "<group>"; };
+		6E8D4B071EB7C5DF001284FD /* FailureRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FailureRecording.swift; path = Internal/FailureRecording.swift; sourceTree = "<group>"; };
 		6E8D4B0B1EB7CF67001284FD /* UIControlTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlTestingTests.swift; sourceTree = "<group>"; };
-		6E8D4B181EB8138B001284FD /* XCTestCase+UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "XCTestCase+UIControl.swift"; path = "UIKitTesting/XCTestCase+UIControl.swift"; sourceTree = "<group>"; };
+		6E8D4B181EB8138B001284FD /* UIControlAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlAssertions.swift; path = UIKitTesting/UIControlAssertions.swift; sourceTree = "<group>"; };
 		6E8D4B1A1EB8154A001284FD /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
 		6E8D4B1D1EB8D660001284FD /* FailureRecordingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureRecordingTests.swift; sourceTree = "<group>"; };
-		6E8D4B211EB941B9001284FD /* XCTestCase+UISegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "XCTestCase+UISegmentedControl.swift"; path = "UIKitTesting/XCTestCase+UISegmentedControl.swift"; sourceTree = "<group>"; };
+		6E8D4B211EB941B9001284FD /* UISegmentedControlAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISegmentedControlAssertions.swift; path = UIKitTesting/UISegmentedControlAssertions.swift; sourceTree = "<group>"; };
 		6E8D4B231EB941F8001284FD /* Array+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Utilities.swift"; path = "Internal/Array+Utilities.swift"; sourceTree = "<group>"; };
 		6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AsyncTesting.swift"; sourceTree = "<group>"; };
 		6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestingTests.swift; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 		6E8D4AFF1EB7AB70001284FD /* UIKitTesting */ = {
 			isa = PBXGroup;
 			children = (
-				6E8D4B181EB8138B001284FD /* XCTestCase+UIControl.swift */,
-				6E8D4B211EB941B9001284FD /* XCTestCase+UISegmentedControl.swift */,
+				6E8D4B181EB8138B001284FD /* UIControlAssertions.swift */,
+				6E8D4B211EB941B9001284FD /* UISegmentedControlAssertions.swift */,
 			);
 			name = UIKitTesting;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 		6E8D4B041EB7AD1B001284FD /* Internal Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6E8D4B071EB7C5DF001284FD /* XCTestCase+FailureRecording.swift */,
+				6E8D4B071EB7C5DF001284FD /* FailureRecording.swift */,
 				6E8D4B231EB941F8001284FD /* Array+Utilities.swift */,
 			);
 			name = "Internal Utilities";
@@ -436,10 +436,10 @@
 				4A771F311D4C144400EFD0B8 /* MTKBrokenConstraintCounter.m in Sources */,
 				4A8AD4EB1CDEA2B60085984D /* MTKExceptionTesting.swift in Sources */,
 				4A8AD4ED1CDEA53A0085984D /* MTKTestable+UIViewController.swift in Sources */,
-				6E8D4B191EB8138B001284FD /* XCTestCase+UIControl.swift in Sources */,
+				6E8D4B191EB8138B001284FD /* UIControlAssertions.swift in Sources */,
 				4A3CFF231CDD60CA003EF6F0 /* MTKExceptionTester.m in Sources */,
-				6E8D4B221EB941B9001284FD /* XCTestCase+UISegmentedControl.swift in Sources */,
-				6E8D4B081EB7C5DF001284FD /* XCTestCase+FailureRecording.swift in Sources */,
+				6E8D4B221EB941B9001284FD /* UISegmentedControlAssertions.swift in Sources */,
+				6E8D4B081EB7C5DF001284FD /* FailureRecording.swift in Sources */,
 				6EC1A6B01EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift in Sources */,
 				4A8AD4E91CDEA2A30085984D /* MTKTestable.swift in Sources */,
 			);
