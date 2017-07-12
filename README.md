@@ -74,6 +74,23 @@ With a single assertion, you can verify that your control actions are hooked up 
 MTKAssertControl(testVC.loginButton, sends: #selector(LoginViewController.didTapLoginButton(_:)), to: testVC, for: .touchUpInside, "The login button should be hooked up to the login action.") 
 ```
  
+##### UIAlertController
+ 
+Verify that a view controller presented an alert having a particular style, title, message, and actions.
+ 
+```swift
+MTKAssertAlertIsPresented(
+    by: testVC,
+    style: .alert,
+    title: "Warning",
+    message: "Are you sure you want to delete this user?",
+    actions: [
+        ExpectedAlertAction(title: "Delete", style: .destructive),
+        ExpectedAlertAction(title: "Cancel", style: .cancel)
+    ]
+)
+```
+ 
 ##### UISegmentedControl
  
 Verify that a `UISegmentedControl` has the segment titles you are expecting. 

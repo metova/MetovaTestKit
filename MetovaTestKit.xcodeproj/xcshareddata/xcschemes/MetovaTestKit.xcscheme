@@ -34,6 +34,34 @@
                ReferencedContainer = "container:MetovaTestKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E2368281F043F59008E3231"
+               BuildableName = "HostedTests.xctest"
+               BlueprintName = "HostedTests"
+               ReferencedContainer = "container:MetovaTestKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E2368121F043F37008E3231"
+               BuildableName = "HostApplicationForTesting.app"
+               BlueprintName = "HostApplicationForTesting"
+               ReferencedContainer = "container:MetovaTestKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -50,6 +78,16 @@
                BlueprintIdentifier = "4A3CFF001CDD5F37003EF6F0"
                BuildableName = "MetovaTestKitTests.xctest"
                BlueprintName = "MetovaTestKitTests"
+               ReferencedContainer = "container:MetovaTestKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E2368281F043F59008E3231"
+               BuildableName = "HostedTests.xctest"
+               BlueprintName = "HostedTests"
                ReferencedContainer = "container:MetovaTestKit.xcodeproj">
             </BuildableReference>
          </TestableReference>

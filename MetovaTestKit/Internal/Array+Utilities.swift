@@ -31,18 +31,21 @@ import Foundation
 
 extension Sequence where Iterator.Element == String {
     
-    /// Convenience method for generating a comma separated list of items in qutoes. The last item will be preceded with "and" as well as an Oxford comma.
+    /// Convenience method for generating a comma separated list of items.
+    ///
+    /// - Returns: A comma separated list of items.
+    func commaSeparatedList() -> String {
+        
+        return "[" + map({ "\($0)" }).joined(separator: ", ") + "]"
+    }
+    
+    /// Convenience method for generating a comma separated list of items in qutoes.
     ///
     /// - Returns: A comma separated list of items where each item is surrounded by quotes.
     func commaSeparatedQuotedList() -> String {
         
-        var itemsInQuotes = map { "\"\($0)\"" }
+        let itemsInQuotes = map { "\"\($0)\"" }
         
-        if itemsInQuotes.count > 1 {
-            let lastItem = itemsInQuotes.removeLast()
-            return itemsInQuotes.joined(separator: ", ") + ", and \(lastItem)"
-        }
-        
-        return itemsInQuotes.joined(separator: ", ")
+        return itemsInQuotes.commaSeparatedList()
     }
 }
