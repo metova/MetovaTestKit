@@ -116,6 +116,7 @@
 		6E8D4B211EB941B9001284FD /* UISegmentedControlAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISegmentedControlAssertions.swift; path = UIKitTesting/UISegmentedControlAssertions.swift; sourceTree = "<group>"; };
 		6E8D4B231EB941F8001284FD /* Array+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Utilities.swift"; path = "Internal/Array+Utilities.swift"; sourceTree = "<group>"; };
 		6E98F0BA1F15931D009C15FB /* QuotedStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotedStringTests.swift; sourceTree = "<group>"; };
+		6E98F0BC1F16A330009C15FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AsyncTesting.swift"; sourceTree = "<group>"; };
 		6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestingTests.swift; sourceTree = "<group>"; };
 		6ED689001EFC2D3C0040C243 /* UIAlertControllerAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerAssertions.swift; sourceTree = "<group>"; };
@@ -303,6 +304,7 @@
 			children = (
 				6E23682B1F043F5A008E3231 /* UIAlertControllerTestingTests.swift */,
 				6E23682D1F043F5A008E3231 /* Info.plist */,
+				6E98F0BC1F16A330009C15FB /* README.md */,
 			);
 			path = HostedTests;
 			sourceTree = "<group>";
