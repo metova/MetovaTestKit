@@ -32,7 +32,7 @@ import Foundation
 /// Utility for producing descriptions for `String?` types without being wrapped in "Optional()".
 ///
 /// - Parameter string: An optional String.
-/// - Returns: The unwrapped value, if it exists. Otherwise, it returns an empty String.
+/// - Returns: The unwrapped value in quotes, if it exists. Otherwise, "nil".
 func quotedString(_ string: String?) -> String {
     
     guard let string = string else {

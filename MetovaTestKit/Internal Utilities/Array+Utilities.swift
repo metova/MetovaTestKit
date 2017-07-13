@@ -38,14 +38,4 @@ extension Sequence where Iterator.Element == String {
         
         return "[" + map({ "\($0)" }).joined(separator: ", ") + "]"
     }
-    
-    /// Convenience method for generating a comma separated list of items in qutoes.
-    ///
-    /// - Returns: A comma separated list of items where each item is surrounded by quotes.
-    func commaSeparatedQuotedList() -> String {
-        
-        let itemsInQuotes = map { "\"\($0)\"" }
-        
-        return itemsInQuotes.commaSeparatedList()
-    }
 }

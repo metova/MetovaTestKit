@@ -42,7 +42,7 @@ public func MTKAssertSegmentedControl(_ segmentedControl: UISegmentedControl, ha
     let actualTitles = Array(0..<segmentedControl.numberOfSegments).flatMap { segmentedControl.titleForSegment(at: $0) }
     
     guard actualTitles == expectedTitles else {
-        MTKRecordFailure(withMessage: failureMessage(), description: "Expected segmented control to have segment titles: \(expectedTitles.commaSeparatedQuotedList()). Instead found \(actualTitles.commaSeparatedQuotedList()).", file: file, line: line)
+        MTKRecordFailure(withMessage: failureMessage(), description: "Expected segmented control to have segment titles: \(expectedTitles.map(quotedString).commaSeparatedList()). Instead found \(actualTitles.map(quotedString).commaSeparatedList()).", file: file, line: line)
         return
     }
 }
