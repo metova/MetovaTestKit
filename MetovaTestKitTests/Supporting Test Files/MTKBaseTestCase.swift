@@ -51,9 +51,23 @@ struct TestFailureExpectation {
 }
 
 class MTKBaseTestCase: XCTestCase {
-
+    
+    // MARK: Properties
+    
+    var testWindow = UIWindow(frame: UIScreen.main.bounds)
     private var expectingFailure: TestFailureExpectation?
     private var descriptionForUnexpectedFailure: String?
+    
+    // MARK: Setup/Teardown
+    
+    override func setUp() {
+        
+        super.setUp()
+        
+        testWindow = UIWindow(frame: UIScreen.main.bounds)
+    }
+    
+    // MARK: Failure Expectations
     
     override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
         

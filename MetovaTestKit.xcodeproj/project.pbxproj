@@ -24,12 +24,8 @@
 		4A8AD4F11CDEB6C30085984D /* TestableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4EF1CDEB6C30085984D /* TestableViewController.swift */; };
 		4A8AD4F21CDEB6C30085984D /* TestableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F01CDEB6C30085984D /* TestableViewController.xib */; };
 		4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */; };
-		6E23680A1F035295008E3231 /* UIViewController+TestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2368091F035295008E3231 /* UIViewController+TestUtilities.swift */; };
-		6E2368161F043F37008E3231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2368151F043F37008E3231 /* AppDelegate.swift */; };
-		6E23682C1F043F5A008E3231 /* UIAlertControllerTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E23682B1F043F5A008E3231 /* UIAlertControllerTestingTests.swift */; };
-		6E2368331F0440EF008E3231 /* MTKBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771FC81D4D534200EFD0B8 /* MTKBaseTestCase.swift */; };
-		6E2368341F045FFD008E3231 /* MetovaTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */; };
 		6E2368361F046B26008E3231 /* QuotedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2368351F046B26008E3231 /* QuotedString.swift */; };
+		6E2616EC1F18060200D9B507 /* UIAlertControllerTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2616EB1F18060200D9B507 /* UIAlertControllerTestingTests.swift */; };
 		6E8D4B081EB7C5DF001284FD /* FailureRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B071EB7C5DF001284FD /* FailureRecording.swift */; };
 		6E8D4B0C1EB7CF68001284FD /* UIControlTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B0B1EB7CF67001284FD /* UIControlTestingTests.swift */; };
 		6E8D4B191EB8138B001284FD /* UIControlAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B181EB8138B001284FD /* UIControlAssertions.swift */; };
@@ -50,13 +46,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4A3CFEF61CDD5F37003EF6F0;
 			remoteInfo = MetovaTestKit;
-		};
-		6E23682E1F043F5A008E3231 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4A3CFEEE1CDD5F37003EF6F0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E2368121F043F37008E3231;
-			remoteInfo = HostApplicationForTesting;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -92,14 +81,8 @@
 		4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		4A8AD4F71CDEE4220085984D /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		4AB9A3E01CDF6AB00021B6B8 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; indentWidth = 2; path = Gemfile; sourceTree = "<group>"; };
-		6E2368091F035295008E3231 /* UIViewController+TestUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+TestUtilities.swift"; path = "Test Setup Utilities/UIViewController+TestUtilities.swift"; sourceTree = "<group>"; };
-		6E2368131F043F37008E3231 /* HostApplicationForTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostApplicationForTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E2368151F043F37008E3231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E2368211F043F37008E3231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E2368291F043F5A008E3231 /* HostedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HostedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E23682B1F043F5A008E3231 /* UIAlertControllerTestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerTestingTests.swift; sourceTree = "<group>"; };
-		6E23682D1F043F5A008E3231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E2368351F046B26008E3231 /* QuotedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuotedString.swift; path = "Internal Utilities/QuotedString.swift"; sourceTree = "<group>"; };
+		6E2616EB1F18060200D9B507 /* UIAlertControllerTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerTestingTests.swift; path = "UIKit Testing Tests/UIAlertControllerTestingTests.swift"; sourceTree = "<group>"; };
 		6E8D4B071EB7C5DF001284FD /* FailureRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FailureRecording.swift; path = "Internal Utilities/FailureRecording.swift"; sourceTree = "<group>"; };
 		6E8D4B0B1EB7CF67001284FD /* UIControlTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlTestingTests.swift; path = "UIKit Testing Tests/UIControlTestingTests.swift"; sourceTree = "<group>"; };
 		6E8D4B181EB8138B001284FD /* UIControlAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlAssertions.swift; path = UIKitTesting/UIControlAssertions.swift; sourceTree = "<group>"; };
@@ -108,7 +91,6 @@
 		6E8D4B211EB941B9001284FD /* UISegmentedControlAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISegmentedControlAssertions.swift; path = UIKitTesting/UISegmentedControlAssertions.swift; sourceTree = "<group>"; };
 		6E8D4B231EB941F8001284FD /* Array+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Utilities.swift"; path = "Internal Utilities/Array+Utilities.swift"; sourceTree = "<group>"; };
 		6E98F0BA1F15931D009C15FB /* QuotedStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuotedStringTests.swift; path = "Internal Utilities Tests/QuotedStringTests.swift"; sourceTree = "<group>"; };
-		6E98F0BC1F16A330009C15FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AsyncTesting.swift"; sourceTree = "<group>"; };
 		6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncTestingTests.swift; path = "Asynchronous Testing Tests/AsyncTestingTests.swift"; sourceTree = "<group>"; };
 		6ED689001EFC2D3C0040C243 /* UIAlertControllerAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerAssertions.swift; path = UIKitTesting/UIAlertControllerAssertions.swift; sourceTree = "<group>"; };
@@ -132,21 +114,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E2368101F043F37008E3231 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6E2368261F043F59008E3231 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E2368341F045FFD008E3231 /* MetovaTestKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -156,8 +123,6 @@
 				4A3CFF111CDD600C003EF6F0 /* Related Files */,
 				4A3CFEF91CDD5F37003EF6F0 /* MetovaTestKit */,
 				4A3CFF051CDD5F37003EF6F0 /* MetovaTestKitTests */,
-				6E2368141F043F37008E3231 /* HostApplicationForTesting */,
-				6E23682A1F043F5A008E3231 /* HostedTests */,
 				4A3CFEF81CDD5F37003EF6F0 /* Products */,
 				4A3CFFCC1CDE1480003EF6F0 /* Dependencies */,
 			);
@@ -168,8 +133,6 @@
 			children = (
 				4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */,
 				4A3CFF011CDD5F37003EF6F0 /* MetovaTestKitTests.xctest */,
-				6E2368131F043F37008E3231 /* HostApplicationForTesting.app */,
-				6E2368291F043F5A008E3231 /* HostedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,7 +140,6 @@
 		4A3CFEF91CDD5F37003EF6F0 /* MetovaTestKit */ = {
 			isa = PBXGroup;
 			children = (
-				6E2368081F03527C008E3231 /* Test Setup Utilities */,
 				6EC1A6AE1EBCDD3F000DEFA6 /* AsynchronousTesting */,
 				6E8D4B041EB7AD1B001284FD /* Internal Utilities */,
 				6E8D4AFF1EB7AB70001284FD /* UIKitTesting */,
@@ -270,33 +232,6 @@
 			name = "Supporting Test Files";
 			sourceTree = "<group>";
 		};
-		6E2368081F03527C008E3231 /* Test Setup Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				6E2368091F035295008E3231 /* UIViewController+TestUtilities.swift */,
-			);
-			name = "Test Setup Utilities";
-			sourceTree = "<group>";
-		};
-		6E2368141F043F37008E3231 /* HostApplicationForTesting */ = {
-			isa = PBXGroup;
-			children = (
-				6E2368151F043F37008E3231 /* AppDelegate.swift */,
-				6E2368211F043F37008E3231 /* Info.plist */,
-			);
-			path = HostApplicationForTesting;
-			sourceTree = "<group>";
-		};
-		6E23682A1F043F5A008E3231 /* HostedTests */ = {
-			isa = PBXGroup;
-			children = (
-				6E23682B1F043F5A008E3231 /* UIAlertControllerTestingTests.swift */,
-				6E23682D1F043F5A008E3231 /* Info.plist */,
-				6E98F0BC1F16A330009C15FB /* README.md */,
-			);
-			path = HostedTests;
-			sourceTree = "<group>";
-		};
 		6E8D4AFF1EB7AB70001284FD /* UIKitTesting */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +257,7 @@
 			children = (
 				6E8D4B0B1EB7CF67001284FD /* UIControlTestingTests.swift */,
 				6EF9B23A1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift */,
+				6E2616EB1F18060200D9B507 /* UIAlertControllerTestingTests.swift */,
 			);
 			name = "UIKit Testing Tests";
 			sourceTree = "<group>";
@@ -414,41 +350,6 @@
 			productReference = 4A3CFF011CDD5F37003EF6F0 /* MetovaTestKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6E2368121F043F37008E3231 /* HostApplicationForTesting */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6E2368221F043F37008E3231 /* Build configuration list for PBXNativeTarget "HostApplicationForTesting" */;
-			buildPhases = (
-				6E23680F1F043F37008E3231 /* Sources */,
-				6E2368101F043F37008E3231 /* Frameworks */,
-				6E2368111F043F37008E3231 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HostApplicationForTesting;
-			productName = HostApplicationForTesting;
-			productReference = 6E2368131F043F37008E3231 /* HostApplicationForTesting.app */;
-			productType = "com.apple.product-type.application";
-		};
-		6E2368281F043F59008E3231 /* HostedTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6E2368301F043F5A008E3231 /* Build configuration list for PBXNativeTarget "HostedTests" */;
-			buildPhases = (
-				6E2368251F043F59008E3231 /* Sources */,
-				6E2368261F043F59008E3231 /* Frameworks */,
-				6E2368271F043F59008E3231 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6E23682F1F043F5A008E3231 /* PBXTargetDependency */,
-			);
-			name = HostedTests;
-			productName = HostedTests;
-			productReference = 6E2368291F043F5A008E3231 /* HostedTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -468,15 +369,6 @@
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0800;
 					};
-					6E2368121F043F37008E3231 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
-					};
-					6E2368281F043F59008E3231 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 6E2368121F043F37008E3231;
-					};
 				};
 			};
 			buildConfigurationList = 4A3CFEF11CDD5F37003EF6F0 /* Build configuration list for PBXProject "MetovaTestKit" */;
@@ -494,8 +386,6 @@
 			targets = (
 				4A3CFEF61CDD5F37003EF6F0 /* MetovaTestKit */,
 				4A3CFF001CDD5F37003EF6F0 /* MetovaTestKitTests */,
-				6E2368121F043F37008E3231 /* HostApplicationForTesting */,
-				6E2368281F043F59008E3231 /* HostedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -513,20 +403,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A8AD4F21CDEB6C30085984D /* TestableViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6E2368111F043F37008E3231 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6E2368271F043F59008E3231 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,7 +453,6 @@
 				4A8AD4ED1CDEA53A0085984D /* MTKTestable+UIViewController.swift in Sources */,
 				6E8D4B191EB8138B001284FD /* UIControlAssertions.swift in Sources */,
 				4A3CFF231CDD60CA003EF6F0 /* MTKExceptionTester.m in Sources */,
-				6E23680A1F035295008E3231 /* UIViewController+TestUtilities.swift in Sources */,
 				6E8D4B221EB941B9001284FD /* UISegmentedControlAssertions.swift in Sources */,
 				6E8D4B081EB7C5DF001284FD /* FailureRecording.swift in Sources */,
 				6EC1A6B01EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift in Sources */,
@@ -595,27 +470,11 @@
 				4A771FC91D4D534200EFD0B8 /* MTKBaseTestCase.swift in Sources */,
 				6EF9B23B1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift in Sources */,
 				4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */,
+				6E2616EC1F18060200D9B507 /* UIAlertControllerTestingTests.swift in Sources */,
 				6EC1A6B31EBCE2E2000DEFA6 /* AsyncTestingTests.swift in Sources */,
 				4A3CFFCE1CDE1548003EF6F0 /* ExceptionTestingTests.swift in Sources */,
 				6E8D4B0C1EB7CF68001284FD /* UIControlTestingTests.swift in Sources */,
 				6E8D4B1E1EB8D660001284FD /* FailureRecordingTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6E23680F1F043F37008E3231 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E2368161F043F37008E3231 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6E2368251F043F59008E3231 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E23682C1F043F5A008E3231 /* UIAlertControllerTestingTests.swift in Sources */,
-				6E2368331F0440EF008E3231 /* MTKBaseTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,11 +485,6 @@
 			isa = PBXTargetDependency;
 			target = 4A3CFEF61CDD5F37003EF6F0 /* MetovaTestKit */;
 			targetProxy = 4A3CFF031CDD5F37003EF6F0 /* PBXContainerItemProxy */;
-		};
-		6E23682F1F043F5A008E3231 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6E2368121F043F37008E3231 /* HostApplicationForTesting */;
-			targetProxy = 6E23682E1F043F5A008E3231 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -810,72 +664,6 @@
 			};
 			name = Release;
 		};
-		6E2368231F043F37008E3231 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = HostApplicationForTesting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.metova.HostApplicationForTesting;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		6E2368241F043F37008E3231 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = HostApplicationForTesting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.metova.HostApplicationForTesting;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		6E2368311F043F5A008E3231 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				INFOPLIST_FILE = HostedTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.metova.HostedTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HostApplicationForTesting.app/HostApplicationForTesting";
-			};
-			name = Debug;
-		};
-		6E2368321F043F5A008E3231 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				INFOPLIST_FILE = HostedTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.metova.HostedTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HostApplicationForTesting.app/HostApplicationForTesting";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -902,24 +690,6 @@
 			buildConfigurations = (
 				4A3CFF0F1CDD5F37003EF6F0 /* Debug */,
 				4A3CFF101CDD5F37003EF6F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6E2368221F043F37008E3231 /* Build configuration list for PBXNativeTarget "HostApplicationForTesting" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6E2368231F043F37008E3231 /* Debug */,
-				6E2368241F043F37008E3231 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6E2368301F043F5A008E3231 /* Build configuration list for PBXNativeTarget "HostedTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6E2368311F043F5A008E3231 /* Debug */,
-				6E2368321F043F5A008E3231 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

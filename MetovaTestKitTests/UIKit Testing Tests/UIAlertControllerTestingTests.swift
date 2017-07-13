@@ -1,6 +1,6 @@
 //
 //  UIAlertControllerTestingTests.swift
-//  HostedTests
+//  MetovaTestKitTests
 //
 //  Created by Logan Gauthier on 6/28/17.
 //  Copyright © 2017 Metova. All rights reserved.
@@ -30,8 +30,6 @@
 import XCTest
 import MetovaTestKit
 
-@testable import HostApplicationForTesting
-
 class UIAlertControllerTestingTests: MTKBaseTestCase {
     
     // MARK: Properties
@@ -45,7 +43,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         super.setUp()
         
         testVC = UIViewController()
-        testVC.addToWindow()
+        testWindow.addSubview(testVC.view)
     }
     
     // MARK: Test Presentation
