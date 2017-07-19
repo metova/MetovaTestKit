@@ -99,6 +99,11 @@ public struct ExpectedAlertAction {
     
     // MARK: Initialization
     
+    /// Initialize an instance of `ExpectedAlertAction`.
+    ///
+    /// - Parameters:
+    ///   - title: The expected title of the `UIAlertAction` you are comparing against.
+    ///   - style: The expected style of the `UIAlertAction` you are comparing against.
     public init(title: String, style: UIAlertActionStyle) {
         
         self.title = title
