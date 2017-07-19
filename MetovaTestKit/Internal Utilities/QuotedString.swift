@@ -1,8 +1,8 @@
 //
-//  Array+Utilities.swift
+//  QuotedString.swift
 //  MetovaTestKit
 //
-//  Created by Logan Gauthier on 5/2/17.
+//  Created by Logan Gauthier on 6/28/17.
 //  Copyright © 2017 Metova. All rights reserved.
 //
 //  MIT License
@@ -29,20 +29,15 @@
 
 import Foundation
 
-extension Sequence where Iterator.Element == String {
+/// Utility for producing descriptions for `String?` types without being wrapped in "Optional()".
+///
+/// - Parameter string: An optional String.
+/// - Returns: The unwrapped value in quotes, if it exists. Otherwise, "nil".
+func quotedString(_ string: String?) -> String {
     
-    /// Convenience method for generating a comma separated list of items in qutoes. The last item will be preceded with "and" as well as an Oxford comma.
-    ///
-    /// - Returns: A comma separated list of items where each item is surrounded by quotes.
-    func commaSeparatedQuotedList() -> String {
-        
-        var itemsInQuotes = map { "\"\($0)\"" }
-        
-        if itemsInQuotes.count > 1 {
-            let lastItem = itemsInQuotes.removeLast()
-            return itemsInQuotes.joined(separator: ", ") + ", and \(lastItem)"
-        }
-        
-        return itemsInQuotes.joined(separator: ", ")
+    guard let string = string else {
+        return "nil"
     }
+    
+    return "\"\(string)\""
 }

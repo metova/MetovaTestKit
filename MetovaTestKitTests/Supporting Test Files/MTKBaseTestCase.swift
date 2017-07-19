@@ -51,17 +51,49 @@ struct TestFailureExpectation {
 }
 
 class MTKBaseTestCase: XCTestCase {
-
+    
+    // MARK: Properties
+    
+    var testWindow = UIWindow(frame: UIScreen.main.bounds)
     private var expectingFailure: TestFailureExpectation?
+    private var descriptionForUnexpectedFailure: String?
+    
+    // MARK: Setup/Teardown
+    
+    override func setUp() {
+        
+        super.setUp()
+        
+        testWindow = UIWindow(frame: UIScreen.main.bounds)
+    }
+    
+    // MARK: Failure Expectations
     
     override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
         
-        if let expectedFailure = expectingFailure, expected
-            && (expectedFailure.description == nil || description == expectedFailure.description)
-            && (expectedFailure.filePath == nil || expectedFailure.filePath == filePath)
-            && (expectedFailure.lineNumber == nil || expectedFailure.lineNumber == lineNumber) {
+        if let expectedFailure = expectingFailure, expected {
             
-            expectingFailure = nil
+            var descriptionsForUnexpectedFailures = [String]()
+            
+            if let expectedFailureDescription = expectedFailure.description, description != expectedFailureDescription {
+                descriptionsForUnexpectedFailures.append("Description mismatch - Expected: `\(expectedFailureDescription)` Actual: `\(description)`.")
+            }
+            
+            if let expectedFailureFilePath = expectedFailure.filePath, filePath != expectedFailureFilePath {
+                descriptionsForUnexpectedFailures.append("File Path mismatch - Expected: \(expectedFailureFilePath) Actual: \(filePath).")
+            }
+            
+            if let expectedFailureLineNumber = expectedFailure.lineNumber, lineNumber != expectedFailureLineNumber {
+                descriptionsForUnexpectedFailures.append("Line Number mismatch - Expected: \(expectedFailureLineNumber) Actual: \(lineNumber).")
+            }
+            
+            if descriptionsForUnexpectedFailures.isEmpty {
+                expectingFailure = nil
+            }
+            else {
+                descriptionForUnexpectedFailure = descriptionsForUnexpectedFailures.joined(separator: " ")
+                super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: true)
+            }
         }
         else {
             super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
@@ -75,7 +107,8 @@ class MTKBaseTestCase: XCTestCase {
         
         if expectingFailure != nil {
             expectingFailure = nil
-            let message = message() ?? "Failed to catch test failure in block."
+            let message = [message(), descriptionForUnexpectedFailure].flatMap({ $0 }).joined(separator: " ")
+            descriptionForUnexpectedFailure = nil
             XCTFail(message, file: file, line: line)
         }
     }
