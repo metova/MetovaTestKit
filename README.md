@@ -99,6 +99,14 @@ Verify that a `UISegmentedControl` has the segment titles you are expecting.
 MTKAssertSegmentedControl(segmentedControl, hasSegmentTitles: ["Followers", "Following"])
 ```
  
+##### UIBarButtonItem
+ 
+Verify that a bar button item has the expected target/action pair and that the target actually responds to the selector that will be sent to it. 
+
+```swift
+MTKAssertBarButtonItem(testVC.editBarButtonItem, sends: #selector(MyViewController.didTapEditButton(_:)), to: testVC) 
+```
+ 
 #### Testing Constraints
 
 You can use Metova Test Kit to assert that you do not have broken autolayout constraints.

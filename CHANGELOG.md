@@ -6,6 +6,7 @@
 - Added assertion for UISegmentedControl segment titles.
 - Added async testing utility.
 - Added assertion for displaying UIAlertControllers.
+- Added assertion for UIBarButtonItem target/action.
 
 ## 1.0.0
 
