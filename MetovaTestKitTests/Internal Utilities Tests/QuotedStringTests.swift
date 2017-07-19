@@ -36,6 +36,8 @@ class QuotedStringTests: MTKBaseTestCase {
     func testQuotedString() {
         
         XCTAssertEqual(quotedString("value"), "\"value\"")
+        XCTAssertEqual(quotedString("\"string that already has quotes\""), "\"\"string that already has quotes\"\"")
+        XCTAssertEqual(quotedString(""), "\"\"")
         XCTAssertEqual(quotedString(nil), "nil")
     }
 }
