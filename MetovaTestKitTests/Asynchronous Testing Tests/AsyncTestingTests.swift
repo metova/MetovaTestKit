@@ -83,17 +83,17 @@ class AsyncTestingTests: MTKBaseTestCase {
             }
             
             if let queue = queue {
-                MTKWaitThenContinueTest(after: 10, on: queue, testAction: testAction)
+                MTKWaitThenContinueTest(after: 3, on: queue, testAction: testAction)
             }
             else {
-                MTKWaitThenContinueTest(after: 10, testAction: testAction)
+                MTKWaitThenContinueTest(after: 3, testAction: testAction)
             }
             
-            waitDurationTester.assertActualDurationMatches(expectedDuration: 10, line: line)
+            waitDurationTester.assertActualDurationMatches(expectedDuration: 3, line: line)
         }
         
         performTest()
-        performTest(usingSpecificQueue: .global())
+        performTest(usingSpecificQueue: .global(qos: .userInteractive))
     }
     
     func testAsyncTestFailsWhenAssertionFailsInTheTestActionClosure() {
@@ -107,16 +107,16 @@ class AsyncTestingTests: MTKBaseTestCase {
                 let waitDurationTester = WaitDurationTester()
                 waitDurationTester.beginRecordingDuration()
                 
-                MTKWaitThenContinueTest(after: 10) {
+                MTKWaitThenContinueTest(after: 3) {
                     waitDurationTester.endRecordingDuration(line: line)
                     self.recordFailure(withDescription: "Description", inFile: "File", atLine: 1, expected: true)
                 }
                 
-                waitDurationTester.assertActualDurationMatches(expectedDuration: 10, line: line)
+                waitDurationTester.assertActualDurationMatches(expectedDuration: 3, line: line)
             }
         }
         
         performTest()
-        performTest(usingSpecificQueue: .global())
+        performTest(usingSpecificQueue: .global(qos: .userInteractive))
     }
 }
