@@ -24,6 +24,8 @@
 		4A8AD4F11CDEB6C30085984D /* TestableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4EF1CDEB6C30085984D /* TestableViewController.swift */; };
 		4A8AD4F21CDEB6C30085984D /* TestableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F01CDEB6C30085984D /* TestableViewController.xib */; };
 		4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */; };
+		6E0D0B441F1FEC7A00600571 /* UIBarButtonItemAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D0B431F1FEC7A00600571 /* UIBarButtonItemAssertions.swift */; };
+		6E0D0B461F1FEE3900600571 /* UIBarButtonItemTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D0B451F1FEE3900600571 /* UIBarButtonItemTestingTests.swift */; };
 		6E2368361F046B26008E3231 /* QuotedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2368351F046B26008E3231 /* QuotedString.swift */; };
 		6E2616EC1F18060200D9B507 /* UIAlertControllerTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2616EB1F18060200D9B507 /* UIAlertControllerTestingTests.swift */; };
 		6E8D4B081EB7C5DF001284FD /* FailureRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8D4B071EB7C5DF001284FD /* FailureRecording.swift */; };
@@ -81,6 +83,8 @@
 		4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		4A8AD4F71CDEE4220085984D /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		4AB9A3E01CDF6AB00021B6B8 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; indentWidth = 2; path = Gemfile; sourceTree = "<group>"; };
+		6E0D0B431F1FEC7A00600571 /* UIBarButtonItemAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemAssertions.swift; sourceTree = "<group>"; };
+		6E0D0B451F1FEE3900600571 /* UIBarButtonItemTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTestingTests.swift; sourceTree = "<group>"; };
 		6E2368351F046B26008E3231 /* QuotedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuotedString.swift; path = "Internal Utilities/QuotedString.swift"; sourceTree = "<group>"; };
 		6E2616EB1F18060200D9B507 /* UIAlertControllerTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerTestingTests.swift; path = "UIKit Testing Tests/UIAlertControllerTestingTests.swift"; sourceTree = "<group>"; };
 		6E8D4B071EB7C5DF001284FD /* FailureRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FailureRecording.swift; path = "Internal Utilities/FailureRecording.swift"; sourceTree = "<group>"; };
@@ -235,9 +239,10 @@
 		6E8D4AFF1EB7AB70001284FD /* UIKitTesting */ = {
 			isa = PBXGroup;
 			children = (
+				6ED689001EFC2D3C0040C243 /* UIAlertControllerAssertions.swift */,
+				6E0D0B431F1FEC7A00600571 /* UIBarButtonItemAssertions.swift */,
 				6E8D4B181EB8138B001284FD /* UIControlAssertions.swift */,
 				6E8D4B211EB941B9001284FD /* UISegmentedControlAssertions.swift */,
-				6ED689001EFC2D3C0040C243 /* UIAlertControllerAssertions.swift */,
 			);
 			name = UIKitTesting;
 			sourceTree = "<group>";
@@ -255,9 +260,10 @@
 		6E8D4B171EB81064001284FD /* UIKit Testing Tests */ = {
 			isa = PBXGroup;
 			children = (
+				6E2616EB1F18060200D9B507 /* UIAlertControllerTestingTests.swift */,
+				6E0D0B451F1FEE3900600571 /* UIBarButtonItemTestingTests.swift */,
 				6E8D4B0B1EB7CF67001284FD /* UIControlTestingTests.swift */,
 				6EF9B23A1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift */,
-				6E2616EB1F18060200D9B507 /* UIAlertControllerTestingTests.swift */,
 			);
 			name = "UIKit Testing Tests";
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E8D4B241EB941F8001284FD /* Array+Utilities.swift in Sources */,
+				6E0D0B441F1FEC7A00600571 /* UIBarButtonItemAssertions.swift in Sources */,
 				6E2368361F046B26008E3231 /* QuotedString.swift in Sources */,
 				4A771F331D4C155700EFD0B8 /* MTKConstraintTester.swift in Sources */,
 				4A771F311D4C144400EFD0B8 /* MTKBrokenConstraintCounter.m in Sources */,
@@ -471,6 +478,7 @@
 				6EF9B23B1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift in Sources */,
 				4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */,
 				6E2616EC1F18060200D9B507 /* UIAlertControllerTestingTests.swift in Sources */,
+				6E0D0B461F1FEE3900600571 /* UIBarButtonItemTestingTests.swift in Sources */,
 				6EC1A6B31EBCE2E2000DEFA6 /* AsyncTestingTests.swift in Sources */,
 				4A3CFFCE1CDE1548003EF6F0 /* ExceptionTestingTests.swift in Sources */,
 				6E8D4B0C1EB7CF68001284FD /* UIControlTestingTests.swift in Sources */,
