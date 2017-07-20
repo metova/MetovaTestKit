@@ -59,25 +59,25 @@
  
      }
  
- This allows `setUp` & `tearDown` code to exist across multiple files.  Moreover, `setUp` & `tearDown` logic could now be inherited.  As well, `MTKTestable` protocol extensions could be written to generalize some of the `setUp` & `tearDown` logic for large collections of types.
+ This allows `setUp` & `tearDown` code to exist across multiple files. Moreover, `setUp` & `tearDown` logic could now be inherited. As well, `MTKTestable` protocol extensions could be written to generalize some of the `setUp` & `tearDown` logic for large collections of types.
  
  - Note 
- `UIViewController` and its subclasses get a free implementation of `test(_:)` as long as they have implemented `instanceForTesting()`.  The default `test(_:)` implementation for view controllers calls `loadView()` and `viewDidLoad()` before running the `testBlock`.
+ `UIViewController` and its subclasses get a free implementation of `test(_:)` as long as they have implemented `instanceForTesting()`. The default `test(_:)` implementation for view controllers calls `loadView()` and `viewDidLoad()` before running the `testBlock`.
  
  */
 public protocol MTKTestable {
     
-    associatedtype T: Any
+    associatedtype TestableItem: Any
     
     /**
      Asks the `MTKTestable` type to run the given test block on an instance of the `MTKTestable` type.
      
      - parameter testBlock: A block of code containing tests to run.
      */
-    static func test(_ testBlock: (T) -> Void)
+    static func test(_ testBlock: (TestableItem) -> Void)
     
     /**
-     Asks the `MTKTestable` type for a new instance in order to be used for testing.  This method should provide a new instance every time.
+     Asks the `MTKTestable` type for a new instance in order to be used for testing. This method should provide a new instance every time.
      
      - returns: A new instance, ready for testing.
      */

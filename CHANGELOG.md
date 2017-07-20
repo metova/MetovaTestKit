@@ -1,5 +1,13 @@
 # Metova Test Kit CHANGELOG
 
+## 1.1.0
+
+- Added assertion for UIControl target/action.
+- Added assertion for UISegmentedControl segment titles.
+- Added async testing utility.
+- Added assertion for displaying UIAlertControllers.
+- Added assertion for UIBarButtonItem target/action.
+
 ## 1.0.0
 
 - Converted to Swift 3.0.

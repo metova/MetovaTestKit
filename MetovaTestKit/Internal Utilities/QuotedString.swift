@@ -1,9 +1,9 @@
 //
-//  ObjectiveCExceptionTester.h
+//  QuotedString.swift
 //  MetovaTestKit
 //
-//  Created by Nick Griffith on 5/6/16.
-//  Copyright © 2016 Metova. All rights reserved.
+//  Created by Logan Gauthier on 6/28/17.
+//  Copyright © 2017 Metova. All rights reserved.
 //
 //  MIT License
 //
@@ -27,22 +27,17 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#pragma GCC visibility push(hidden)
+import Foundation
 
-#import <Foundation/Foundation.h>
-
-/**
- Synchronously tests the provided block for exceptions. If it would throw an exception, it catches the exception and returns it.
- 
- @param testBlock The block to test.
-
- @return The caught exception. If no exception was thrown, returns `nil`.
- 
- @warning You should not rely on `XCTestExpectation` fulfillment in this block. If an exception is thrown before fulfillment, the expectation will never be fulfilled. `XCTestExpectation` should be unnecessary as the block is executed synchronously.
- 
- @warning This will only catch Objective-C-style exceptions. Swift's `fatalError`'s are not caught by this test.
- 
- */
-NSException * __nullable MTKCatchException(__attribute__((noescape)) void (^ __nonnull testBlock)());
-
-#pragma GCC visibility pop
+/// Utility for producing descriptions for `String?` types without being wrapped in "Optional()".
+///
+/// - Parameter string: An optional String.
+/// - Returns: The unwrapped value in quotes, if it exists. Otherwise, "nil".
+func quotedString(_ string: String?) -> String {
+    
+    guard let string = string else {
+        return "nil"
+    }
+    
+    return "\"\(string)\""
+}

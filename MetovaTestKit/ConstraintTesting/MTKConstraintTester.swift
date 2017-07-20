@@ -30,7 +30,7 @@
 import XCTest
 
 /**
-  Synchronously tests the provided block for broken constraints.  If any constraints are broken, the test fails.  Otherwise, it passes.
+ Synchronously tests the provided block for broken constraints. If any constraints are broken, the test fails. Otherwise, it passes.
  
  - parameter message:   The message to log upon test failure.
  - parameter file:      The file the test is called from.

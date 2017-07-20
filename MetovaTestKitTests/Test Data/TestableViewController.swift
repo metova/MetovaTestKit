@@ -30,7 +30,7 @@
 import UIKit
 @testable import MetovaTestKit
 
-// This class exists for the purposes of testing the MTKTestable protocol.  In a real project, the class definition would exist in the main target.  The MTKTestable extension would exist in a separate file and only part of the test target.
+// This class exists for the purposes of testing the MTKTestable protocol. In a real project, the class definition would exist in the main target. The MTKTestable extension would exist in a separate file and only part of the test target.
 
 class TestableViewController: UIViewController {
 
