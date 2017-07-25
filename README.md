@@ -3,7 +3,7 @@
 <p align="center">
  <a href="https://travis-ci.org/metova/MetovaTestKit" target="_blank"><img src="https://travis-ci.org/metova/MetovaTestKit.svg?branch=master" alt="Build Status"></a> 
  <a href="https://cocoapods.org/pods/MTK" target="_blank"><img src="https://img.shields.io/cocoapods/v/MTK.svg" alt="CocoaPods Compatible"/></a> 
- <a href="http://metova.github.io/MetovaTestKit/docs" target="_blank"><img src="https://cdn.rawgit.com/metova/MetovaTestKit/master/docs/badge.svg" alt="Documentation"/></a>
+ <a href="http://metova.github.io/MetovaTestKit/" target="_blank"><img src="https://cdn.rawgit.com/metova/MetovaTestKit/master/docs/badge.svg" alt="Documentation"/></a>
  <a href="https://coveralls.io/github/metova/MetovaTestKit?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/metova/MetovaTestKit/badge.svg?branch=master&dummy=no_cache_please_1" alt="Coverage Status"/></a>
  <a href="http://cocoadocs.org/docsets/MTK" target="_blank"><img src="https://img.shields.io/cocoapods/p/MTK.svg?style=flat" alt="Platform"/></a>
  <a href="http://twitter.com/metova" target="_blank"><img src="https://img.shields.io/badge/twitter-@Metova-3CAC84.svg" alt="Twitter"/></a>
@@ -234,7 +234,7 @@ MTKWaitThenContinueTest(after: 1) {
 
 # Documentation
 
-Documentation can be found [here](http://metova.github.io/MetovaTestKit/docs).
+Documentation can be found [here](http://metova.github.io/MetovaTestKit/).
  
 -----
 
