@@ -1,9 +1,9 @@
-[![MetovaTestKit](Assets/MetovaTestKit.png)](https://cocoapods.org/pods/MTK)
+[![MetovaTestKit](https://github.com/metova/MetovaTestKit/blob/master/Assets/MetovaTestKit.png?raw=true)](https://cocoapods.org/pods/MTK)
 
 <p align="center">
  <a href="https://travis-ci.org/metova/MetovaTestKit" target="_blank"><img src="https://travis-ci.org/metova/MetovaTestKit.svg?branch=master" alt="Build Status"></a> 
  <a href="https://cocoapods.org/pods/MTK" target="_blank"><img src="https://img.shields.io/cocoapods/v/MTK.svg" alt="CocoaPods Compatible"/></a> 
- <a href="http://cocoadocs.org/docsets/MTK/" target="_blank"><img src="https://img.shields.io/cocoapods/metrics/doc-percent/MTK.svg" alt="Documentation"/></a>
+ <a href="http://metova.github.io/MetovaTestKit" target="_blank"><img src="https://cdn.rawgit.com/metova/MetovaTestKit/master/docs/badge.svg?raw=true" alt="Documentation"/></a>
  <a href="https://coveralls.io/github/metova/MetovaTestKit?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/metova/MetovaTestKit/badge.svg?branch=master&dummy=no_cache_please_1" alt="Coverage Status"/></a>
  <a href="http://cocoadocs.org/docsets/MTK" target="_blank"><img src="https://img.shields.io/cocoapods/p/MTK.svg?style=flat" alt="Platform"/></a>
  <a href="http://twitter.com/metova" target="_blank"><img src="https://img.shields.io/badge/twitter-@Metova-3CAC84.svg" alt="Twitter"/></a>
@@ -24,6 +24,7 @@ Metova Test Kit is a collection of useful test helpers designed to ease the burd
     - [Testing Auto Layout Constraints](#testing-auto-layout-constraints)
     - [Testing Exceptions](#testing-exceptions)
     - [Asynchronous Testing](#asynchronous-testing)
+- [Documentation](#documentation)
 - [Credits](#credits)
 - [License](#license)
 
@@ -228,6 +229,12 @@ MTKWaitThenContinueTest(after: 1) {
     XCTAssertTrue(testViewController.searchButton.isEnabled, "Once the request is complete, the search button should be re-enabled.") 
 }
 ```
+ 
+-----
+
+# Documentation
+
+Documentation can be found [here](http://metova.github.io/MetovaTestKit).
  
 -----
 
