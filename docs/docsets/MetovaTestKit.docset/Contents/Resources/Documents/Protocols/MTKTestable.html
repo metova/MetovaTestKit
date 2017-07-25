@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MTKTestable Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/MTKTestable" class="dashAnchor"></a>
+
+    <a title="MTKTestable Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          MetovaTestKit Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/metova/MetovaTestKit">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MetovaTestKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      MTKTestable Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIAlertActionStyle.html">UIAlertActionStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIAlertControllerStyle.html">UIAlertControllerStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:F13MetovaTestKit25MTKAssertAlertIsPresentedFT2byCSo16UIViewController5styleOSC22UIAlertControllerStyle5titleGSqSS_7messageGSqSS_7actionsGSaVS_19ExpectedAlertAction_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertAlertIsPresented(by:style:title:message:actions:_:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:F13MetovaTestKit22MTKAssertBarButtonItemFTCSo15UIBarButtonItem5sendsV10ObjectiveC8Selector2toCSo8NSObjectKT_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertBarButtonItem(_:sends:to:_:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:F13MetovaTestKit16MTKAssertControlFTCSo9UIControl5sendsV10ObjectiveC8Selector2toCSo8NSObject3forVSC15UIControlEventsKT_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertControl(_:sends:to:for:_:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:F13MetovaTestKit18MTKAssertExceptionFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__GSqCSo11NSException_">MTKAssertException(message:file:line:testBlock:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:F13MetovaTestKit28MTKAssertNoBrokenConstraintsFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__Su">MTKAssertNoBrokenConstraints(message:file:line:testBlock:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:F13MetovaTestKit20MTKAssertNoExceptionFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__GSqCSo11NSException_">MTKAssertNoException(message:file:line:testBlock:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:F13MetovaTestKit25MTKAssertSegmentedControlFTCSo18UISegmentedControl16hasSegmentTitlesGSaSS_KT_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertSegmentedControl(_:hasSegmentTitles:_:file:line:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MTKTestable.html">MTKTestable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ExpectedAlertAction.html">ExpectedAlertAction</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>MTKTestable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">MTKTestable</span></code></pre>
+
+                </div>
+              </div>
+            <p>The MTKTestable protocol provides an alternative, functional approach to <code>XCTest</code>&lsquo;s built in <code>setUp</code> &amp; <code>tearDown</code> methods for handling unit tests.</p>
+
+<p><code>instanceForTesting()</code> should provide a new instance for each call.</p>
+
+<p><code>test(_:)</code> should effectively follow this pattern:</p>
+<pre class="highlight plaintext"><code>static func test(_ testBlock: (Self) -&gt; Void) {
+
+    let testInstance = instanceForTesting()
+
+    // any code that would previously live in setUp
+
+    testBlock(testInstance)
+
+    // any code that would previously live in tearDown
+
+}
+</code></pre>
+
+<p>With these methods implemented, our test cases now look like this:</p>
+<pre class="highlight plaintext"><code>func testThings() {
+
+    FooBarClass.test { testInstance in
+
+        XCTAssertNil(testInstance.thingThatShouldBeNil)
+
+    }
+
+}
+</code></pre>
+
+<p>This allows <code>setUp</code> &amp; <code>tearDown</code> code to exist across multiple files. Moreover, <code>setUp</code> &amp; <code>tearDown</code> logic could now be inherited. As well, <code>MTKTestable</code> protocol extensions could be written to generalize some of the <code>setUp</code> &amp; <code>tearDown</code> logic for large collections of types.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note 
+<code>UIViewController</code> and its subclasses get a free implementation of <code>test(_:)</code> as long as they have implemented <code>instanceForTesting()</code>. The default <code>test(_:)</code> implementation for view controllers calls <code>loadView()</code> and <code>viewDidLoad()</code> before running the <code>testBlock</code>.
+
+</div>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP13MetovaTestKit11MTKTestable4testFFwx12TestableItemT_T_"></a>
+                    <a name="//apple_ref/swift/Method/test(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP13MetovaTestKit11MTKTestable4testFFwx12TestableItemT_T_">test(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asks the <code>MTKTestable</code> type to run the given test block on an instance of the <code>MTKTestable</code> type.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Instantiates a new testable instance of a <code>UIViewController</code> or subclass using <code>instanceForTesting</code>, executes <code>loadView</code> &amp; <code>viewDidLoad</code> to prepare the view controller for testing, and then runs the <code>testBlock</code> with this new instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">test</span><span class="p">(</span><span class="n">_</span> <span class="nv">testBlock</span><span class="p">:</span> <span class="p">(</span><span class="kt">TestableItem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>testBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block of code containing tests to run.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP13MetovaTestKit11MTKTestable18instanceForTestingFT_x"></a>
+                    <a name="//apple_ref/swift/Method/instanceForTesting()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP13MetovaTestKit11MTKTestable18instanceForTestingFT_x">instanceForTesting()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asks the <code>MTKTestable</code> type for a new instance in order to be used for testing. This method should provide a new instance every time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">instanceForTesting</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new instance, ready for testing.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="http://metova.com" target="_blank" rel="external">Nick Griffith and Logan Gauthier</a>. All rights reserved. (Last updated: 2017-07-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

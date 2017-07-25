@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Functions  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          MetovaTestKit Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/metova/MetovaTestKit">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">MetovaTestKit Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Functions  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIAlertActionStyle.html">UIAlertActionStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIAlertControllerStyle.html">UIAlertControllerStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:F13MetovaTestKit25MTKAssertAlertIsPresentedFT2byCSo16UIViewController5styleOSC22UIAlertControllerStyle5titleGSqSS_7messageGSqSS_7actionsGSaVS_19ExpectedAlertAction_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertAlertIsPresented(by:style:title:message:actions:_:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:F13MetovaTestKit22MTKAssertBarButtonItemFTCSo15UIBarButtonItem5sendsV10ObjectiveC8Selector2toCSo8NSObjectKT_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertBarButtonItem(_:sends:to:_:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:F13MetovaTestKit16MTKAssertControlFTCSo9UIControl5sendsV10ObjectiveC8Selector2toCSo8NSObject3forVSC15UIControlEventsKT_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertControl(_:sends:to:for:_:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:F13MetovaTestKit18MTKAssertExceptionFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__GSqCSo11NSException_">MTKAssertException(message:file:line:testBlock:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:F13MetovaTestKit28MTKAssertNoBrokenConstraintsFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__Su">MTKAssertNoBrokenConstraints(message:file:line:testBlock:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:F13MetovaTestKit20MTKAssertNoExceptionFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__GSqCSo11NSException_">MTKAssertNoException(message:file:line:testBlock:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:F13MetovaTestKit25MTKAssertSegmentedControlFTCSo18UISegmentedControl16hasSegmentTitlesGSaSS_KT_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertSegmentedControl(_:hasSegmentTitles:_:file:line:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MTKTestable.html">MTKTestable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ExpectedAlertAction.html">ExpectedAlertAction</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Functions</h1>
+            <p>The following functions are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F13MetovaTestKit22MTKAssertBarButtonItemFTCSo15UIBarButtonItem5sendsV10ObjectiveC8Selector2toCSo8NSObjectKT_GSqSS_4fileVs12StaticString4lineSu_T_"></a>
+                    <a name="//apple_ref/swift/Function/MTKAssertBarButtonItem(_:sends:to:_:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F13MetovaTestKit22MTKAssertBarButtonItemFTCSo15UIBarButtonItem5sendsV10ObjectiveC8Selector2toCSo8NSObjectKT_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertBarButtonItem(_:sends:to:_:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Passes if the bar button item has the specified target/action and the target responds to the action. Fails otherwise.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">MTKAssertBarButtonItem</span><span class="p">(</span><span class="n">_</span> <span class="nv">barButtonItem</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="p">,</span> <span class="n">sends</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">to</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="n">_</span> <span class="nv">failureMessage</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>barButtonItem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bar button item to test.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message that should be sent to <code>target</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>target</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object that the <code>action</code> should be sent to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failureMessage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log upon failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the file to report the failure for. The default value will report the file from which this method is called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The line number to report the failure for. The default value will report the line number of the calling site.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F13MetovaTestKit28MTKAssertNoBrokenConstraintsFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__Su"></a>
+                    <a name="//apple_ref/swift/Function/MTKAssertNoBrokenConstraints(message:file:line:testBlock:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F13MetovaTestKit28MTKAssertNoBrokenConstraintsFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__Su">MTKAssertNoBrokenConstraints(message:file:line:testBlock:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously tests the provided block for broken constraints. If any constraints are broken, the test fails. Otherwise, it passes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@discardableResult</span> <span class="kd">public</span> <span class="kd">func</span> <span class="kt">MTKAssertNoBrokenConstraints</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="nv">testBlock</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log upon test failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The file the test is called from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The line number the test is called from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>testBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to test.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Number of broken constraints during test</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F13MetovaTestKit25MTKAssertAlertIsPresentedFT2byCSo16UIViewController5styleOSC22UIAlertControllerStyle5titleGSqSS_7messageGSqSS_7actionsGSaVS_19ExpectedAlertAction_GSqSS_4fileVs12StaticString4lineSu_T_"></a>
+                    <a name="//apple_ref/swift/Function/MTKAssertAlertIsPresented(by:style:title:message:actions:_:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F13MetovaTestKit25MTKAssertAlertIsPresentedFT2byCSo16UIViewController5styleOSC22UIAlertControllerStyle5titleGSqSS_7messageGSqSS_7actionsGSaVS_19ExpectedAlertAction_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertAlertIsPresented(by:style:title:message:actions:_:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Test that a view controller presented an alert with the specified title, message, action titles, and action styles.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">MTKAssertAlertIsPresented</span><span class="p">(</span><span class="n">by</span> <span class="nv">presenter</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIAlertControllerStyle</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">actions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="Structs/ExpectedAlertAction.html">ExpectedAlertAction</a></span><span class="p">],</span> <span class="n">_</span> <span class="nv">failureMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>presenter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view controller expected to have presented the alert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The expected style of the alert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The expected title of the alert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The expected message of the alert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>actions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of expected actions in the expected order.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failureMessage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log upon failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the file to report the failure for. The default value will report the file from which this method is called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The line number to report the failure for. The default value will report the line number of the calling site.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F13MetovaTestKit20MTKAssertNoExceptionFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__GSqCSo11NSException_"></a>
+                    <a name="//apple_ref/swift/Function/MTKAssertNoException(message:file:line:testBlock:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F13MetovaTestKit20MTKAssertNoExceptionFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__GSqCSo11NSException_">MTKAssertNoException(message:file:line:testBlock:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously tests the provided block for exceptions. If it would throw an exception, the exception is caught and the test fails. Otherwise, the test passes.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>You should not rely on <code>XCTestExpectation</code> fulfillment in this block. If an exception is thrown before fulfillment, the expectation will never be fulfilled. <code>XCTestExpectation</code> should be unnecessary as the block is executed synchronously.</p>
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This will only catch Objective-C-style exceptions. Swift&rsquo;s <code>fatalError</code>s are not caught by this test.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@discardableResult</span> <span class="kd">public</span> <span class="kd">func</span> <span class="kt">MTKAssertNoException</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="nv">testBlock</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSException</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log upon test failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The file the test is called from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The line number the test is called from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>testBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to test.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The caught exception. If no exception was thrown, returns <code>nil</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F13MetovaTestKit18MTKAssertExceptionFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__GSqCSo11NSException_"></a>
+                    <a name="//apple_ref/swift/Function/MTKAssertException(message:file:line:testBlock:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F13MetovaTestKit18MTKAssertExceptionFT7messageKT_GSqSS_4fileVs12StaticString4lineSu9testBlockFT_T__GSqCSo11NSException_">MTKAssertException(message:file:line:testBlock:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synchronously tests the provided block for exceptions. If it does not throw an exception, the test fails. If it would throw an exception, the exception is caught and the test passes. Any code below the thrown exception is not executed.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>You should not rely on <code>XCTestExpectation</code> fulfillment in this block. If an exception is thrown before fulfillment, the expectation will never be fulfilled. <code>XCTestExpectation</code> should be unnecessary as the block is executed synchronously.</p>
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This will only catch Objective-C-style exceptions. Swift&rsquo;s <code>fatalError</code>s are not caught by this test.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@discardableResult</span> <span class="kd">public</span> <span class="kd">func</span> <span class="kt">MTKAssertException</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="nv">testBlock</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSException</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log upon test failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The file the test is called from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The line number the test is called from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>testBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to test.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The caught exception. If no exception was thrown, returns <code>nil</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F13MetovaTestKit16MTKAssertControlFTCSo9UIControl5sendsV10ObjectiveC8Selector2toCSo8NSObject3forVSC15UIControlEventsKT_GSqSS_4fileVs12StaticString4lineSu_T_"></a>
+                    <a name="//apple_ref/swift/Function/MTKAssertControl(_:sends:to:for:_:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F13MetovaTestKit16MTKAssertControlFTCSo9UIControl5sendsV10ObjectiveC8Selector2toCSo8NSObject3forVSC15UIControlEventsKT_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertControl(_:sends:to:for:_:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Test that a control has an action method added for a particular target and event. Passes if the control has the specified target/action/event added. Fails otherwise.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">MTKAssertControl</span><span class="p">(</span><span class="n">_</span> <span class="nv">control</span><span class="p">:</span> <span class="kt">UIControl</span><span class="p">,</span> <span class="n">sends</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">to</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="k">for</span> <span class="nv">controlEvent</span><span class="p">:</span> <span class="kt">UIControlEvents</span><span class="p">,</span> <span class="n">_</span> <span class="nv">failureMessage</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>control</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The control to test.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message that should be sent to <code>target</code> when <code>controlEvent</code> is fired.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>target</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object in which <code>action</code> should be invoked on when <code>controlEvent</code> is fired.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controlEvent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The event which should trigger <code>action</code> on <code>target</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failureMessage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log upon failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the file to report the failure for. The default value will report the file from which this method is called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The line number to report the failure for. The default value will report the line number of the calling site.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F13MetovaTestKit25MTKAssertSegmentedControlFTCSo18UISegmentedControl16hasSegmentTitlesGSaSS_KT_GSqSS_4fileVs12StaticString4lineSu_T_"></a>
+                    <a name="//apple_ref/swift/Function/MTKAssertSegmentedControl(_:hasSegmentTitles:_:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F13MetovaTestKit25MTKAssertSegmentedControlFTCSo18UISegmentedControl16hasSegmentTitlesGSaSS_KT_GSqSS_4fileVs12StaticString4lineSu_T_">MTKAssertSegmentedControl(_:hasSegmentTitles:_:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Test that a segmented control has the expected segment titles in the expectd order. Passes if the segmented control has the specified segment titles in the specified order. Fails otherwise.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">MTKAssertSegmentedControl</span><span class="p">(</span><span class="n">_</span> <span class="nv">segmentedControl</span><span class="p">:</span> <span class="kt">UISegmentedControl</span><span class="p">,</span> <span class="n">hasSegmentTitles</span> <span class="nv">expectedTitles</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="n">_</span> <span class="nv">failureMessage</span><span class="p">:</span> <span class="kd">@autoclosure</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>segmentedControl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The segmented control to test.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expectedTitles</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of expected segment titles in the expected order.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failureMessage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log upon failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the file to report the failure for. The default value will report the file from which this method is called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The line number to report the failure for. The default value will report the line number of the calling site.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="http://metova.com" target="_blank" rel="external">Nick Griffith and Logan Gauthier</a>. All rights reserved. (Last updated: 2017-07-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
