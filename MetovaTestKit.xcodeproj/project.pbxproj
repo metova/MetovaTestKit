@@ -83,8 +83,34 @@
 		4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		4A8AD4F71CDEE4220085984D /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		4AB9A3E01CDF6AB00021B6B8 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; indentWidth = 2; path = Gemfile; sourceTree = "<group>"; };
-		6E0D0B431F1FEC7A00600571 /* UIBarButtonItemAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemAssertions.swift; sourceTree = "<group>"; };
+		6E0D0B431F1FEC7A00600571 /* UIBarButtonItemAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIBarButtonItemAssertions.swift; path = UIKitTesting/UIBarButtonItemAssertions.swift; sourceTree = "<group>"; };
 		6E0D0B451F1FEE3900600571 /* UIBarButtonItemTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTestingTests.swift; sourceTree = "<group>"; };
+		6E1816671F2796EB0034E26E /* badge.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = badge.svg; sourceTree = "<group>"; };
+		6E1816691F2796EB0034E26E /* highlight.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = highlight.css; sourceTree = "<group>"; };
+		6E18166A1F2796EB0034E26E /* jazzy.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jazzy.css; sourceTree = "<group>"; };
+		6E18166C1F2796EB0034E26E /* MetovaTestKit.docset */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MetovaTestKit.docset; sourceTree = "<group>"; };
+		6E18166D1F2796EB0034E26E /* MetovaTestKit.tgz */ = {isa = PBXFileReference; lastKnownFileType = file; path = MetovaTestKit.tgz; sourceTree = "<group>"; };
+		6E18166F1F2796EB0034E26E /* UIAlertActionStyle.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = UIAlertActionStyle.html; sourceTree = "<group>"; };
+		6E1816701F2796EB0034E26E /* UIAlertControllerStyle.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = UIAlertControllerStyle.html; sourceTree = "<group>"; };
+		6E1816711F2796EB0034E26E /* XCTestCase.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = XCTestCase.html; sourceTree = "<group>"; };
+		6E1816721F2796EB0034E26E /* Extensions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Extensions.html; sourceTree = "<group>"; };
+		6E1816731F2796EB0034E26E /* Functions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Functions.html; sourceTree = "<group>"; };
+		6E1816751F2796EB0034E26E /* carat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carat.png; sourceTree = "<group>"; };
+		6E1816761F2796EB0034E26E /* dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash.png; sourceTree = "<group>"; };
+		6E1816771F2796EB0034E26E /* gh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gh.png; sourceTree = "<group>"; };
+		6E1816781F2796EB0034E26E /* spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spinner.gif; sourceTree = "<group>"; };
+		6E1816791F2796EB0034E26E /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		6E18167B1F2796EB0034E26E /* jazzy.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jazzy.js; sourceTree = "<group>"; };
+		6E18167C1F2796EB0034E26E /* jazzy.search.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jazzy.search.js; sourceTree = "<group>"; };
+		6E18167D1F2796EB0034E26E /* jquery.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
+		6E18167E1F2796EB0034E26E /* lunr.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = lunr.min.js; sourceTree = "<group>"; };
+		6E18167F1F2796EB0034E26E /* typeahead.jquery.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = typeahead.jquery.js; sourceTree = "<group>"; };
+		6E1816811F2796EB0034E26E /* MTKTestable.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = MTKTestable.html; sourceTree = "<group>"; };
+		6E1816821F2796EB0034E26E /* Protocols.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Protocols.html; sourceTree = "<group>"; };
+		6E1816831F2796EB0034E26E /* search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
+		6E1816851F2796EB0034E26E /* ExpectedAlertAction.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ExpectedAlertAction.html; sourceTree = "<group>"; };
+		6E1816861F2796EB0034E26E /* Structs.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Structs.html; sourceTree = "<group>"; };
+		6E1816871F2796EB0034E26E /* undocumented.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = undocumented.json; sourceTree = "<group>"; };
 		6E2368351F046B26008E3231 /* QuotedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuotedString.swift; path = "Internal Utilities/QuotedString.swift"; sourceTree = "<group>"; };
 		6E2616EB1F18060200D9B507 /* UIAlertControllerTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerTestingTests.swift; path = "UIKit Testing Tests/UIAlertControllerTestingTests.swift"; sourceTree = "<group>"; };
 		6E8D4B071EB7C5DF001284FD /* FailureRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FailureRecording.swift; path = "Internal Utilities/FailureRecording.swift"; sourceTree = "<group>"; };
@@ -97,6 +123,7 @@
 		6E98F0BA1F15931D009C15FB /* QuotedStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuotedStringTests.swift; path = "Internal Utilities Tests/QuotedStringTests.swift"; sourceTree = "<group>"; };
 		6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AsyncTesting.swift"; sourceTree = "<group>"; };
 		6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncTestingTests.swift; path = "Asynchronous Testing Tests/AsyncTestingTests.swift"; sourceTree = "<group>"; };
+		6EC276D71F218796002A4939 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .jazzy.yaml; sourceTree = "<group>"; };
 		6ED689001EFC2D3C0040C243 /* UIAlertControllerAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerAssertions.swift; path = UIKitTesting/UIAlertControllerAssertions.swift; sourceTree = "<group>"; };
 		6EF9B23A1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISegmentedControlTestingTests.swift; path = "UIKit Testing Tests/UISegmentedControlTestingTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,7 +201,9 @@
 		4A3CFF111CDD600C003EF6F0 /* Related Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E1816661F2796EB0034E26E /* docs */,
 				4A3CFF121CDD6043003EF6F0 /* .gitignore */,
+				6EC276D71F218796002A4939 /* .jazzy.yaml */,
 				4A3CFF131CDD6043003EF6F0 /* .slather.yml */,
 				4A3CFF141CDD6043003EF6F0 /* .swiftlint.yml */,
 				4A8AD4F71CDEE4220085984D /* .travis.yml */,
@@ -234,6 +263,95 @@
 				4A3CFF081CDD5F37003EF6F0 /* Info.plist */,
 			);
 			name = "Supporting Test Files";
+			sourceTree = "<group>";
+		};
+		6E1816661F2796EB0034E26E /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				6E1816671F2796EB0034E26E /* badge.svg */,
+				6E1816681F2796EB0034E26E /* css */,
+				6E18166B1F2796EB0034E26E /* docsets */,
+				6E18166E1F2796EB0034E26E /* Extensions */,
+				6E1816721F2796EB0034E26E /* Extensions.html */,
+				6E1816731F2796EB0034E26E /* Functions.html */,
+				6E1816741F2796EB0034E26E /* img */,
+				6E1816791F2796EB0034E26E /* index.html */,
+				6E18167A1F2796EB0034E26E /* js */,
+				6E1816801F2796EB0034E26E /* Protocols */,
+				6E1816821F2796EB0034E26E /* Protocols.html */,
+				6E1816831F2796EB0034E26E /* search.json */,
+				6E1816841F2796EB0034E26E /* Structs */,
+				6E1816861F2796EB0034E26E /* Structs.html */,
+				6E1816871F2796EB0034E26E /* undocumented.json */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		6E1816681F2796EB0034E26E /* css */ = {
+			isa = PBXGroup;
+			children = (
+				6E1816691F2796EB0034E26E /* highlight.css */,
+				6E18166A1F2796EB0034E26E /* jazzy.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		6E18166B1F2796EB0034E26E /* docsets */ = {
+			isa = PBXGroup;
+			children = (
+				6E18166C1F2796EB0034E26E /* MetovaTestKit.docset */,
+				6E18166D1F2796EB0034E26E /* MetovaTestKit.tgz */,
+			);
+			path = docsets;
+			sourceTree = "<group>";
+		};
+		6E18166E1F2796EB0034E26E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6E18166F1F2796EB0034E26E /* UIAlertActionStyle.html */,
+				6E1816701F2796EB0034E26E /* UIAlertControllerStyle.html */,
+				6E1816711F2796EB0034E26E /* XCTestCase.html */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E1816741F2796EB0034E26E /* img */ = {
+			isa = PBXGroup;
+			children = (
+				6E1816751F2796EB0034E26E /* carat.png */,
+				6E1816761F2796EB0034E26E /* dash.png */,
+				6E1816771F2796EB0034E26E /* gh.png */,
+				6E1816781F2796EB0034E26E /* spinner.gif */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		6E18167A1F2796EB0034E26E /* js */ = {
+			isa = PBXGroup;
+			children = (
+				6E18167B1F2796EB0034E26E /* jazzy.js */,
+				6E18167C1F2796EB0034E26E /* jazzy.search.js */,
+				6E18167D1F2796EB0034E26E /* jquery.min.js */,
+				6E18167E1F2796EB0034E26E /* lunr.min.js */,
+				6E18167F1F2796EB0034E26E /* typeahead.jquery.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		6E1816801F2796EB0034E26E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6E1816811F2796EB0034E26E /* MTKTestable.html */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6E1816841F2796EB0034E26E /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				6E1816851F2796EB0034E26E /* ExpectedAlertAction.html */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 		6E8D4AFF1EB7AB70001284FD /* UIKitTesting */ = {

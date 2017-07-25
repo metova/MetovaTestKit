@@ -1,0 +1,6 @@
+module: MetovaTestKit
+github_url: https://github.com/metova/MetovaTestKit
+clean: true
+theme: fullwidth
+xcodebuild_arguments: [-project, MetovaTestKit.xcodeproj, -target, MetovaTestKit]
+output: docs
