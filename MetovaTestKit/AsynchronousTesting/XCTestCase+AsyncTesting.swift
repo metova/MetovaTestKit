@@ -44,6 +44,7 @@ extension XCTestCase {
     ///   - Calling `waitForExpectations(timeout:handler:)` within `testAction`.
     ///
     /// - Note: This method will result in a failure if `testAction` takes longer than 15 seconds to execute.
+    @available(*, deprecated: 1.2.0, message: "This method is deprecated in favor of `MTKWaitThenContinueTest(after:)`.")
     public func MTKWaitThenContinueTest(after timeInterval: TimeInterval, on queue: DispatchQueue = .main, testAction: @escaping () -> Void) {
         
         let waitExpectation = expectation(description: "Waiting to resume tests.")
@@ -53,6 +54,21 @@ extension XCTestCase {
             waitExpectation.fulfill()
         }
         
-        waitForExpectations(timeout: timeInterval + 15, handler: nil)
+        wait(for: [waitExpectation], timeout: timeInterval + 15)
+    }
+    
+    /// Provides a succinct syntax for performing simple asynchronous tests.
+    ///
+    /// - Parameters:
+    ///   - timeInterval: The number of seconds to wait before continuing execution of the test.
+    public func MTKWaitThenContinueTest(after timeInterval: TimeInterval) {
+        
+        let waitExpectation = expectation(description: "Waiting to resume tests.")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval) {
+            waitExpectation.fulfill()
+        }
+        
+        wait(for: [waitExpectation], timeout: timeInterval + 15)
     }
 }

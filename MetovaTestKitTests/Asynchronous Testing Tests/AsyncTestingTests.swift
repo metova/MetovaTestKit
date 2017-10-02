@@ -86,7 +86,8 @@ class AsyncTestingTests: MTKBaseTestCase {
                 MTKWaitThenContinueTest(after: 3, on: queue, testAction: testAction)
             }
             else {
-                MTKWaitThenContinueTest(after: 3, testAction: testAction)
+                MTKWaitThenContinueTest(after: 3)
+                testAction()
             }
             
             waitDurationTester.assertActualDurationMatches(expectedDuration: 3, line: line)
@@ -107,7 +108,14 @@ class AsyncTestingTests: MTKBaseTestCase {
                 let waitDurationTester = WaitDurationTester()
                 waitDurationTester.beginRecordingDuration()
                 
-                MTKWaitThenContinueTest(after: 3) {
+                if let queue = queue {
+                    MTKWaitThenContinueTest(after: 3, on: queue) {
+                        waitDurationTester.endRecordingDuration(line: line)
+                        self.recordFailure(withDescription: "Description", inFile: "File", atLine: 1, expected: true)
+                    }
+                }
+                else {
+                    MTKWaitThenContinueTest(after: 3)
                     waitDurationTester.endRecordingDuration(line: line)
                     self.recordFailure(withDescription: "Description", inFile: "File", atLine: 1, expected: true)
                 }

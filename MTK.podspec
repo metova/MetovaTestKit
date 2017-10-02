@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'MTK'
-  s.version      = '1.1.0'
+  s.version      = '1.2.0'
   s.summary      = 'A collection of useful test helpers designed to ease the burden of writing tests for iOS applications.'
 
   s.homepage = 'http://metova.com'
