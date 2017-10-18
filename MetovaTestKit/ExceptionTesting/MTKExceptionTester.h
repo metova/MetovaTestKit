@@ -43,6 +43,6 @@
  @warning This will only catch Objective-C-style exceptions. Swift's `fatalError`'s are not caught by this test.
  
  */
-NSException * __nullable MTKCatchException(__attribute__((noescape)) void (^ __nonnull testBlock)());
+NSException * __nullable MTKCatchException(__attribute__((noescape)) void (^ __nonnull testBlock)(void));
 
 #pragma GCC visibility pop
