@@ -32,8 +32,8 @@ Metova Test Kit is a collection of useful test helpers designed to ease the burd
 
 # Requirements
 
-- Swift 3.0
-- iOS 8.0
+- Swift 4.0
+- iOS 8.3+
 
 -----
 
