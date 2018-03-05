@@ -11,6 +11,7 @@ env:
     - DESTINATION="OS=11.0,name=iPhone X" SCHEME="$IOS_FRAMEWORK_SCHEME" SDK="$IOS_SDK" RUN_TESTS="YES" POD_LINT="YES"
 before_install:
   - bundle install --without=documentation
+  - bundle exec pod repo update
   - bundle exec pod install
 script:
   - set -o pipefail
