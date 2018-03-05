@@ -39,6 +39,7 @@
 		6EC1A6B31EBCE2E2000DEFA6 /* AsyncTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */; };
 		6ED689011EFC2D3C0040C243 /* UIAlertControllerAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED689001EFC2D3C0040C243 /* UIAlertControllerAssertions.swift */; };
 		6EF9B23B1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9B23A1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift */; };
+		8C5DBD5EA5193DF58D0EF97C /* Pods_MetovaTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79631A34E94E032EB303D968 /* Pods_MetovaTestKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152CC7EA0C83675F6522A85B /* Pods-MetovaTestKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetovaTestKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetovaTestKit/Pods-MetovaTestKit.debug.xcconfig"; sourceTree = "<group>"; };
 		4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetovaTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetovaTestKit.h; sourceTree = "<group>"; };
 		4A3CFEFC1CDD5F37003EF6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,8 +126,13 @@
 		6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AsyncTesting.swift"; sourceTree = "<group>"; };
 		6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncTestingTests.swift; path = "Asynchronous Testing Tests/AsyncTestingTests.swift"; sourceTree = "<group>"; };
 		6EC276D71F218796002A4939 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .jazzy.yaml; sourceTree = "<group>"; };
+		6EC55627204DC600005AFE46 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		6EC55628204DC665005AFE46 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; indentWidth = 2; path = Podfile; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6EC55629204DC771005AFE46 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		6ED689001EFC2D3C0040C243 /* UIAlertControllerAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerAssertions.swift; path = UIKitTesting/UIAlertControllerAssertions.swift; sourceTree = "<group>"; };
 		6EF9B23A1EBBA65600B87FA3 /* UISegmentedControlTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISegmentedControlTestingTests.swift; path = "UIKit Testing Tests/UISegmentedControlTestingTests.swift"; sourceTree = "<group>"; };
+		79631A34E94E032EB303D968 /* Pods_MetovaTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetovaTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0519F01D9726D38CD714598 /* Pods-MetovaTestKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetovaTestKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetovaTestKit/Pods-MetovaTestKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3CFFCB1CDE1473003EF6F0 /* XCTest.framework in Frameworks */,
+				8C5DBD5EA5193DF58D0EF97C /* Pods_MetovaTestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +164,8 @@
 				4A3CFF051CDD5F37003EF6F0 /* MetovaTestKitTests */,
 				4A3CFEF81CDD5F37003EF6F0 /* Products */,
 				4A3CFFCC1CDE1480003EF6F0 /* Dependencies */,
+				634135A92DFE71D915C1E3B7 /* Pods */,
+				EC1DA839BB8A56D69E13D46B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,7 +218,10 @@
 				4A3CFF141CDD6043003EF6F0 /* .swiftlint.yml */,
 				4A8AD4F71CDEE4220085984D /* .travis.yml */,
 				6E8D4B1A1EB8154A001284FD /* .ruby-version */,
+				6EC55628204DC665005AFE46 /* Podfile */,
+				6EC55629204DC771005AFE46 /* Podfile.lock */,
 				4AB9A3E01CDF6AB00021B6B8 /* Gemfile */,
+				6EC55627204DC600005AFE46 /* Gemfile.lock */,
 				4A3CFF151CDD6043003EF6F0 /* CHANGELOG.md */,
 				4A3CFF161CDD6043003EF6F0 /* LICENSE */,
 				4A3CFF171CDD6043003EF6F0 /* Package.swift */,
@@ -263,6 +276,15 @@
 				4A3CFF081CDD5F37003EF6F0 /* Info.plist */,
 			);
 			name = "Supporting Test Files";
+			sourceTree = "<group>";
+		};
+		634135A92DFE71D915C1E3B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				152CC7EA0C83675F6522A85B /* Pods-MetovaTestKit.debug.xcconfig */,
+				D0519F01D9726D38CD714598 /* Pods-MetovaTestKit.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		6E1816661F2796EB0034E26E /* docs */ = {
@@ -420,6 +442,14 @@
 			name = "Asynchronous Testing Tests";
 			sourceTree = "<group>";
 		};
+		EC1DA839BB8A56D69E13D46B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79631A34E94E032EB303D968 /* Pods_MetovaTestKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -440,12 +470,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A3CFF0B1CDD5F37003EF6F0 /* Build configuration list for PBXNativeTarget "MetovaTestKit" */;
 			buildPhases = (
+				E036C02CCEF15672877958DC /* [CP] Check Pods Manifest.lock */,
 				4A8AD4E51CDEA0F90085984D /* TODO Warnings */,
 				4A3CFF291CDD6630003EF6F0 /* SwiftLint */,
 				4A3CFEF21CDD5F37003EF6F0 /* Sources */,
 				4A3CFEF31CDD5F37003EF6F0 /* Frameworks */,
 				4A3CFEF41CDD5F37003EF6F0 /* Headers */,
 				4A3CFEF51CDD5F37003EF6F0 /* Resources */,
+				5C4AB980766113032191651D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -545,7 +577,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect && swiftlint\nelse\n    cat << EOM\nerror: SwiftLint not installed.\n\nYou can install SwiftLint via Homebrew:\n\n$ brew update\n$ brew install swiftlint\n\nFor more information, visit https://github.com/realm/SwiftLint\nEOM\n    exit 1\nfi";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect && \"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		4A8AD4E51CDEA0F90085984D /* TODO Warnings */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -560,6 +592,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nKEYWORDS=\"TODO:\"\nfind \"${SRCROOT}/MetovaTestKit\" \"${SRCROOT}/MetovaTestKitTests\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.mm\" -or -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\nfi";
+		};
+		5C4AB980766113032191651D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MetovaTestKit/Pods-MetovaTestKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E036C02CCEF15672877958DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -727,6 +789,7 @@
 		};
 		4A3CFF0C1CDD5F37003EF6F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152CC7EA0C83675F6522A85B /* Pods-MetovaTestKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -755,6 +818,7 @@
 		};
 		4A3CFF0D1CDD5F37003EF6F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0519F01D9726D38CD714598 /* Pods-MetovaTestKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
