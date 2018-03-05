@@ -38,7 +38,7 @@
 
 @end
 
-NSUInteger MTKCountBrokenConstraints(__attribute__((noescape)) void (^ __nonnull testBlock)()) {
+NSUInteger MTKCountBrokenConstraints(__attribute__((noescape)) void (^ __nonnull testBlock)(void)) {
     __block NSUInteger brokenConstraintCount = 0;
     
     SEL brokenConstraintSelector = @selector(engine:willBreakConstraint:dueToMutuallyExclusiveConstraints:);

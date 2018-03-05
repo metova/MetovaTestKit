@@ -69,7 +69,7 @@ class MTKBaseTestCase: XCTestCase {
     
     // MARK: Failure Expectations
     
-    override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
+    override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: Int, expected: Bool) {
         
         if let expectedFailure = expectingFailure, expected {
             

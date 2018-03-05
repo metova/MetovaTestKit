@@ -38,6 +38,6 @@
  *
  *  @return The number of broken constraints
  */
-NSUInteger MTKCountBrokenConstraints(__attribute__((noescape)) void (^ __nonnull testBlock)());
+NSUInteger MTKCountBrokenConstraints(__attribute__((noescape)) void (^ __nonnull testBlock)(void));
 
 #pragma GCC visibility pop

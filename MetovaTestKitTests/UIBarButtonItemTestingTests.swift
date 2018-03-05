@@ -35,8 +35,8 @@ import XCTest
 
 private class TestViewController: UIViewController {
     
-    func testAction() {}
-    func someOtherAction() {}
+    @objc func testAction() {}
+    @objc func someOtherAction() {}
 }
 
 // MARK: - UIBarButtonItemAssertionsTests

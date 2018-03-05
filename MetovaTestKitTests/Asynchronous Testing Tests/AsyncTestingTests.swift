@@ -64,7 +64,7 @@ class AsyncTestingTests: MTKBaseTestCase {
             
             let actualDuration = endTime - startTime
             
-            XCTAssertEqualWithAccuracy(actualDuration, expectedDuration, accuracy: 1.0, file: file, line: line)
+            XCTAssertEqual(actualDuration, expectedDuration, accuracy: 1.0, file: file, line: line)
             XCTAssertTrue(actualDuration >= expectedDuration, "Because the test action is dispatched after the expected duration, the actual recorded duration (\(actualDuration) seconds) should never be less than the expected duration (\(expectedDuration) seconds).")
         }
     }
