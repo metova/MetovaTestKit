@@ -70,61 +70,36 @@ class AsyncTestingTests: MTKBaseTestCase {
     }
     
     // MARK: Tests
-
+    
     func testSuccessfulAsyncTest() {
         
-        func performTest(usingSpecificQueue queue: DispatchQueue? = nil, line: UInt = #line) {
-            
-            let waitDurationTester = WaitDurationTester()
-            waitDurationTester.beginRecordingDuration()
-
-            let testAction = {
-                waitDurationTester.endRecordingDuration(line: line)
-            }
-            
-            if let queue = queue {
-                MTKWaitThenContinueTest(after: 3, on: queue, testAction: testAction)
-            }
-            else {
-                MTKWaitThenContinueTest(after: 3)
-                testAction()
-            }
-            
-            waitDurationTester.assertActualDurationMatches(expectedDuration: 3, line: line)
+        let waitDurationTester = WaitDurationTester()
+        waitDurationTester.beginRecordingDuration()
+        
+        let testAction = {
+            waitDurationTester.endRecordingDuration()
         }
         
-        performTest()
-        performTest(usingSpecificQueue: .global(qos: .userInteractive))
+        MTKWaitThenContinueTest(after: 3)
+        testAction()
+        
+        waitDurationTester.assertActualDurationMatches(expectedDuration: 3)
     }
     
     func testAsyncTestFailsWhenAssertionFailsInTheTestActionClosure() {
         
-        func performTest(usingSpecificQueue queue: DispatchQueue? = nil, line: UInt = #line) {
-            
-            let expectedFailure = TestFailureExpectation(description: "Description", filePath: "File", lineNumber: 1)
-            
-            expectTestFailure(expectedFailure) {
-                
-                let waitDurationTester = WaitDurationTester()
-                waitDurationTester.beginRecordingDuration()
-                
-                if let queue = queue {
-                    MTKWaitThenContinueTest(after: 3, on: queue) {
-                        waitDurationTester.endRecordingDuration(line: line)
-                        self.recordFailure(withDescription: "Description", inFile: "File", atLine: 1, expected: true)
-                    }
-                }
-                else {
-                    MTKWaitThenContinueTest(after: 3)
-                    waitDurationTester.endRecordingDuration(line: line)
-                    self.recordFailure(withDescription: "Description", inFile: "File", atLine: 1, expected: true)
-                }
-                
-                waitDurationTester.assertActualDurationMatches(expectedDuration: 3, line: line)
-            }
-        }
+        let expectedFailure = TestFailureExpectation(description: "Description", filePath: "File", lineNumber: 1)
         
-        performTest()
-        performTest(usingSpecificQueue: .global(qos: .userInteractive))
+        expectTestFailure(expectedFailure) {
+            
+            let waitDurationTester = WaitDurationTester()
+            waitDurationTester.beginRecordingDuration()
+            
+            MTKWaitThenContinueTest(after: 3)
+            waitDurationTester.endRecordingDuration()
+            self.recordFailure(withDescription: "Description", inFile: "File", atLine: 1, expected: true)
+            
+            waitDurationTester.assertActualDurationMatches(expectedDuration: 3)
+        }
     }
 }

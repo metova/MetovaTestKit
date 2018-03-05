@@ -1,16 +1,16 @@
-[![MetovaTestKit](https://github.com/metova/MetovaTestKit/blob/master/Assets/MetovaTestKit.png?raw=true)](https://cocoapods.org/pods/MTK)
+[![MetovaTestKit](https://github.com/metova/MetovaTestKit/blob/master/Assets/MetovaTestKit.png?raw=true)](https://cocoapods.org/pods/MetovaTestKit)
 
 <p align="center">
  <a href="https://travis-ci.org/metova/MetovaTestKit" target="_blank"><img src="https://travis-ci.org/metova/MetovaTestKit.svg?branch=master" alt="Build Status"></a> 
- <a href="https://cocoapods.org/pods/MTK" target="_blank"><img src="https://img.shields.io/cocoapods/v/MTK.svg" alt="CocoaPods Compatible"/></a> 
+ <a href="https://cocoapods.org/pods/MetovaTestKit" target="_blank"><img src="https://img.shields.io/cocoapods/v/MetovaTestKit.svg" alt="CocoaPods Compatible"/></a>
  <a href="http://metova.github.io/MetovaTestKit/" target="_blank"><img src="https://cdn.rawgit.com/metova/MetovaTestKit/master/docs/badge.svg" alt="Documentation"/></a>
  <a href="https://coveralls.io/github/metova/MetovaTestKit?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/metova/MetovaTestKit/badge.svg?branch=master&dummy=no_cache_please_1" alt="Coverage Status"/></a>
- <a href="http://cocoadocs.org/docsets/MTK" target="_blank"><img src="https://img.shields.io/cocoapods/p/MTK.svg?style=flat" alt="Platform"/></a>
+ <a href="http://cocoadocs.org/docsets/MetovaTestKit" target="_blank"><img src="https://img.shields.io/cocoapods/p/MetovaTestKit.svg?style=flat" alt="Platform"/></a>
  <a href="http://twitter.com/metova" target="_blank"><img src="https://img.shields.io/badge/twitter-@Metova-3CAC84.svg" alt="Twitter"/></a>
  <br/>
 </p>
  
-Metova Test Kit is a collection of useful test helpers designed to ease the burden of writing tests for iOS applications.
+MetovaTestKit is a collection of useful test helpers designed to ease the burden of writing tests for iOS applications.
 
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -33,15 +33,15 @@ Metova Test Kit is a collection of useful test helpers designed to ease the burd
 # Requirements
 
 - Swift 4.0
-- iOS 8.3+
+- iOS 9+
 
 -----
 
 # Installation
 
-Metova Test Kit is available through [CocoaPods](http://cocoapods.org).
+MetovaTestKit is available through [CocoaPods](http://cocoapods.org).
 
-Metova Test Kit is intended to be used with unit testing targets. To install it, add MTK your project's Podfile:
+MetovaTestKit is intended to be used with unit testing targets. To install it, add MetovaTestKit your project's Podfile:
 
 ```ruby
 target 'YourApp' do
@@ -52,17 +52,17 @@ target 'YourApp' do
 
   target 'YourAppTests' do
     inherit! :search_paths
-    pod 'MTK'
+    pod 'MetovaTestKit'
   end
 end
 ```
 
 And run `pod install`
 
-If you would like to test a beta version of Metova Test Kit, you can install the latest from develop:
+If you would like to test a beta version of MetovaTestKit, you can install the latest from develop:
 
 ```ruby
-pod 'MTK', :git => 'https://github.com/metova/MetovaTestKit.git', :branch => 'develop'
+pod 'MetovaTestKit', :git => 'https://github.com/metova/MetovaTestKit.git', :branch => 'develop'
 ```
 
 -----
@@ -71,7 +71,7 @@ pod 'MTK', :git => 'https://github.com/metova/MetovaTestKit.git', :branch => 'de
 
 ## MTKTestable
 
-Metova Test Kit defines the `MTKTestable` protocol. Correct implementation of this protocol allows for functional unit testing. It abstracts away the set up and tear down code into extensions of the types you want to test, and allows for functional unit tests.
+MetovaTestKit defines the `MTKTestable` protocol. Correct implementation of this protocol allows for functional unit testing. It abstracts away the set up and tear down code into extensions of the types you want to test, and allows for functional unit tests.
 
 ```swift
 func testOutlets() {
@@ -127,7 +127,7 @@ MTKAssertBarButtonItem(testVC.editBarButtonItem, sends: #selector(MyViewControll
  
 ## Testing Auto Layout Constraints
 
-You can use Metova Test Kit to assert that you do not have broken Auto Layout constraints.
+You can use MetovaTestKit to assert that you do not have broken Auto Layout constraints.
 
 ```swift
 MTKAssertNoBrokenConstraints {
@@ -154,7 +154,7 @@ let brokenConstraintCount = MTKAssertNoBrokenConstraints {
 
 ## Testing Exceptions
 
-You can use Metova Test Kit to assert that code that should not throw exceptions doesn't. Without MTK, this would result in the entire test suite crashing. With MTK, this is just a failed test, and you still get to run the rest of the test suite.
+You can use MetovaTestKit to assert that code that should not throw exceptions doesn't. Without MetovaTestKit, this would result in the entire test suite crashing. With MetovaTestKit, this is just a failed test, and you still get to run the rest of the test suite.
 
 ```swift
 MTKAssertNoException {
@@ -217,7 +217,7 @@ If the closure did not throw an exception, the function returns `nil`. Otherwise
  
 ## Asynchronous Testing
  
-XCTest provides asynchronous testing capabilities using `expectation(description:)` and `waitForExpectations(timeout:handler:)`. However, when testing simple delayed asynchronous actions, this approach can be cumbersome and the intent might not be immediately obvious. Using MTK's `MTKWaitThenContinueTest(after:)` utility method, these kinds of tests become simple and they read naturally.
+XCTest provides asynchronous testing capabilities using `expectation(description:)` and `waitForExpectations(timeout:handler:)`. However, when testing simple delayed asynchronous actions, this approach can be cumbersome and the intent might not be immediately obvious. Using MetovaTestKit's `MTKWaitThenContinueTest(after:)` utility method, these kinds of tests become simple and they read naturally.
  
 ```swift
 mockUserSearchNetworkRequest(withResponseTime: 0.5)
@@ -240,16 +240,16 @@ Documentation can be found [here](http://metova.github.io/MetovaTestKit/).
 
 # Credits
 
-Metova Test Kit is owned and maintained by [Metova Inc.](https://metova.com)
+MetovaTestKit is owned and maintained by [Metova Inc.](https://metova.com)
 
 [Contributors](https://github.com/Metova/MetovaTestKit/graphs/contributors)
 
-If you would like to contribute to Metova Test Kit, see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
+If you would like to contribute to MetovaTestKit, see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
 
-Metova Test Kit banner image and other assets provided by Christi Johnson.
+MetovaTestKit banner image and other assets provided by Christi Johnson.
 
 -----
 
 # License
 
-Metova Test Kit is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+MetovaTestKit is available under the MIT license. See the [LICENSE](LICENSE) file for more info.

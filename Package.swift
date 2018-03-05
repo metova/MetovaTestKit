@@ -1,6 +1,6 @@
 //
 //  Package.swift
-//  DataManager
+//  MetovaTestKit
 //
 //  Copyright (c) 2016 Metova Inc.
 //
@@ -29,5 +29,5 @@
 import PackageDescription
 
 let package = Package(
-    name: "MTK"
+    name: "MetovaTestKit"
 )
