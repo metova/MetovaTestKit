@@ -31,28 +31,18 @@ import XCTest
 
 extension XCTestCase {
     
-    /// Provides a succinct syntax for performing a simple asynchronous test.
+    /// Provides a succinct syntax for performing simple asynchronous tests.
     ///
     /// - Parameters:
-    ///   - timeInterval: The number of seconds to wait before running `testAction`.
-    ///   - queue: The queue to dispatch `testAction` on. Defaults to the main queue.
-    ///   - testAction: The closure which will have a delayed execution.
-    ///
-    /// - Warning: This method works by creating an expectation and calling `waitForExpectations(timeout:handler:)`. Because of this, the following actions will result in a failure:
-    ///   - Creating nested calls to `MTKWaitThenContinueTest(after:on:testAction:)`.
-    ///   - Creating expectations within `testAction` that are not fulfilled within `testAction`
-    ///   - Calling `waitForExpectations(timeout:handler:)` within `testAction`.
-    ///
-    /// - Note: This method will result in a failure if `testAction` takes longer than 15 seconds to execute.
-    public func MTKWaitThenContinueTest(after timeInterval: TimeInterval, on queue: DispatchQueue = .main, testAction: @escaping () -> Void) {
+    ///   - timeInterval: The number of seconds to wait before continuing execution of the test.
+    public func MTKWaitThenContinueTest(after timeInterval: TimeInterval) {
         
         let waitExpectation = expectation(description: "Waiting to resume tests.")
         
-        queue.asyncAfter(deadline: .now() + timeInterval) {
-            testAction()
+        DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval) {
             waitExpectation.fulfill()
         }
         
-        waitForExpectations(timeout: timeInterval + 15, handler: nil)
+        wait(for: [waitExpectation], timeout: timeInterval + 15)
     }
 }

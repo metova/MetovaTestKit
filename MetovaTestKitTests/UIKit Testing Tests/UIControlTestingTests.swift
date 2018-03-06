@@ -35,8 +35,8 @@ import XCTest
 
 private class TestViewController: UIViewController {
     
-    func didFireControlEvent() {}
-    func didFireOtherControlEvent() {}
+    @objc func didFireControlEvent() {}
+    @objc func didFireOtherControlEvent() {}
 }
 
 // MARK: - UIControlTestingTests

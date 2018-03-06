@@ -1,5 +1,9 @@
 # Metova Test Kit CHANGELOG
 
+## 1.2.0
+
+- Deprecate `MTKWaitThenContinueTest(after:on:testAction:)` in favor of `MTKWaitThenContinueTest(after:)`. This addresses issue [#24](https://github.com/metova/MetovaTestKit/issues/24).
+
 ## 1.1.0
 
 - Added assertion for UIControl target/action.
