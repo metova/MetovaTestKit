@@ -64,11 +64,9 @@
 		4A3CFF141CDD6043003EF6F0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A3CFF151CDD6043003EF6F0 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		4A3CFF161CDD6043003EF6F0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		4A3CFF171CDD6043003EF6F0 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4A3CFF181CDD6043003EF6F0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4A3CFF201CDD60CA003EF6F0 /* MTKExceptionTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTKExceptionTester.h; path = ExceptionTesting/MTKExceptionTester.h; sourceTree = "<group>"; };
 		4A3CFF211CDD60CA003EF6F0 /* MTKExceptionTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTKExceptionTester.m; path = ExceptionTesting/MTKExceptionTester.m; sourceTree = "<group>"; };
-		4A3CFFB81CDD74A8003EF6F0 /* MTK.podspec */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = MTK.podspec; sourceTree = "<group>"; tabWidth = 4; };
 		4A3CFFCA1CDE1473003EF6F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4A3CFFCD1CDE1548003EF6F0 /* ExceptionTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionTestingTests.swift; sourceTree = "<group>"; };
 		4A771F2E1D4C144400EFD0B8 /* MTKBrokenConstraintCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTKBrokenConstraintCounter.h; path = ConstraintTesting/MTKBrokenConstraintCounter.h; sourceTree = "<group>"; };
@@ -126,6 +124,7 @@
 		6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AsyncTesting.swift"; sourceTree = "<group>"; };
 		6EC1A6B21EBCE2E2000DEFA6 /* AsyncTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncTestingTests.swift; path = "Asynchronous Testing Tests/AsyncTestingTests.swift"; sourceTree = "<group>"; };
 		6EC276D71F218796002A4939 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .jazzy.yaml; sourceTree = "<group>"; };
+		6EC55626204DBCA2005AFE46 /* MetovaTestKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; indentWidth = 2; path = MetovaTestKit.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		6EC55627204DC600005AFE46 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		6EC55628204DC665005AFE46 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; indentWidth = 2; path = Podfile; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6EC55629204DC771005AFE46 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
@@ -224,10 +223,9 @@
 				6EC55627204DC600005AFE46 /* Gemfile.lock */,
 				4A3CFF151CDD6043003EF6F0 /* CHANGELOG.md */,
 				4A3CFF161CDD6043003EF6F0 /* LICENSE */,
-				4A3CFF171CDD6043003EF6F0 /* Package.swift */,
 				4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */,
 				4A3CFF181CDD6043003EF6F0 /* README.md */,
-				4A3CFFB81CDD74A8003EF6F0 /* MTK.podspec */,
+				6EC55626204DBCA2005AFE46 /* MetovaTestKit.podspec */,
 			);
 			name = "Related Files";
 			sourceTree = "<group>";
