@@ -195,14 +195,14 @@
 		4A3CFF051CDD5F37003EF6F0 /* MetovaTestKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				4A8AD4EE1CDEB6300085984D /* Supporting Test Files */,
-				6E8D4B1B1EB8D5D0001284FD /* Test Data */,
+				4AD3B57A214AAACD0089FA1E /* Constraint Testing Tests */,
+				4AD3B579214AAAC20089FA1E /* Testable Protocol Tests */,
+				6EC1A6B11EBCE2C7000DEFA6 /* Asynchronous Testing Tests */,
+				4ADA98FF214AAA7900B91CF2 /* Exception Testing Tests */,
 				6E8D4B1C1EB8D644001284FD /* Internal Utilities Tests */,
 				6E8D4B171EB81064001284FD /* UIKit Testing Tests */,
-				6EC1A6B11EBCE2C7000DEFA6 /* Asynchronous Testing Tests */,
-				4A3CFFCD1CDE1548003EF6F0 /* ExceptionTestingTests.swift */,
-				4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */,
-				4A771F341D4C173300EFD0B8 /* ConstraintTestingTests.swift */,
+				6E8D4B1B1EB8D5D0001284FD /* Test Data */,
+				4A8AD4EE1CDEB6300085984D /* Supporting Test Files */,
 			);
 			path = MetovaTestKitTests;
 			sourceTree = "<group>";
@@ -274,6 +274,30 @@
 				4A3CFF081CDD5F37003EF6F0 /* Info.plist */,
 			);
 			name = "Supporting Test Files";
+			sourceTree = "<group>";
+		};
+		4AD3B579214AAAC20089FA1E /* Testable Protocol Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */,
+			);
+			path = "Testable Protocol Tests";
+			sourceTree = "<group>";
+		};
+		4AD3B57A214AAACD0089FA1E /* Constraint Testing Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4A771F341D4C173300EFD0B8 /* ConstraintTestingTests.swift */,
+			);
+			path = "Constraint Testing Tests";
+			sourceTree = "<group>";
+		};
+		4ADA98FF214AAA7900B91CF2 /* Exception Testing Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CFFCD1CDE1548003EF6F0 /* ExceptionTestingTests.swift */,
+			);
+			path = "Exception Testing Tests";
 			sourceTree = "<group>";
 		};
 		634135A92DFE71D915C1E3B7 /* Pods */ = {
