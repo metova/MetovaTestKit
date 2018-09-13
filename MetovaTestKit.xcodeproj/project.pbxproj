@@ -181,11 +181,11 @@
 			isa = PBXGroup;
 			children = (
 				6EC1A6AE1EBCDD3F000DEFA6 /* AsynchronousTesting */,
-				6E8D4B041EB7AD1B001284FD /* Internal Utilities */,
-				6E8D4AFF1EB7AB70001284FD /* UIKitTesting */,
 				4A771F2D1D4C13FC00EFD0B8 /* ConstraintTesting */,
 				4A3CFF241CDD60CE003EF6F0 /* ExceptionTesting */,
+				6E8D4B041EB7AD1B001284FD /* Internal Utilities */,
 				4A8AD4E71CDEA27E0085984D /* Testable */,
+				6E8D4AFF1EB7AB70001284FD /* UIKitTesting */,
 				4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */,
 				4A3CFEFC1CDD5F37003EF6F0 /* Info.plist */,
 			);
@@ -195,11 +195,11 @@
 		4A3CFF051CDD5F37003EF6F0 /* MetovaTestKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				4AD3B57A214AAACD0089FA1E /* Constraint Testing Tests */,
-				4AD3B579214AAAC20089FA1E /* Testable Protocol Tests */,
 				6EC1A6B11EBCE2C7000DEFA6 /* Asynchronous Testing Tests */,
+				4AD3B57A214AAACD0089FA1E /* Constraint Testing Tests */,
 				4ADA98FF214AAA7900B91CF2 /* Exception Testing Tests */,
 				6E8D4B1C1EB8D644001284FD /* Internal Utilities Tests */,
+				4AD3B579214AAAC20089FA1E /* Testable Protocol Tests */,
 				6E8D4B171EB81064001284FD /* UIKit Testing Tests */,
 				6E8D4B1B1EB8D5D0001284FD /* Test Data */,
 				4A8AD4EE1CDEB6300085984D /* Supporting Test Files */,
