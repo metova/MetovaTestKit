@@ -14,6 +14,8 @@
 		4A771F351D4C173300EFD0B8 /* ConstraintTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771F341D4C173300EFD0B8 /* ConstraintTestingTests.swift */; };
 		4A771FC91D4D534200EFD0B8 /* MTKBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771FC81D4D534200EFD0B8 /* MTKBaseTestCase.swift */; };
 		4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */; };
+		4A91E13E2155784E0003B78B /* MTKBrokenConstraintCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADA98E0214AA67B00B91CF2 /* MTKBrokenConstraintCounter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A91E13F2155784E0003B78B /* MTKExceptionTester.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADA98E6214AA68D00B91CF2 /* MTKExceptionTester.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4ADA98D4214AA65200B91CF2 /* UIBarButtonItemAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D0214AA65200B91CF2 /* UIBarButtonItemAssertions.swift */; };
 		4ADA98D5214AA65200B91CF2 /* UISegmentedControlAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D1214AA65200B91CF2 /* UISegmentedControlAssertions.swift */; };
 		4ADA98D6214AA65200B91CF2 /* UIControlAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D2214AA65200B91CF2 /* UIControlAssertions.swift */; };
@@ -23,10 +25,8 @@
 		4ADA98DD214AA66A00B91CF2 /* QuotedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98DA214AA66A00B91CF2 /* QuotedString.swift */; };
 		4ADA98E1214AA67B00B91CF2 /* MTKConstraintTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98DE214AA67B00B91CF2 /* MTKConstraintTester.swift */; };
 		4ADA98E2214AA67B00B91CF2 /* MTKBrokenConstraintCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98DF214AA67B00B91CF2 /* MTKBrokenConstraintCounter.m */; };
-		4ADA98E3214AA67B00B91CF2 /* MTKBrokenConstraintCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADA98E0214AA67B00B91CF2 /* MTKBrokenConstraintCounter.h */; };
 		4ADA98E7214AA68D00B91CF2 /* MTKExceptionTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98E4214AA68D00B91CF2 /* MTKExceptionTesting.swift */; };
 		4ADA98E8214AA68D00B91CF2 /* MTKExceptionTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98E5214AA68D00B91CF2 /* MTKExceptionTester.m */; };
-		4ADA98E9214AA68D00B91CF2 /* MTKExceptionTester.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADA98E6214AA68D00B91CF2 /* MTKExceptionTester.h */; };
 		4ADA98EC214AA69B00B91CF2 /* MTKTestable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98EA214AA69B00B91CF2 /* MTKTestable+UIViewController.swift */; };
 		4ADA98ED214AA69B00B91CF2 /* MTKTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98EB214AA69B00B91CF2 /* MTKTestable.swift */; };
 		4ADA98F1214AAA0700B91CF2 /* TestableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98EF214AAA0700B91CF2 /* TestableViewController.swift */; };
@@ -479,9 +479,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ADA98E9214AA68D00B91CF2 /* MTKExceptionTester.h in Headers */,
-				4ADA98E3214AA67B00B91CF2 /* MTKBrokenConstraintCounter.h in Headers */,
 				4A3CFEFB1CDD5F37003EF6F0 /* MetovaTestKit.h in Headers */,
+				4A91E13F2155784E0003B78B /* MTKExceptionTester.h in Headers */,
+				4A91E13E2155784E0003B78B /* MTKBrokenConstraintCounter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,13 +636,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MetovaTestKit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
