@@ -39,7 +39,7 @@ import XCTest
 ///   - line: The line number to report the failure for. The default value will report the line number of the calling site.
 public func MTKAssertSegmentedControl(_ segmentedControl: UISegmentedControl, hasSegmentTitles expectedTitles: [String], _ failureMessage: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line) {
     
-    let actualTitles = Array(0..<segmentedControl.numberOfSegments).flatMap { segmentedControl.titleForSegment(at: $0) }
+    let actualTitles = Array(0..<segmentedControl.numberOfSegments).compactMap { segmentedControl.titleForSegment(at: $0) }
     
     guard actualTitles == expectedTitles else {
         MTKRecordFailure(withMessage: failureMessage(), description: "Expected segmented control to have segment titles: \(expectedTitles.map(quotedString).commaSeparatedList()). Instead found \(actualTitles.map(quotedString).commaSeparatedList()).", file: file, line: line)
