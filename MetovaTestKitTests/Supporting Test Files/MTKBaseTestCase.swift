@@ -107,7 +107,7 @@ class MTKBaseTestCase: XCTestCase {
         
         if expectingFailure != nil {
             expectingFailure = nil
-            let message = [message(), descriptionForUnexpectedFailure].flatMap({ $0 }).joined(separator: " ")
+            let message = [message(), descriptionForUnexpectedFailure].compactMap({ $0 }).joined(separator: " ")
             descriptionForUnexpectedFailure = nil
             XCTFail(message, file: file, line: line)
         }
