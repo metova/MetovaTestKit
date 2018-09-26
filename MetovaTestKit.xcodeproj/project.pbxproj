@@ -475,7 +475,6 @@
 				4A3CFEF31CDD5F37003EF6F0 /* Frameworks */,
 				4A3CFEF41CDD5F37003EF6F0 /* Headers */,
 				4A3CFEF51CDD5F37003EF6F0 /* Resources */,
-				5C4AB980766113032191651D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -590,21 +589,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nKEYWORDS=\"TODO:\"\nfind \"${SRCROOT}/MetovaTestKit\" \"${SRCROOT}/MetovaTestKitTests\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.mm\" -or -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\nfi";
-		};
-		5C4AB980766113032191651D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MetovaTestKit/Pods-MetovaTestKit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		E036C02CCEF15672877958DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
