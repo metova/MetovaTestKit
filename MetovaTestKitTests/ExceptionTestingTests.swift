@@ -40,8 +40,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
         MTKAssertNoException(message: "TEST MESSAGE") {
             didReachEnd = false
 
-            let arr: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
-            arr.object(at: 3)
+            let array: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
+            array.object(at: 3)
             
             didReachEnd = true
         }
@@ -61,8 +61,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
         MTKAssertNoException {
             didReachEnd = false
             
-            let arr: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
-            arr.object(at: 3)
+            let array: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
+            array.object(at: 3)
             
             didReachEnd = true
         }
@@ -87,8 +87,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
             MTKAssertNoException(message: message) {
                 didReachEnd = false
                 
-                let arr: NSArray = []
-                arr.object(at: 3)
+                let array: NSArray = []
+                array.object(at: 3)
                 
                 didReachEnd = true
             }
@@ -114,8 +114,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
             MTKAssertNoException {
                 didReachEnd = false
                 
-                let arr: NSArray = []
-                arr.object(at: 3)
+                let array: NSArray = []
+                array.object(at: 3)
                 
                 didReachEnd = true
             }
@@ -132,8 +132,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
     func testAssertNoExceptionReturnsNilWhenPassing() {
         
         let exception = MTKAssertNoException {
-            let arr: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
-            arr.object(at: 3)
+            let array: NSArray = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10]
+            array.object(at: 3)
         }
         
         XCTAssertNil(exception)
@@ -146,8 +146,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
         MTKAssertException(message: "TEST MESSAGE") {
             didReachEnd = false
             
-            let arr = NSArray()
-            arr.object(at: 3)
+            let array = NSArray()
+            array.object(at: 3)
             
             didReachEnd = true
         }
@@ -167,8 +167,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
         MTKAssertException {
             didReachEnd = false
             
-            let arr = NSArray()
-            arr.object(at: 3)
+            let array = NSArray()
+            array.object(at: 3)
             
             didReachEnd = true
         }
@@ -194,8 +194,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
                 
                 didReachEnd = false
                 
-                let arr: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                arr.object(at: 3)
+                let array: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                array.object(at: 3)
                 
                 didReachEnd = true
             }
@@ -222,8 +222,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
                 
                 didReachEnd = false
                 
-                let arr: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                arr.object(at: 3)
+                let array: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                array.object(at: 3)
                 
                 didReachEnd = true
             }
@@ -240,8 +240,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
     func testAssertExceptionCatchesCorrectException() {
 
         let throwingBlock = {
-            let arr = NSArray()
-            arr.object(at: 3)
+            let array = NSArray()
+            array.object(at: 3)
         }
         
         guard let exception = MTKAssertException(testBlock: throwingBlock) else {

@@ -280,7 +280,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         MTKAssertAlertIsPresented(by: testVC, style: .actionSheet, title: "Title", message: "Message", actions: expectedActions)
     }
     
-    func createSuccessCaseAlert(withStyle style: UIAlertControllerStyle) -> UIAlertController {
+    func createSuccessCaseAlert(withStyle style: UIAlertController.Style) -> UIAlertController {
         
         let alert = UIAlertController(title: "Title", message: "Message", preferredStyle: style)
         

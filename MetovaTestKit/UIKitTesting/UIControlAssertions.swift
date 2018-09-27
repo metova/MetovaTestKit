@@ -39,7 +39,7 @@ import XCTest
 ///   - failureMessage: The message to log upon failure.
 ///   - file: The name of the file to report the failure for. The default value will report the file from which this method is called.
 ///   - line: The line number to report the failure for. The default value will report the line number of the calling site.
-public func MTKAssertControl(_ control: UIControl, sends action: Selector, to target: NSObject, for controlEvent: UIControlEvents, _ failureMessage: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line) {
+public func MTKAssertControl(_ control: UIControl, sends action: Selector, to target: NSObject, for controlEvent: UIControl.Event, _ failureMessage: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line) {
     
     guard let actionsForTarget = control.actions(forTarget: target, forControlEvent: controlEvent), !actionsForTarget.isEmpty else {
         MTKRecordFailure(withMessage: failureMessage(), description: "The control doesn't have any actions for the specified target", file: file, line: line)
