@@ -40,7 +40,7 @@ import Foundation
 ///   - failureMessage: The message to log upon failure.
 ///   - file: The name of the file to report the failure for. The default value will report the file from which this method is called.
 ///   - line: The line number to report the failure for. The default value will report the line number of the calling site.
-public func MTKAssertAlertIsPresented(by presenter: UIViewController, style: UIAlertControllerStyle, title: String?, message: String?, actions: [ExpectedAlertAction], _ failureMessage: String? = nil, file: StaticString = #file, line: UInt = #line) {
+public func MTKAssertAlertIsPresented(by presenter: UIViewController, style: UIAlertController.Style, title: String?, message: String?, actions: [ExpectedAlertAction], _ failureMessage: String? = nil, file: StaticString = #file, line: UInt = #line) {
     
     guard let alert = presenter.presentedViewController as? UIAlertController else {
         MTKRecordFailure(withMessage: failureMessage, description: "No alert was presented.", file: file, line: line)
@@ -93,7 +93,7 @@ public struct ExpectedAlertAction {
     // MARK: Properties
     
     fileprivate let title: String
-    fileprivate let style: UIAlertActionStyle
+    fileprivate let style: UIAlertAction.Style
     
     // MARK: Initialization
     
@@ -102,7 +102,7 @@ public struct ExpectedAlertAction {
     /// - Parameters:
     ///   - title: The expected title of the `UIAlertAction` you are comparing against.
     ///   - style: The expected style of the `UIAlertAction` you are comparing against.
-    public init(title: String, style: UIAlertActionStyle) {
+    public init(title: String, style: UIAlertAction.Style) {
         
         self.title = title
         self.style = style
@@ -118,7 +118,7 @@ public struct ExpectedAlertAction {
 
 // MARK: - UIAlertControllerStyle: CustomStringConvertible
 
-extension UIAlertControllerStyle: CustomStringConvertible {
+extension UIAlertController.Style: CustomStringConvertible {
     
     public var description: String {
         
@@ -133,7 +133,7 @@ extension UIAlertControllerStyle: CustomStringConvertible {
 
 // MARK: - UIAlertActionStyle: CustomStringConvertible
 
-extension UIAlertActionStyle: CustomStringConvertible {
+extension UIAlertAction.Style: CustomStringConvertible {
     
     public var description: String {
         
