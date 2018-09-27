@@ -45,7 +45,7 @@ class UIControlTestingTests: MTKBaseTestCase {
     
     // MARK: Properties
     
-    let allEvents: [UIControlEvents] = [
+    let allEvents: [UIControl.Event] = [
         .touchDown,
         .touchDownRepeat,
         .touchDragInside,
