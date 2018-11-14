@@ -31,19 +31,20 @@
  
  The MTKTestable protocol provides an alternative, functional approach to `XCTest`'s built in `setUp` & `tearDown` methods for handling unit tests.
  
+ `instanceForTesting()` should provide a new instance for each call.
+ 
  `test(_:)` should effectively follow this pattern:
  
      static func test(_ testBlock: (Self) -> Void) {
-
-         let dependency = Dependency()
-         let testInstance = Self.init(injecting: dependency)
-
+ 
+         let testInstance = instanceForTesting()
+ 
          // any code that would previously live in setUp
-
+ 
          testBlock(testInstance)
-
+ 
          // any code that would previously live in tearDown
-
+ 
      }
  
  With these methods implemented, our test cases now look like this:
