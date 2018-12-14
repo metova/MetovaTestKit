@@ -205,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC1A6B11EBCE2C7000DEFA6 /* Asynchronous Testing Tests */,
-				4AE8F28821B0A28400417292 /* Cell Testing Tests */,
+				4AE8F28821B0A28400417292 /* CellTestingTests */,
 				4AD3B57A214AAACD0089FA1E /* Constraint Testing Tests */,
 				4ADA98FF214AAA7900B91CF2 /* Exception Testing Tests */,
 				6E8D4B1C1EB8D644001284FD /* Internal Utilities Tests */,
@@ -319,13 +319,13 @@
 			path = CellTesting;
 			sourceTree = "<group>";
 		};
-		4AE8F28821B0A28400417292 /* Cell Testing Tests */ = {
+		4AE8F28821B0A28400417292 /* CellTestingTests */ = {
 			isa = PBXGroup;
 			children = (
-				4AE8F28921B0A29800417292 /* MTKTableViewTestCellTests.swift */,
 				4AA895E521C4174A0088C2CB /* MTKCollectionViewTestCellTests.swift.swift */,
+				4AE8F28921B0A29800417292 /* MTKTableViewTestCellTests.swift */,
 			);
-			path = "Cell Testing Tests";
+			path = CellTestingTests;
 			sourceTree = "<group>";
 		};
 		634135A92DFE71D915C1E3B7 /* Pods */ = {
