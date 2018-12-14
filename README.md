@@ -17,12 +17,12 @@ MetovaTestKit is a collection of useful test helpers designed to ease the burden
 - [Usage](#usage)
     - [MTKTestable Protocol](#mtktestable)
     - [Testing UIKit Components](#testing-uikit-components)
+        - [UIAlertController](#uialertcontroller)
+        - [UIBarButtonItem](#uibarbuttonitem)
+        - [UIControl](#uicontrol)
         - [UICollectionViewCell](#uicollectionviewcell)
         - [UITableViewCell](#uitableviewcell)
-        - [UIControl](#uicontrol)
-        - [UIAlertController](#uialertcontroller)
         - [UISegmentedControl](#uisegmentedcontrol)
-        - [UIBarButtonItem](#uibarbuttonitem)
     - [Testing Auto Layout Constraints](#testing-auto-layout-constraints)
     - [Testing Exceptions](#testing-exceptions)
     - [Asynchronous Testing](#asynchronous-testing)
@@ -87,6 +87,41 @@ func testOutlets() {
 
 ## Testing UIKit Components
 
+
+### UIAlertController
+
+Verify that a view controller presented an alert having a particular style, title, message, and actions.
+
+```swift
+MTKAssertAlertIsPresented(
+    by: testVC,
+    style: .alert,
+    title: "Warning",
+    message: "Are you sure you want to delete this user?",
+    actions: [
+        ExpectedAlertAction(title: "Delete", style: .destructive),
+        ExpectedAlertAction(title: "Cancel", style: .cancel)
+    ]
+)
+```
+
+### UIBarButtonItem
+
+Verify that a bar button item has the expected target/action pair and that the target actually responds to the selector that will be sent to it. 
+
+```swift
+MTKAssertBarButtonItem(testVC.editBarButtonItem, sends: #selector(MyViewController.didTapEditButton(_:)), to: testVC) 
+```
+
+### UIControl
+
+With a single assertion, you can verify that your control actions are hooked up and that your target actually responds to the selector that will be sent to it. 
+
+```swift
+MTKAssertControl(testVC.loginButton, sends: #selector(LoginViewController.didTapLoginButton(_:)), to: testVC, for: .touchUpInside, "The login button should be hooked up to the login action.") 
+```
+
+
 ### UICollectionViewCell
 
 Using a `UICollectionView` extension, you can easily retrieve cells using the `testCell` method.  This method assures that the collection view returns a cell for the given index path, and that it is of the type expected.  Once these checks have been made, the cell is passed into the completion handler in order to execute further tests.
@@ -111,45 +146,12 @@ testVC.tableView.testCell(at: indexPath) { (testCell: MyTableViewCell) in
 
 See [the tests](./MetovaTestKitTests/CellTestingTests/MTKTableViewTestCellTests.swift#L34) for examples of test failures this method can generate.
 
-### UIControl
- 
-With a single assertion, you can verify that your control actions are hooked up and that your target actually responds to the selector that will be sent to it. 
-
-```swift
-MTKAssertControl(testVC.loginButton, sends: #selector(LoginViewController.didTapLoginButton(_:)), to: testVC, for: .touchUpInside, "The login button should be hooked up to the login action.") 
-```
- 
-### UIAlertController
- 
-Verify that a view controller presented an alert having a particular style, title, message, and actions.
- 
-```swift
-MTKAssertAlertIsPresented(
-    by: testVC,
-    style: .alert,
-    title: "Warning",
-    message: "Are you sure you want to delete this user?",
-    actions: [
-        ExpectedAlertAction(title: "Delete", style: .destructive),
-        ExpectedAlertAction(title: "Cancel", style: .cancel)
-    ]
-)
-```
- 
 ### UISegmentedControl
  
 Verify that a `UISegmentedControl` has the segment titles you are expecting. 
  
 ```swift
 MTKAssertSegmentedControl(segmentedControl, hasSegmentTitles: ["Followers", "Following"])
-```
- 
-### UIBarButtonItem
- 
-Verify that a bar button item has the expected target/action pair and that the target actually responds to the selector that will be sent to it. 
-
-```swift
-MTKAssertBarButtonItem(testVC.editBarButtonItem, sends: #selector(MyViewController.didTapEditButton(_:)), to: testVC) 
 ```
  
 ## Testing Auto Layout Constraints
