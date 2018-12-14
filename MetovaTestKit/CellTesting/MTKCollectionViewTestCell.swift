@@ -2,7 +2,7 @@
 //  MTKTableViewTestCell.swift
 //  MetovaTestKit
 //
-//  Created by Nick Griffith on 11/29/18.
+//  Created by Nick Griffith on 2018-12-14
 //  Copyright © 2018 Metova. All rights reserved.
 //
 //  MIT License
@@ -29,9 +29,9 @@
 
 import XCTest
 
-extension UITableView {
+extension UICollectionView {
     
-    /// This method attempts to produce a table view cell from the table view at the specified index path.  It then attempts to cast the cell to the specified type.  If either of these two fail, this function will produce a test failure and the test block will not be executed.  If both pass, the resulting cell, cast to the specified type, will be passed into the testBlock where the developer can run further assertions on the cell.
+    /// This method attempts to produce a collection view cell from the collection view at the specified index path.  It then attempts to cast the cell to the specified type.  If either of these two fail, this function will produce a test failure and the test block will not be executed.  If both pass, the resulting cell, cast to the specified type, will be passed into the testBlock where the developer can run further assertions on the cell.
     ///
     /// - Parameters:
     ///   - cellType: Type of cell to cast to before passing into test block.
@@ -40,7 +40,7 @@ extension UITableView {
     ///   - line: The line the test is called from.
     ///   - testBlock: A block of code containing tests to run.  This block is not guaranteed to execute.  If it does not execute, this method will fail the test.
     /// - Throws: Rethrows any error thrown by the test block.  Does not throw any errors on its own.
-    func testCell<T: UITableViewCell>(
+    func testCell<T: UICollectionViewCell>(
         cellType: T.Type = T.self,
         at indexPath: IndexPath,
         file: StaticString = #file,
@@ -52,16 +52,16 @@ extension UITableView {
             return
         }
         
-        let tableSectionCount = dataSource.numberOfSections?(in: self) ?? 1
+        let collectionSectionCount = dataSource.numberOfSections?(in: self) ?? 1
         guard
-            indexPath.section < tableSectionCount,
-            indexPath.row < dataSource.tableView(self, numberOfRowsInSection: indexPath.section)
+            indexPath.section < collectionSectionCount,
+            indexPath.item < dataSource.collectionView(self, numberOfItemsInSection: indexPath.section)
         else {
             XCTFail("\(self) does not have a cell at \(indexPath)", file: file, line: line)
             return
         }
-
-        let cell = dataSource.tableView(self, cellForRowAt: indexPath)
+        
+        let cell = dataSource.collectionView(self, cellForItemAt: indexPath)
         guard let typedCell = cell as? T else {
             XCTFail("Cell at \(indexPath) expected to be \(T.self) was actually \(type(of: cell))", file: file, line: line)
             return

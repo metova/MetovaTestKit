@@ -41,7 +41,7 @@ class TableViewTestCellTests: MTKBaseTestCase {
         tableView.dataSource = dataSource
         
         let testExecutedExpectation = expectation(description: "Test block should be executed!")
-        tableView.testCell(at: indexPath) { (testCell: MockCellTypeA) in
+        tableView.testCell(at: indexPath) { (testCell: MockTableCellTypeA) in
             testExecutedExpectation.fulfill()
         }
         wait(for: [testExecutedExpectation], timeout: 0)
@@ -81,17 +81,17 @@ class TableViewTestCellTests: MTKBaseTestCase {
 
         tableView.dataSource = dataSource
         
-        let description = "failed - Cell at \(indexPath) expected to be \(MockCellTypeA.self) was actually \(MockCellTypeB.self)"
+        let description = "failed - Cell at \(indexPath) expected to be \(MockTableCellTypeA.self) was actually \(MockTableCellTypeB.self)"
         expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-            tableView.testCell(at: indexPath) { (testCell: MockCellTypeA) in
+            tableView.testCell(at: indexPath) { (testCell: MockTableCellTypeA) in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }
     }
 }
 
-class MockCellTypeA: UITableViewCell {}
-class MockCellTypeB: UITableViewCell {}
+class MockTableCellTypeA: UITableViewCell {}
+class MockTableCellTypeB: UITableViewCell {}
 
 class TableDataSource: NSObject, UITableViewDataSource {
     
@@ -107,8 +107,8 @@ class TableDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
-        case 0: return tableView.dequeueReusableCell(withIdentifier: "A") ?? MockCellTypeA()
-        case 1: return tableView.dequeueReusableCell(withIdentifier: "B") ?? MockCellTypeB()
+        case 0: return tableView.dequeueReusableCell(withIdentifier: "A") ?? MockTableCellTypeA()
+        case 1: return tableView.dequeueReusableCell(withIdentifier: "B") ?? MockTableCellTypeB()
         default: return UITableViewCell()
         }
     }

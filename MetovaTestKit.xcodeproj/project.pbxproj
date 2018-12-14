@@ -16,6 +16,8 @@
 		4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */; };
 		4A91E13E2155784E0003B78B /* MTKBrokenConstraintCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADA98E0214AA67B00B91CF2 /* MTKBrokenConstraintCounter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A91E13F2155784E0003B78B /* MTKExceptionTester.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADA98E6214AA68D00B91CF2 /* MTKExceptionTester.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AA895E421C4160D0088C2CB /* MTKCollectionViewTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA895E321C4160D0088C2CB /* MTKCollectionViewTestCell.swift */; };
+		4AA895E621C4174A0088C2CB /* MTKCollectionViewTestCellTests.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA895E521C4174A0088C2CB /* MTKCollectionViewTestCellTests.swift.swift */; };
 		4ADA98D4214AA65200B91CF2 /* UIBarButtonItemAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D0214AA65200B91CF2 /* UIBarButtonItemAssertions.swift */; };
 		4ADA98D5214AA65200B91CF2 /* UISegmentedControlAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D1214AA65200B91CF2 /* UISegmentedControlAssertions.swift */; };
 		4ADA98D6214AA65200B91CF2 /* UIControlAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D2214AA65200B91CF2 /* UIControlAssertions.swift */; };
@@ -74,6 +76,8 @@
 		4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableProtocolTests.swift; sourceTree = "<group>"; };
 		4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		4A8AD4F71CDEE4220085984D /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		4AA895E321C4160D0088C2CB /* MTKCollectionViewTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKCollectionViewTestCell.swift; sourceTree = "<group>"; };
+		4AA895E521C4174A0088C2CB /* MTKCollectionViewTestCellTests.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKCollectionViewTestCellTests.swift.swift; sourceTree = "<group>"; };
 		4AB9A3E01CDF6AB00021B6B8 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; indentWidth = 2; path = Gemfile; sourceTree = "<group>"; };
 		4ADA98D0214AA65200B91CF2 /* UIBarButtonItemAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemAssertions.swift; sourceTree = "<group>"; };
 		4ADA98D1214AA65200B91CF2 /* UISegmentedControlAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControlAssertions.swift; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 		4AE8F28321B0996F00417292 /* CellTesting */ = {
 			isa = PBXGroup;
 			children = (
+				4AA895E321C4160D0088C2CB /* MTKCollectionViewTestCell.swift */,
 				4AE8F28421B099AC00417292 /* MTKTableViewTestCell.swift */,
 			);
 			path = CellTesting;
@@ -318,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE8F28921B0A29800417292 /* MTKTableViewTestCellTests.swift */,
+				4AA895E521C4174A0088C2CB /* MTKCollectionViewTestCellTests.swift.swift */,
 			);
 			path = "Cell Testing Tests";
 			sourceTree = "<group>";
@@ -674,6 +680,7 @@
 				4ADA98E1214AA67B00B91CF2 /* MTKConstraintTester.swift in Sources */,
 				4AE8F28521B099AC00417292 /* MTKTableViewTestCell.swift in Sources */,
 				4ADA98ED214AA69B00B91CF2 /* MTKTestable.swift in Sources */,
+				4AA895E421C4160D0088C2CB /* MTKCollectionViewTestCell.swift in Sources */,
 				4ADA98E7214AA68D00B91CF2 /* MTKExceptionTesting.swift in Sources */,
 				4ADA98D5214AA65200B91CF2 /* UISegmentedControlAssertions.swift in Sources */,
 			);
@@ -689,6 +696,7 @@
 				6E0D0B461F1FEE3900600571 /* UIBarButtonItemTestingTests.swift in Sources */,
 				4ADA98FC214AAA2D00B91CF2 /* UIAlertControllerTestingTests.swift in Sources */,
 				4ADA98F1214AAA0700B91CF2 /* TestableViewController.swift in Sources */,
+				4AA895E621C4174A0088C2CB /* MTKCollectionViewTestCellTests.swift.swift in Sources */,
 				4ADA98FE214AAA5400B91CF2 /* AsyncTestingTests.swift in Sources */,
 				4AE8F28A21B0A29800417292 /* MTKTableViewTestCellTests.swift in Sources */,
 				4ADA98F5214AAA1400B91CF2 /* FailureRecordingTests.swift in Sources */,
