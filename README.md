@@ -17,6 +17,8 @@ MetovaTestKit is a collection of useful test helpers designed to ease the burden
 - [Usage](#usage)
     - [MTKTestable Protocol](#mtktestable)
     - [Testing UIKit Components](#testing-uikit-components)
+        - [UITableViewCell](#uitableviewcell)
+        - [UICollectionViewCell](#uicollectionviewcell)
         - [UIControl](#uicontrol)
         - [UIAlertController](#uialertcontroller)
         - [UISegmentedControl](#uisegmentedcontrol)
@@ -84,6 +86,28 @@ func testOutlets() {
 ```
 
 ## Testing UIKit Components
+
+### UITableViewCell
+
+Using a `UITableView` extension, you can easily retrieve cells using the `testCell` method.  This method assures that the table view returns a cell for the given index path, and that it is of the type expected.  Once these checks have been made, the cell is passed into the completion handler in order to execute further tests.
+
+```swift
+testVC.tableView.testCell(at: indexPath) { (testCell: MyTableViewCell) in
+    XCTAssertEqual(testCell.label.text, "Hello World!")
+}
+```
+
+### UICollectionViewCell
+
+Using a `UICollectionView` extension, you can easily retrieve cells using the `testCell` method.  This method assures that the collection view returns a cell for the given index path, and that it is of the type expected.  Once these checks have been made, the cell is passed into the completion handler in order to execute further tests.
+
+```swift
+testVC.collectionView.testCell(at: indexPath) { (testCell: MyCollectionViewCell) in 
+    XCTAssertEqual(testCell.label.text, "Hello World!")
+}
+```
+
+
 ### UIControl
  
 With a single assertion, you can verify that your control actions are hooked up and that your target actually responds to the selector that will be sent to it. 
