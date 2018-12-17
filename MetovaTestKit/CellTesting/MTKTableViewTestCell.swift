@@ -41,8 +41,8 @@ extension UITableView {
     ///   - testBlock: A block of code containing tests to run.  This block is not guaranteed to execute.  If it does not execute, this method will fail the test.
     /// - Throws: Rethrows any error thrown by the test block.  Does not throw any errors on its own.
     func testCell<T: UITableViewCell>(
-        cellType: T.Type = T.self,
         at indexPath: IndexPath,
+        as cellType: T.Type = T.self,
         file: StaticString = #file,
         line: UInt = #line,
         test testBlock: (T) throws -> Void

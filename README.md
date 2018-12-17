@@ -127,7 +127,7 @@ MTKAssertControl(testVC.loginButton, sends: #selector(LoginViewController.didTap
 Using a `UICollectionView` extension, you can easily retrieve cells using the `testCell` method.  This method assures that the collection view returns a cell for the given index path, and that it is of the type expected.  Once these checks have been made, the cell is passed into the completion handler in order to execute further tests.
 
 ```swift
-testVC.collectionView.testCell(at: indexPath) { (testCell: MyCollectionViewCell) in 
+testVC.collectionView.testCell(at: indexPath, as: MyCollectionViewCell.self) { testCell in 
     XCTAssertEqual(testCell.label.text, "Hello World!")
 }
 ```
@@ -139,7 +139,7 @@ See [the tests](./MetovaTestKitTests/CellTestingTests/MTKCollectionViewTestCellT
 Using a `UITableView` extension, you can easily retrieve cells using the `testCell` method.  This method assures that the table view returns a cell for the given index path, and that it is of the type expected.  Once these checks have been made, the cell is passed into the completion handler in order to execute further tests.
 
 ```swift
-testVC.tableView.testCell(at: indexPath) { (testCell: MyTableViewCell) in
+testVC.tableView.testCell(at: indexPath, as: MyTableViewCell.self) { testCell in
     XCTAssertEqual(testCell.label.text, "Hello World!")
 }
 ```

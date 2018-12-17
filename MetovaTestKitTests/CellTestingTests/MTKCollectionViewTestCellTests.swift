@@ -41,7 +41,7 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         collectionView.dataSource = dataSource
         
         let testExecutedExpectation = expectation(description: "Test block should be executed!")
-        collectionView.testCell(at: indexPath) { (testCell: MockCollectionCellTypeA) in
+        collectionView.testCell(at: indexPath, as: MockCollectionCellTypeA.self) { testCell in
             testExecutedExpectation.fulfill()
         }
         wait(for: [testExecutedExpectation], timeout: 0)
@@ -53,7 +53,7 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         
         let description = "failed - \(collectionView) does not have a dataSource"
         expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-            collectionView.testCell(at: indexPath) { (testCell: UICollectionViewCell) in
+        collectionView.testCell(at: indexPath, as: UICollectionViewCell.self) { testCell in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }
@@ -68,7 +68,7 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
 
         let description = "failed - \(collectionView) does not have a cell at \(indexPath)"
         expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-            collectionView.testCell(at: indexPath) { (testCell: UICollectionViewCell) in
+            collectionView.testCell(at: indexPath, as: UICollectionViewCell.self) { testCell in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }
@@ -83,7 +83,7 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         
         let description = "failed - Cell at \(indexPath) expected to be \(MockCollectionCellTypeA.self) was actually \(MockCollectionCellTypeB.self)"
         expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-            collectionView.testCell(at: indexPath) { (testCell: MockCollectionCellTypeA) in
+            collectionView.testCell(at: indexPath, as: MockCollectionCellTypeA.self) { testCell in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }

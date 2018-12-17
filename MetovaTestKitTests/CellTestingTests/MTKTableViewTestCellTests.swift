@@ -41,7 +41,7 @@ class TableViewTestCellTests: MTKBaseTestCase {
         tableView.dataSource = dataSource
         
         let testExecutedExpectation = expectation(description: "Test block should be executed!")
-        tableView.testCell(at: indexPath) { (testCell: MockTableCellTypeA) in
+        tableView.testCell(at: indexPath, as: MockTableCellTypeA.self) { testCell in
             testExecutedExpectation.fulfill()
         }
         wait(for: [testExecutedExpectation], timeout: 0)
@@ -53,7 +53,7 @@ class TableViewTestCellTests: MTKBaseTestCase {
         
         let description = "failed - \(tableView) does not have a dataSource"
         expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-            tableView.testCell(at: indexPath) { (testCell: UITableViewCell) in
+            tableView.testCell(at: indexPath, as: UITableViewCell.self) { testCell in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }
@@ -68,7 +68,7 @@ class TableViewTestCellTests: MTKBaseTestCase {
         
         let description = "failed - \(tableView) does not have a cell at \(indexPath)"
         expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-            tableView.testCell(at: indexPath) { (testCell: UITableViewCell) in
+            tableView.testCell(at: indexPath, as: UITableViewCell.self) { testCell in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }
@@ -83,7 +83,7 @@ class TableViewTestCellTests: MTKBaseTestCase {
         
         let description = "failed - Cell at \(indexPath) expected to be \(MockTableCellTypeA.self) was actually \(MockTableCellTypeB.self)"
         expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-            tableView.testCell(at: indexPath) { (testCell: MockTableCellTypeA) in
+            tableView.testCell(at: indexPath, as: MockTableCellTypeA.self) { testCell in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }
