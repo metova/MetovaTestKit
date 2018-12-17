@@ -33,7 +33,7 @@ import XCTest
 
 class TableViewTestCellTests: MTKBaseTestCase {
 
-    func testGoodCell() {
+    func testCellExistsAtIndexPathAndIsCastable() {
         let dataSource = TableDataSource(rows: 1)
         let tableView = UITableView()
         let indexPath = IndexPath(row: 0, section: 0)
@@ -47,7 +47,7 @@ class TableViewTestCellTests: MTKBaseTestCase {
         wait(for: [testExecutedExpectation], timeout: 0)
     }
     
-    func testNoDataSource() {
+    func testAssertionFailureDueToMissingDataSource() {
         let tableView = UITableView()
         let indexPath = IndexPath(row: 0, section: 0)
         
@@ -59,7 +59,7 @@ class TableViewTestCellTests: MTKBaseTestCase {
         }
     }
     
-    func testNoCellFailure() {
+    func testAssertionFailureDueToNoCellAtIndexPath() {
         let dataSource = TableDataSource()
         let tableView = UITableView()
         let indexPath = IndexPath(row: 0, section: 0)
@@ -74,7 +74,7 @@ class TableViewTestCellTests: MTKBaseTestCase {
         }
     }
     
-    func testWrongCellTypeFailure() {
+    func testAssertionFailureDoToIncorrectCellType() {
         let dataSource = TableDataSource(rows: 3)
         let tableView = UITableView()
         let indexPath = IndexPath(row: 1, section: 0)

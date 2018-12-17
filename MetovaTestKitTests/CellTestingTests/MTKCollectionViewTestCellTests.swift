@@ -33,7 +33,7 @@ import XCTest
 
 class CollectionViewTestCellTests: MTKBaseTestCase {
     
-    func testGoodCell() {
+    func testCellExistsAtIndexPathAndIsCastable() {
         let dataSource = CollectionDataSource(items: 1)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         let indexPath = IndexPath(item: 0, section: 0)
@@ -47,7 +47,7 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         wait(for: [testExecutedExpectation], timeout: 0)
     }
     
-    func testNoDataSource() {
+    func testAssertionFailureDueToMissingDataSource() {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         let indexPath = IndexPath(item: 0, section: 0)
         
@@ -59,7 +59,7 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         }
     }
     
-    func testNoCellFailure() {
+    func testAssertionFailureDueToNoCellAtIndexPath() {
         let dataSource = CollectionDataSource()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         let indexPath = IndexPath(item: 0, section: 0)
@@ -74,7 +74,7 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         }
     }
     
-    func testWrongCellTypeFailure() {
+    func testAssertionFailureDoToIncorrectCellType() {
         let dataSource = CollectionDataSource(items: 3)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         let indexPath = IndexPath(item: 1, section: 0)
