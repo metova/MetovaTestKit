@@ -74,7 +74,7 @@ class TableViewTestCellTests: MTKBaseTestCase {
         }
     }
     
-    func testAssertionFailureDoToIncorrectCellType() {
+    func testAssertionFailureDueToIncorrectCellType() {
         let dataSource = TableDataSource(rows: 3)
         let tableView = UITableView()
         let indexPath = IndexPath(row: 1, section: 0)

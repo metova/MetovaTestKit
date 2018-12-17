@@ -74,7 +74,7 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         }
     }
     
-    func testAssertionFailureDoToIncorrectCellType() {
+    func testAssertionFailureDueToIncorrectCellType() {
         let dataSource = CollectionDataSource(items: 3)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         let indexPath = IndexPath(item: 1, section: 0)
