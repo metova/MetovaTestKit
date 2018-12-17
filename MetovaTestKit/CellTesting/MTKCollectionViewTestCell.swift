@@ -29,44 +29,43 @@
 
 import XCTest
 
-extension UICollectionView {
-    
-    /// This method attempts to produce a collection view cell from the collection view at the specified index path.  It then attempts to cast the cell to the specified type.  If either of these two fail, this function will produce a test failure and the test block will not be executed.  If both pass, the resulting cell, cast to the specified type, will be passed into the testBlock where the developer can run further assertions on the cell.
-    ///
-    /// - Parameters:
-    ///   - cellType: Type of cell to cast to before passing into test block.
-    ///   - indexPath: IndexPath to grab a cell from.
-    ///   - file: The file the test is called from.
-    ///   - line: The line the test is called from.
-    ///   - testBlock: A block of code containing tests to run.  This block is not guaranteed to execute.  If it does not execute, this method will fail the test.
-    /// - Throws: Rethrows any error thrown by the test block.  Does not throw any errors on its own.
-    func testCell<T: UICollectionViewCell>(
-        at indexPath: IndexPath,
-        as cellType: T.Type = T.self,
-        file: StaticString = #file,
-        line: UInt = #line,
-        test testBlock: (T) throws -> Void
-    ) rethrows {
-        guard let dataSource = dataSource else {
-            XCTFail("\(self) does not have a dataSource", file: file, line: line)
-            return
-        }
-        
-        let collectionSectionCount = dataSource.numberOfSections?(in: self) ?? 1
-        guard
-            indexPath.section < collectionSectionCount,
-            indexPath.item < dataSource.collectionView(self, numberOfItemsInSection: indexPath.section)
-        else {
-            XCTFail("\(self) does not have a cell at \(indexPath)", file: file, line: line)
-            return
-        }
-        
-        let cell = dataSource.collectionView(self, cellForItemAt: indexPath)
-        guard let typedCell = cell as? T else {
-            XCTFail("Cell at \(indexPath) expected to be \(T.self) was actually \(type(of: cell))", file: file, line: line)
-            return
-        }
-        
-        try testBlock(typedCell)
+/// This method attempts to produce a collection view cell from the collection view at the specified index path.  It then attempts to cast the cell to the specified type.  If either of these two fail, this function will produce a test failure and the test block will not be executed.  If both pass, the resulting cell, cast to the specified type, will be passed into the testBlock where the developer can run further assertions on the cell.
+///
+/// - Parameters:
+///   - collectionView: Collection view to grab cell from.
+///   - indexPath: IndexPath to grab a cell from.
+///   - cellType: Type of cell to cast to before passing into test block.
+///   - file: The file the test is called from.
+///   - line: The line the test is called from.
+///   - testBlock: A block of code containing tests to run.  This block is not guaranteed to execute.  If it does not execute, this method will fail the test.
+/// - Throws: Rethrows any error thrown by the test block.  Does not throw any errors on its own.
+func MTKTestCell<T: UICollectionViewCell>(
+    in collectionView: UICollectionView,
+    at indexPath: IndexPath,
+    as cellType: T.Type = T.self,
+    file: StaticString = #file,
+    line: UInt = #line,
+    test testBlock: (T) throws -> Void
+) rethrows {
+    guard let dataSource = collectionView.dataSource else {
+        XCTFail("\(collectionView) does not have a dataSource", file: file, line: line)
+        return
     }
+    
+    let collectionSectionCount = dataSource.numberOfSections?(in: collectionView) ?? 1
+    guard
+        indexPath.section < collectionSectionCount,
+        indexPath.item < dataSource.collectionView(collectionView, numberOfItemsInSection: indexPath.section)
+    else {
+        XCTFail("\(collectionView) does not have a cell at \(indexPath)", file: file, line: line)
+        return
+    }
+    
+    let cell = dataSource.collectionView(collectionView, cellForItemAt: indexPath)
+    guard let typedCell = cell as? T else {
+        XCTFail("Cell at \(indexPath) expected to be \(T.self) was actually \(type(of: cell))", file: file, line: line)
+        return
+    }
+    
+    try testBlock(typedCell)
 }
