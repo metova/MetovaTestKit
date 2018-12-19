@@ -1,6 +1,6 @@
 # Metova Test Kit CHANGELOG
 
-## Unpublished
+## 2.2.0
 
 - Added convenience method for testing UICollectionViewCells
 - Added convenience method for testing UITableViewCells
