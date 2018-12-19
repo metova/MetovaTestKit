@@ -1,5 +1,19 @@
 # Metova Test Kit CHANGELOG
 
+## 2.2.0
+
+- Added convenience method for testing UICollectionViewCells
+- Added convenience method for testing UITableViewCells
+- Added rethrowing mechanism allowing MTKTestable's `test(_:)` to propagate thrown errors.
+
+## 2.1.0
+
+- Converted to Swift 4.2
+
+## 2.0.0
+
+- Converted to Swift 4.0
+
 ## 1.2.0
 
 - Deprecate `MTKWaitThenContinueTest(after:on:testAction:)` in favor of `MTKWaitThenContinueTest(after:)`. This addresses issue [#24](https://github.com/metova/MetovaTestKit/issues/24).

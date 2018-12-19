@@ -1,11 +1,16 @@
 Pod::Spec.new do |s|
   s.name         = 'MetovaTestKit'
-  s.version      = '2.1.0'
+  s.version      = '2.2.0'
   s.summary      = 'A collection of useful test helpers designed to ease the burden of writing tests for iOS applications.'
 
   s.homepage = 'http://metova.com'
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
-  s.authors  = { 'Nick Griffith' => 'nick.griffith@metova.com', 'Logan Gauthier' => 'logan.paul.gauthier@gmail.com' }
+  s.authors  = {
+    'Metova, Inc.' => 'pods@metova.com',
+    'Nick Griffith' => 'nhgrif@gmail.com',
+    'Logan Gauthier' => 'logan.paul.gauthier@gmail.com',
+    'Chris Martin' => 'schrismartin@me.com'
+  }
 
   s.source = { :git => 'https://github.com/metova/MetovaTestKit.git', :tag => s.version.to_s }
 
