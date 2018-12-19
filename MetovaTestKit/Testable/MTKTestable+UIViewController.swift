@@ -31,11 +31,13 @@ import UIKit
 
 public extension MTKTestable where Self: UIViewController {
     
-    /**
-     Instantiates a new testable instance of a `UIViewController` or subclass using `instanceForTesting`, executes `loadView` & `viewDidLoad` to prepare the view controller for testing, and then runs the `testBlock` with this new instance.
-     
-     - parameter testBlock: The block of tests to run.
-     */
+    /// Instantiates a new testable instance of a `UIViewController` or
+    /// subclass using `instanceForTesting`, executes `loadView` &
+    /// `viewDidLoad` to prepare the view controller for testing, and
+    /// then runs the `testBlock` with this new instance.
+    ///
+    /// - Parameter testBlock: The block of tests to run.
+    /// - Throws: Rethrows errors thrown inside of `testBlock`
     static func test(_ testBlock: (Self) throws -> Void) rethrows {
         let testVC = instanceForTesting()
         testVC.loadView()

@@ -83,6 +83,16 @@ func testOutlets() {
 }
 ```
 
+The `test` function rethrows any errors thrown inside the `testBlock`, allowing you to leveraging `throw`ing test cases to more conveniently denote failures.
+
+```swift
+func testLogin() throws {
+    try HomeViewControllerClass.test { testVC in
+        try testVC.login(username: "jimmythecorgi", password: "woofwoof123")
+    }
+}
+```
+
 ## Testing UIKit Components
 ### UIControl
  
