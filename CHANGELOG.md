@@ -4,6 +4,7 @@
 
 - Added convenience method for testing UICollectionViewCells
 - Added convenience method for testing UITableViewCells
+- Added rethrowing mechanism allowing MTKTestable's `test(_:)` to propagate thrown errors.
 
 ## 2.1.0
 

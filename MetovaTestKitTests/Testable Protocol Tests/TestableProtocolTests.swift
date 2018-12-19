@@ -59,4 +59,15 @@ class TestableProtocolTests: MTKBaseTestCase {
         
         waitForExpectations(timeout: 0, handler: nil)
     }
+    
+    func testErrorIsThrown() {
+        
+        XCTAssertThrowsError(
+            
+            try TestableViewController.test { testVC in
+                
+                try testVC.throwError()
+            }
+        )
+    }
 }

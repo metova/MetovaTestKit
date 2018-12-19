@@ -55,6 +55,16 @@ class TestableViewController: UIViewController {
         testLabel.text = TestableViewController.TestLabelString
         testButton.setTitle(TestableViewController.TestButtonString, for: .normal)
     }
+    
+    func throwError() throws {
+        
+        throw ViewControllerError()
+    }
+}
+
+extension TestableViewController {
+    
+    struct ViewControllerError: Error { }
 }
 
 // Implementing this method and marking conformance to MTKTestable protocol means we inherit the default implementation of the test(_:) method defined in the extension for the protocol for UIViewControllers.
