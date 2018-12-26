@@ -178,6 +178,8 @@ This assertion accepts components as a variadic argument or as a `Set<Calendar.C
 ```swift
 let components: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
 MTKAssertEqualDates(date1, date2, comparing: components)
+MTKAssertEqualDates(date3, date4, comparing: components)
+MTKAssertEqualDates(date5, date6, comparing: components)
 ```
  
 ## Testing Auto Layout Constraints
