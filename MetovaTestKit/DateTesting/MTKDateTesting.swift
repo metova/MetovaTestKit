@@ -26,3 +26,52 @@
 //  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
+
+import XCTest
+
+/// Compares two dates using only the provided components.  If any of the provided components are mismatched between the two dates, the test fails.  If no components are provided, the test always passes.
+///
+/// - Parameters:
+///   - lhs: A `Date` to compare.
+///   - rhs: A `Date` to compare.
+///   - components: Components to use to compare the two dates.
+///   - calendar: Calendar to use to pull components out of dates.  Defaults to `.current`.
+///   - message: An optional description of the failure.
+///   - file: The file in which failure occurred. Defaults to the file name of the test case in which this function was called.
+///   - line: The line number on which failure occurred. Defaults to the line number on which this function was called.
+public func MTKAssertEqualDates(_ lhs: Date, _ rhs: Date, comparing components: Calendar.Component..., calendar: Calendar = .current, message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line) {
+    MTKAssertEqualDates(lhs, rhs, comparing: Set(components), calendar: calendar, message: message, file: file, line: line)
+}
+
+/// Compares two dates using only the provided components.  If any of the provided components are mismatched between the two dates, the test fails.  If no components are provided, the test always passes.
+///
+/// - Parameters:
+///   - lhs: A `Date` to compare.
+///   - rhs: A `Date` to compare.
+///   - components: Components to use to compare the two dates.
+///   - calendar: Calendar to use to pull components out of dates.  Defaults to `.current`.
+///   - message: An optional description of the failure.
+///   - file: The file in which failure occurred. Defaults to the file name of the test case in which this function was called.
+///   - line: The line number on which failure occurred. Defaults to the line number on which this function was called.
+public func MTKAssertEqualDates(_ lhs: Date, _ rhs: Date, comparing components: Set<Calendar.Component>, calendar: Calendar = .current, message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line) {
+
+    var failureMessage = ""
+    
+    for component in components {
+        let lhsComponent = calendar.component(component, from: lhs)
+        let rhsComponent = calendar.component(component, from: rhs)
+
+        if lhsComponent != rhsComponent {
+            if let message = message() {
+                XCTFail("MTKAssertEqualDates failure - \(message)", file: file, line: line)
+                return
+            }
+            
+            failureMessage += "\n  \(component) value (\(lhsComponent)) of lhs is not equal to \(component) value (\(rhsComponent)) of rhs"
+        }
+    }
+    
+    if !failureMessage.isEmpty {
+        XCTFail(failureMessage, file: file, line: line)
+    }
+}
