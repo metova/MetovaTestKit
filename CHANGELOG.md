@@ -1,5 +1,10 @@
 # Metova Test Kit CHANGELOG
 
+## 2.3.0
+
+ - Added assertion for comparing `Date` objects only by specified components.
+ - General test target improvements.
+
 ## 2.2.0
 
 - Added convenience method for testing UICollectionViewCells

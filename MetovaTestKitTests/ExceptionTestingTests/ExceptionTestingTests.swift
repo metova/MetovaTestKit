@@ -82,8 +82,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
         
         var didReachEnd: Bool?
         
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 87)) {
-            
+        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
             MTKAssertNoException(message: message) {
                 didReachEnd = false
                 
@@ -109,8 +108,7 @@ class ExceptionTestingTests: MTKBaseTestCase {
         
         var didReachEnd: Bool?
         
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 114)) {
-            
+        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
             MTKAssertNoException {
                 didReachEnd = false
                 
@@ -188,10 +186,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
         
         var didReachEnd: Bool?
 
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 193)) {
-            
+        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
             MTKAssertException(message: message) {
-                
                 didReachEnd = false
                 
                 let array: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -216,10 +212,8 @@ class ExceptionTestingTests: MTKBaseTestCase {
         
         var didReachEnd: Bool?
         
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: 221)) {
-            
+        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
             MTKAssertException {
-                
                 didReachEnd = false
                 
                 let array: NSArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

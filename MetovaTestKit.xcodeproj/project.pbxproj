@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A2294F421D5180200D093A6 /* TestFailureExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2294F321D5180200D093A6 /* TestFailureExpectation.swift */; };
+		4A2294F621D531B000D093A6 /* DetailedTestFailureExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2294F521D531B000D093A6 /* DetailedTestFailureExpectation.swift */; };
+		4A22950C21D564D500D093A6 /* BasicTestFailureExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22950B21D564D500D093A6 /* BasicTestFailureExpectation.swift */; };
 		4A3CFEFB1CDD5F37003EF6F0 /* MetovaTestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A3CFF021CDD5F37003EF6F0 /* MetovaTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */; };
 		4A3CFFCB1CDE1473003EF6F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CFFCA1CDE1473003EF6F0 /* XCTest.framework */; };
@@ -41,6 +44,8 @@
 		4ADA98FE214AAA5400B91CF2 /* AsyncTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98FD214AAA5400B91CF2 /* AsyncTestingTests.swift */; };
 		4AE8F28521B099AC00417292 /* MTKTableViewTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE8F28421B099AC00417292 /* MTKTableViewTestCell.swift */; };
 		4AE8F28A21B0A29800417292 /* MTKTableViewTestCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE8F28921B0A29800417292 /* MTKTableViewTestCellTests.swift */; };
+		4AEFB76721D403D8007FA095 /* MTKDateTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFB76621D403D8007FA095 /* MTKDateTesting.swift */; };
+		4AEFB76921D403E2007FA095 /* MTKDateTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFB76821D403E2007FA095 /* MTKDateTestingTests.swift */; };
 		6E0D0B461F1FEE3900600571 /* UIBarButtonItemTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D0B451F1FEE3900600571 /* UIBarButtonItemTestingTests.swift */; };
 		6EC1A6B01EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */; };
 		8C5DBD5EA5193DF58D0EF97C /* Pods_MetovaTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79631A34E94E032EB303D968 /* Pods_MetovaTestKit.framework */; };
@@ -58,6 +63,9 @@
 
 /* Begin PBXFileReference section */
 		152CC7EA0C83675F6522A85B /* Pods-MetovaTestKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetovaTestKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetovaTestKit/Pods-MetovaTestKit.debug.xcconfig"; sourceTree = "<group>"; };
+		4A2294F321D5180200D093A6 /* TestFailureExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFailureExpectation.swift; sourceTree = "<group>"; };
+		4A2294F521D531B000D093A6 /* DetailedTestFailureExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTestFailureExpectation.swift; sourceTree = "<group>"; };
+		4A22950B21D564D500D093A6 /* BasicTestFailureExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTestFailureExpectation.swift; sourceTree = "<group>"; };
 		4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetovaTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetovaTestKit.h; sourceTree = "<group>"; };
 		4A3CFEFC1CDD5F37003EF6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,7 +80,7 @@
 		4A3CFFCA1CDE1473003EF6F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4A3CFFCD1CDE1548003EF6F0 /* ExceptionTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionTestingTests.swift; sourceTree = "<group>"; };
 		4A771F341D4C173300EFD0B8 /* ConstraintTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintTestingTests.swift; sourceTree = "<group>"; };
-		4A771FC81D4D534200EFD0B8 /* MTKBaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTKBaseTestCase.swift; path = "Supporting Test Files/MTKBaseTestCase.swift"; sourceTree = "<group>"; };
+		4A771FC81D4D534200EFD0B8 /* MTKBaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTKBaseTestCase.swift; sourceTree = "<group>"; };
 		4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableProtocolTests.swift; sourceTree = "<group>"; };
 		4A8AD4F51CDEDF110085984D /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		4A8AD4F71CDEE4220085984D /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
@@ -104,6 +112,8 @@
 		4ADA98FD214AAA5400B91CF2 /* AsyncTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestingTests.swift; sourceTree = "<group>"; };
 		4AE8F28421B099AC00417292 /* MTKTableViewTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKTableViewTestCell.swift; sourceTree = "<group>"; };
 		4AE8F28921B0A29800417292 /* MTKTableViewTestCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKTableViewTestCellTests.swift; sourceTree = "<group>"; };
+		4AEFB76621D403D8007FA095 /* MTKDateTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKDateTesting.swift; sourceTree = "<group>"; };
+		4AEFB76821D403E2007FA095 /* MTKDateTestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKDateTestingTests.swift; sourceTree = "<group>"; };
 		6E0D0B451F1FEE3900600571 /* UIBarButtonItemTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTestingTests.swift; sourceTree = "<group>"; };
 		6E1816671F2796EB0034E26E /* badge.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = badge.svg; sourceTree = "<group>"; };
 		6E1816691F2796EB0034E26E /* highlight.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = highlight.css; sourceTree = "<group>"; };
@@ -163,6 +173,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A2294F221D517AD00D093A6 /* TestingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				4A771FC81D4D534200EFD0B8 /* MTKBaseTestCase.swift */,
+				4A2294F321D5180200D093A6 /* TestFailureExpectation.swift */,
+				4A22950B21D564D500D093A6 /* BasicTestFailureExpectation.swift */,
+				4A2294F521D531B000D093A6 /* DetailedTestFailureExpectation.swift */,
+			);
+			path = TestingUtilities;
+			sourceTree = "<group>";
+		};
 		4A3CFEED1CDD5F37003EF6F0 = {
 			isa = PBXGroup;
 			children = (
@@ -189,10 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				6EC1A6AE1EBCDD3F000DEFA6 /* AsynchronousTesting */,
-				4AE8F28321B0996F00417292 /* CellTesting */,
-				4A771F2D1D4C13FC00EFD0B8 /* ConstraintTesting */,
+				4AEFB76421D403A5007FA095 /* DateTesting */,
 				4A3CFF241CDD60CE003EF6F0 /* ExceptionTesting */,
-				6E8D4B041EB7AD1B001284FD /* Internal Utilities */,
+				6E8D4B041EB7AD1B001284FD /* InternalUtilities */,
 				4A8AD4E71CDEA27E0085984D /* Testable */,
 				6E8D4AFF1EB7AB70001284FD /* UIKitTesting */,
 				4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */,
@@ -204,14 +224,14 @@
 		4A3CFF051CDD5F37003EF6F0 /* MetovaTestKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				6EC1A6B11EBCE2C7000DEFA6 /* Asynchronous Testing Tests */,
-				4AE8F28821B0A28400417292 /* CellTestingTests */,
-				4AD3B57A214AAACD0089FA1E /* Constraint Testing Tests */,
-				4ADA98FF214AAA7900B91CF2 /* Exception Testing Tests */,
-				6E8D4B1C1EB8D644001284FD /* Internal Utilities Tests */,
-				4AD3B579214AAAC20089FA1E /* Testable Protocol Tests */,
-				6E8D4B171EB81064001284FD /* UIKit Testing Tests */,
-				6E8D4B1B1EB8D5D0001284FD /* Test Data */,
+				4A2294F221D517AD00D093A6 /* TestingUtilities */,
+				6EC1A6B11EBCE2C7000DEFA6 /* AsynchronousTestingTests */,
+				4AEFB76521D403B7007FA095 /* DateTestingTests */,
+				4ADA98FF214AAA7900B91CF2 /* ExceptionTestingTests */,
+				6E8D4B1C1EB8D644001284FD /* InternalUtilitiesTests */,
+				4AD3B579214AAAC20089FA1E /* TestableProtocolTests */,
+				6E8D4B171EB81064001284FD /* UIKitTestingTests */,
+				6E8D4B1B1EB8D5D0001284FD /* TestData */,
 				4A8AD4EE1CDEB6300085984D /* Supporting Test Files */,
 			);
 			path = MetovaTestKitTests;
@@ -280,34 +300,33 @@
 		4A8AD4EE1CDEB6300085984D /* Supporting Test Files */ = {
 			isa = PBXGroup;
 			children = (
-				4A771FC81D4D534200EFD0B8 /* MTKBaseTestCase.swift */,
 				4A3CFF081CDD5F37003EF6F0 /* Info.plist */,
 			);
 			name = "Supporting Test Files";
 			sourceTree = "<group>";
 		};
-		4AD3B579214AAAC20089FA1E /* Testable Protocol Tests */ = {
+		4AD3B579214AAAC20089FA1E /* TestableProtocolTests */ = {
 			isa = PBXGroup;
 			children = (
 				4A8AD4F31CDEB7A60085984D /* TestableProtocolTests.swift */,
 			);
-			path = "Testable Protocol Tests";
+			path = TestableProtocolTests;
 			sourceTree = "<group>";
 		};
-		4AD3B57A214AAACD0089FA1E /* Constraint Testing Tests */ = {
+		4AD3B57A214AAACD0089FA1E /* ConstraintTestingTests */ = {
 			isa = PBXGroup;
 			children = (
 				4A771F341D4C173300EFD0B8 /* ConstraintTestingTests.swift */,
 			);
-			path = "Constraint Testing Tests";
+			path = ConstraintTestingTests;
 			sourceTree = "<group>";
 		};
-		4ADA98FF214AAA7900B91CF2 /* Exception Testing Tests */ = {
+		4ADA98FF214AAA7900B91CF2 /* ExceptionTestingTests */ = {
 			isa = PBXGroup;
 			children = (
 				4A3CFFCD1CDE1548003EF6F0 /* ExceptionTestingTests.swift */,
 			);
-			path = "Exception Testing Tests";
+			path = ExceptionTestingTests;
 			sourceTree = "<group>";
 		};
 		4AE8F28321B0996F00417292 /* CellTesting */ = {
@@ -326,6 +345,22 @@
 				4AE8F28921B0A29800417292 /* MTKTableViewTestCellTests.swift */,
 			);
 			path = CellTestingTests;
+			sourceTree = "<group>";
+		};
+		4AEFB76421D403A5007FA095 /* DateTesting */ = {
+			isa = PBXGroup;
+			children = (
+				4AEFB76621D403D8007FA095 /* MTKDateTesting.swift */,
+			);
+			path = DateTesting;
+			sourceTree = "<group>";
+		};
+		4AEFB76521D403B7007FA095 /* DateTestingTests */ = {
+			isa = PBXGroup;
+			children = (
+				4AEFB76821D403E2007FA095 /* MTKDateTestingTests.swift */,
+			);
+			path = DateTestingTests;
 			sourceTree = "<group>";
 		};
 		634135A92DFE71D915C1E3B7 /* Pods */ = {
@@ -429,6 +464,8 @@
 		6E8D4AFF1EB7AB70001284FD /* UIKitTesting */ = {
 			isa = PBXGroup;
 			children = (
+				4AE8F28321B0996F00417292 /* CellTesting */,
+				4A771F2D1D4C13FC00EFD0B8 /* ConstraintTesting */,
 				4ADA98D3214AA65200B91CF2 /* UIAlertControllerAssertions.swift */,
 				4ADA98D0214AA65200B91CF2 /* UIBarButtonItemAssertions.swift */,
 				4ADA98D2214AA65200B91CF2 /* UIControlAssertions.swift */,
@@ -437,43 +474,45 @@
 			path = UIKitTesting;
 			sourceTree = "<group>";
 		};
-		6E8D4B041EB7AD1B001284FD /* Internal Utilities */ = {
+		6E8D4B041EB7AD1B001284FD /* InternalUtilities */ = {
 			isa = PBXGroup;
 			children = (
 				4ADA98D8214AA66A00B91CF2 /* Array+Utilities.swift */,
 				4ADA98D9214AA66A00B91CF2 /* FailureRecording.swift */,
 				4ADA98DA214AA66A00B91CF2 /* QuotedString.swift */,
 			);
-			path = "Internal Utilities";
+			path = InternalUtilities;
 			sourceTree = "<group>";
 		};
-		6E8D4B171EB81064001284FD /* UIKit Testing Tests */ = {
+		6E8D4B171EB81064001284FD /* UIKitTestingTests */ = {
 			isa = PBXGroup;
 			children = (
+				4AE8F28821B0A28400417292 /* CellTestingTests */,
+				4AD3B57A214AAACD0089FA1E /* ConstraintTestingTests */,
 				4ADA98F9214AAA2D00B91CF2 /* UIAlertControllerTestingTests.swift */,
 				4ADA98F7214AAA2D00B91CF2 /* UIControlTestingTests.swift */,
 				4ADA98F8214AAA2D00B91CF2 /* UISegmentedControlTestingTests.swift */,
 				6E0D0B451F1FEE3900600571 /* UIBarButtonItemTestingTests.swift */,
 			);
-			path = "UIKit Testing Tests";
+			path = UIKitTestingTests;
 			sourceTree = "<group>";
 		};
-		6E8D4B1B1EB8D5D0001284FD /* Test Data */ = {
+		6E8D4B1B1EB8D5D0001284FD /* TestData */ = {
 			isa = PBXGroup;
 			children = (
 				4ADA98EF214AAA0700B91CF2 /* TestableViewController.swift */,
 				4ADA98F0214AAA0700B91CF2 /* TestableViewController.xib */,
 			);
-			path = "Test Data";
+			path = TestData;
 			sourceTree = "<group>";
 		};
-		6E8D4B1C1EB8D644001284FD /* Internal Utilities Tests */ = {
+		6E8D4B1C1EB8D644001284FD /* InternalUtilitiesTests */ = {
 			isa = PBXGroup;
 			children = (
 				4ADA98F3214AAA1400B91CF2 /* FailureRecordingTests.swift */,
 				4ADA98F4214AAA1400B91CF2 /* QuotedStringTests.swift */,
 			);
-			path = "Internal Utilities Tests";
+			path = InternalUtilitiesTests;
 			sourceTree = "<group>";
 		};
 		6EC1A6AE1EBCDD3F000DEFA6 /* AsynchronousTesting */ = {
@@ -484,12 +523,12 @@
 			path = AsynchronousTesting;
 			sourceTree = "<group>";
 		};
-		6EC1A6B11EBCE2C7000DEFA6 /* Asynchronous Testing Tests */ = {
+		6EC1A6B11EBCE2C7000DEFA6 /* AsynchronousTestingTests */ = {
 			isa = PBXGroup;
 			children = (
 				4ADA98FD214AAA5400B91CF2 /* AsyncTestingTests.swift */,
 			);
-			path = "Asynchronous Testing Tests";
+			path = AsynchronousTestingTests;
 			sourceTree = "<group>";
 		};
 		EC1DA839BB8A56D69E13D46B /* Frameworks */ = {
@@ -678,6 +717,7 @@
 				6EC1A6B01EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift in Sources */,
 				4ADA98D7214AA65200B91CF2 /* UIAlertControllerAssertions.swift in Sources */,
 				4ADA98E1214AA67B00B91CF2 /* MTKConstraintTester.swift in Sources */,
+				4AEFB76721D403D8007FA095 /* MTKDateTesting.swift in Sources */,
 				4AE8F28521B099AC00417292 /* MTKTableViewTestCell.swift in Sources */,
 				4ADA98ED214AA69B00B91CF2 /* MTKTestable.swift in Sources */,
 				4AA895E421C4160D0088C2CB /* MTKCollectionViewTestCell.swift in Sources */,
@@ -692,7 +732,10 @@
 			files = (
 				4A771F351D4C173300EFD0B8 /* ConstraintTestingTests.swift in Sources */,
 				4A771FC91D4D534200EFD0B8 /* MTKBaseTestCase.swift in Sources */,
+				4A22950C21D564D500D093A6 /* BasicTestFailureExpectation.swift in Sources */,
 				4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */,
+				4A2294F421D5180200D093A6 /* TestFailureExpectation.swift in Sources */,
+				4A2294F621D531B000D093A6 /* DetailedTestFailureExpectation.swift in Sources */,
 				6E0D0B461F1FEE3900600571 /* UIBarButtonItemTestingTests.swift in Sources */,
 				4ADA98FC214AAA2D00B91CF2 /* UIAlertControllerTestingTests.swift in Sources */,
 				4ADA98F1214AAA0700B91CF2 /* TestableViewController.swift in Sources */,
@@ -700,6 +743,7 @@
 				4ADA98FE214AAA5400B91CF2 /* AsyncTestingTests.swift in Sources */,
 				4AE8F28A21B0A29800417292 /* MTKTableViewTestCellTests.swift in Sources */,
 				4ADA98F5214AAA1400B91CF2 /* FailureRecordingTests.swift in Sources */,
+				4AEFB76921D403E2007FA095 /* MTKDateTestingTests.swift in Sources */,
 				4ADA98FB214AAA2D00B91CF2 /* UISegmentedControlTestingTests.swift in Sources */,
 				4A3CFFCE1CDE1548003EF6F0 /* ExceptionTestingTests.swift in Sources */,
 				4ADA98F6214AAA1400B91CF2 /* QuotedStringTests.swift in Sources */,

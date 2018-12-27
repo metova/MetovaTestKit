@@ -88,7 +88,7 @@ class AsyncTestingTests: MTKBaseTestCase {
     
     func testAsyncTestFailsWhenAssertionFailsInTheTestActionClosure() {
         
-        let expectedFailure = TestFailureExpectation(description: "Description", filePath: "File", lineNumber: 1)
+        let expectedFailure = BasicTestFailureExpectation(description: "Description", filePath: "File", lineNumber: 1)
         
         expectTestFailure(expectedFailure) {
             

@@ -50,7 +50,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
     
     func testFailureDueToNoAlertBeingPresented() {
         
-        let failureExpectation = TestFailureExpectation(description: "failed - No alert was presented.", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - No alert was presented.", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [])
@@ -64,7 +64,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         let alert = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have style `.actionSheet`. Instead found `.alert`.", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have style `.actionSheet`. Instead found `.alert`.", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .actionSheet, title: "Title", message: "Message", actions: [])
@@ -78,7 +78,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         let alert = UIAlertController(title: "Incorrect Title", message: "Message", preferredStyle: .alert)
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have title \"Title\". Instead found \"Incorrect Title\".", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have title \"Title\". Instead found \"Incorrect Title\".", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [])
@@ -90,7 +90,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         let alert = UIAlertController(title: nil, message: "Message", preferredStyle: .alert)
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have title \"Title\". Instead found nil.", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have title \"Title\". Instead found nil.", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [])
@@ -102,7 +102,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         let alert = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have title nil. Instead found \"Title\".", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have title nil. Instead found \"Title\".", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: nil, message: "Message", actions: [])
@@ -116,7 +116,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         let alert = UIAlertController(title: "Title", message: "Incorrect Message", preferredStyle: .alert)
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have message \"Message\". Instead found \"Incorrect Message\".", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have message \"Message\". Instead found \"Incorrect Message\".", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [])
@@ -128,7 +128,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         let alert = UIAlertController(title: "Title", message: nil, preferredStyle: .alert)
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have message \"Message\". Instead found nil.", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have message \"Message\". Instead found nil.", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [])
@@ -140,7 +140,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         let alert = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have message nil. Instead found \"Message\".", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have message nil. Instead found \"Message\".", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: nil, actions: [])
@@ -155,7 +155,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title\", style: .default)]. Instead found [].", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title\", style: .default)]. Instead found [].", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [ExpectedAlertAction(title: "Action Title", style: .default)])
@@ -170,7 +170,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title\", style: .default)]. Instead found [(title: \"Incorrect Action Title\", style: .default)].", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title\", style: .default)]. Instead found [(title: \"Incorrect Action Title\", style: .default)].", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [ExpectedAlertAction(title: "Action Title", style: .default)])
@@ -185,7 +185,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .default)]. Instead found [(title: \"Action Title1\", style: .default)].", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .default)]. Instead found [(title: \"Action Title1\", style: .default)].", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [ExpectedAlertAction(title: "Action Title1", style: .default), ExpectedAlertAction(title: "Action Title2", style: .default)])
@@ -202,7 +202,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title1\", style: .default)]. Instead found [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .default)].", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title1\", style: .default)]. Instead found [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .default)].", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [ExpectedAlertAction(title: "Action Title1", style: .default)])
@@ -219,7 +219,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .default)]. Instead found [(title: \"Action Title2\", style: .default), (title: \"Action Title1\", style: .default)].", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .default)]. Instead found [(title: \"Action Title2\", style: .default), (title: \"Action Title1\", style: .default)].", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             MTKAssertAlertIsPresented(by: testVC, style: .alert, title: "Title", message: "Message", actions: [ExpectedAlertAction(title: "Action Title1", style: .default), ExpectedAlertAction(title: "Action Title2", style: .default)])
@@ -236,7 +236,7 @@ class UIAlertControllerTestingTests: MTKBaseTestCase {
         
         testVC.present(alert, animated: false, completion: nil)
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .destructive)]. Instead found [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .cancel)].", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected alert to have actions: [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .destructive)]. Instead found [(title: \"Action Title1\", style: .default), (title: \"Action Title2\", style: .cancel)].", filePath: #file)
         
         let expectedActions = [
             ExpectedAlertAction(title: "Action Title1", style: .default),
