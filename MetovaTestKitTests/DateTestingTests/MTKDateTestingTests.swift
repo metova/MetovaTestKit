@@ -86,7 +86,7 @@ class DateTestingTests: MTKBaseTestCase {
         }
         
         let description = "failed - \n  second value (42) of lhs is not equal to second value (43) of rhs"
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
+        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
             MTKAssertEqualDates(date1, date2, comparing: .year, .month, .day, .hour, .minute, .second)
         }
     }
@@ -111,7 +111,7 @@ class DateTestingTests: MTKBaseTestCase {
         }
         
         let description = "failed - MTKAssertEqualDates failure - Custom Message!"
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
+        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
             MTKAssertEqualDates(date1, date2, comparing: .year, .month, .day, .hour, .minute, .second, .nanosecond, message: "Custom Message!")
         }
     }

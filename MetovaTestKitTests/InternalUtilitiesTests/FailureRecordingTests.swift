@@ -43,7 +43,7 @@ class FailureRecordingTests: MTKBaseTestCase {
     func testRecordingFailureWithMessageAndDescription() {
         
         let line: UInt = 100
-        let testFailureExpectation = TestFailureExpectation(description: "failed - Description - Message", filePath: #file, lineNumber: line)
+        let testFailureExpectation = BasicTestFailureExpectation(description: "failed - Description - Message", filePath: #file, lineNumber: line)
         
         expectTestFailure(testFailureExpectation) {
             MTKRecordFailure(withMessage: "Message", description: "Description", file: #file, line: line)

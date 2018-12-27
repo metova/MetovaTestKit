@@ -37,19 +37,6 @@
 
 import XCTest
 
-struct TestFailureExpectation {
-    
-    let description: String?
-    let filePath: String?
-    let lineNumber: UInt?
-    
-    init(description: String? = nil, filePath: String? = nil, lineNumber: UInt? = nil) {
-        self.description = description
-        self.filePath = filePath
-        self.lineNumber = lineNumber
-    }
-}
-
 class MTKBaseTestCase: XCTestCase {
     
     // MARK: Properties
@@ -75,16 +62,16 @@ class MTKBaseTestCase: XCTestCase {
             
             var descriptionsForUnexpectedFailures = [String]()
             
-            if let expectedFailureDescription = expectedFailure.description, description != expectedFailureDescription {
-                descriptionsForUnexpectedFailures.append("Description mismatch - Expected: `\(expectedFailureDescription)` Actual: `\(description)`.")
+            if case .mismatch(let failureReason) = expectedFailure.verifyDescription(description) {
+                descriptionsForUnexpectedFailures.append(failureReason)
+            }
+
+            if case .mismatch(let failureReason) = expectedFailure.verifyFilePath(filePath) {
+                descriptionsForUnexpectedFailures.append(failureReason)
             }
             
-            if let expectedFailureFilePath = expectedFailure.filePath, filePath != expectedFailureFilePath {
-                descriptionsForUnexpectedFailures.append("File Path mismatch - Expected: \(expectedFailureFilePath) Actual: \(filePath).")
-            }
-            
-            if let expectedFailureLineNumber = expectedFailure.lineNumber, lineNumber != expectedFailureLineNumber {
-                descriptionsForUnexpectedFailures.append("Line Number mismatch - Expected: \(expectedFailureLineNumber) Actual: \(lineNumber).")
+            if case .mismatch(let failureReason) = expectedFailure.verifyLineNumber(lineNumber) {
+                descriptionsForUnexpectedFailures.append(failureReason)
             }
             
             if descriptionsForUnexpectedFailures.isEmpty {
@@ -100,7 +87,7 @@ class MTKBaseTestCase: XCTestCase {
         }
     }
     
-    func expectTestFailure(_ failure: TestFailureExpectation = TestFailureExpectation(), message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, inBlock testBlock: () -> Void) {
+    func expectTestFailure(_ failure: TestFailureExpectation = BasicTestFailureExpectation(), message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, inBlock testBlock: () -> Void) {
         
         expectingFailure = failure
         testBlock()
