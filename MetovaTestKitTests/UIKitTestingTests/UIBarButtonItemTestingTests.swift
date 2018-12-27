@@ -57,7 +57,7 @@ class UIBarButtonItemTestingTests: MTKBaseTestCase {
     
     func testFailureDueToNoAction() {
         
-        let failureExpectation = TestFailureExpectation(description: "failed - The bar button item's action is nil.", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - The bar button item's action is nil.", filePath: #file)
 
         expectTestFailure(failureExpectation) {
             
@@ -68,7 +68,7 @@ class UIBarButtonItemTestingTests: MTKBaseTestCase {
     
     func testFailureDueToWrongAction() {
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected the bar button item to have action `testAction`. Instead found `someOtherAction`.", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected the bar button item to have action `testAction`. Instead found `someOtherAction`.", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             
@@ -79,7 +79,7 @@ class UIBarButtonItemTestingTests: MTKBaseTestCase {
     
     func testFailureDueToNoTarget() {
         
-        let failureExpectation = TestFailureExpectation(description: "failed - The bar button item's target is nil.", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - The bar button item's target is nil.", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             
@@ -92,7 +92,7 @@ class UIBarButtonItemTestingTests: MTKBaseTestCase {
         
         let otherTarget = TestViewController()
         
-        let failureExpectation = TestFailureExpectation(description: "failed - Expected the bar button item to have target `\(testVC)`. Instead found `\(otherTarget)`.", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - Expected the bar button item to have target `\(testVC)`. Instead found `\(otherTarget)`.", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             
@@ -103,7 +103,7 @@ class UIBarButtonItemTestingTests: MTKBaseTestCase {
     
     func testFailureDueToTargetNotRespondingToAction() {
         
-        let failureExpectation = TestFailureExpectation(description: "failed - The target does not respond to the action.", filePath: #file)
+        let failureExpectation = BasicTestFailureExpectation(description: "failed - The target does not respond to the action.", filePath: #file)
         
         expectTestFailure(failureExpectation) {
             

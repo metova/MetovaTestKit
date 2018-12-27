@@ -37,19 +37,6 @@
 
 import XCTest
 
-struct TestFailureExpectation {
-    
-    let description: String?
-    let filePath: String?
-    let lineNumber: UInt?
-    
-    init(description: String? = nil, filePath: String? = nil, lineNumber: UInt? = nil) {
-        self.description = description
-        self.filePath = filePath
-        self.lineNumber = lineNumber
-    }
-}
-
 class MTKBaseTestCase: XCTestCase {
     
     // MARK: Properties
@@ -71,36 +58,35 @@ class MTKBaseTestCase: XCTestCase {
     
     override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: Int, expected: Bool) {
         
-        if let expectedFailure = expectingFailure, expected {
-            
-            var descriptionsForUnexpectedFailures = [String]()
-            
-            if let expectedFailureDescription = expectedFailure.description, description != expectedFailureDescription {
-                descriptionsForUnexpectedFailures.append("Description mismatch - Expected: `\(expectedFailureDescription)` Actual: `\(description)`.")
-            }
-            
-            if let expectedFailureFilePath = expectedFailure.filePath, filePath != expectedFailureFilePath {
-                descriptionsForUnexpectedFailures.append("File Path mismatch - Expected: \(expectedFailureFilePath) Actual: \(filePath).")
-            }
-            
-            if let expectedFailureLineNumber = expectedFailure.lineNumber, lineNumber != expectedFailureLineNumber {
-                descriptionsForUnexpectedFailures.append("Line Number mismatch - Expected: \(expectedFailureLineNumber) Actual: \(lineNumber).")
-            }
-            
-            if descriptionsForUnexpectedFailures.isEmpty {
-                expectingFailure = nil
-            }
-            else {
-                descriptionForUnexpectedFailure = descriptionsForUnexpectedFailures.joined(separator: " ")
-                super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: true)
-            }
+        guard let expectedFailure = expectingFailure, expected else {
+            super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
+            return
+        }
+        
+        var descriptionsForUnexpectedFailures = [String]()
+        
+        if case .mismatch(let failureReason) = expectedFailure.verifyDescription(description) {
+            descriptionsForUnexpectedFailures.append(failureReason)
+        }
+
+        if case .mismatch(let failureReason) = expectedFailure.verifyFilePath(filePath) {
+            descriptionsForUnexpectedFailures.append(failureReason)
+        }
+        
+        if case .mismatch(let failureReason) = expectedFailure.verifyLineNumber(lineNumber) {
+            descriptionsForUnexpectedFailures.append(failureReason)
+        }
+        
+        if descriptionsForUnexpectedFailures.isEmpty {
+            expectingFailure = nil
         }
         else {
-            super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
+            descriptionForUnexpectedFailure = descriptionsForUnexpectedFailures.joined(separator: " ")
+            super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: true)
         }
     }
     
-    func expectTestFailure(_ failure: TestFailureExpectation = TestFailureExpectation(), message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, inBlock testBlock: () -> Void) {
+    func expectTestFailure(_ failure: TestFailureExpectation = BasicTestFailureExpectation(), message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line, inBlock testBlock: () -> Void) {
         
         expectingFailure = failure
         testBlock()

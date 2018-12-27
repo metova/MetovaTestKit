@@ -41,7 +41,7 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         collectionView.dataSource = dataSource
         
         let testExecutedExpectation = expectation(description: "Test block should be executed!")
-        MTKTestCell(in: collectionView, at: indexPath, as: MockCollectionCellTypeA.self) { testCell in
+        MTKTestCell(in: collectionView, at: indexPath, as: MockCollectionCellTypeA.self) { _ in
             testExecutedExpectation.fulfill()
         }
         wait(for: [testExecutedExpectation], timeout: 0)
@@ -52,8 +52,8 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         let indexPath = IndexPath(item: 0, section: 0)
         
         let description = "failed - \(collectionView) does not have a dataSource"
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-        MTKTestCell(in: collectionView, at: indexPath, as: UICollectionViewCell.self) { testCell in
+        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
+        MTKTestCell(in: collectionView, at: indexPath, as: UICollectionViewCell.self) { _ in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }
@@ -67,8 +67,8 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         collectionView.dataSource = dataSource
 
         let description = "failed - \(collectionView) does not have a cell at \(indexPath)"
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-            MTKTestCell(in: collectionView, at: indexPath, as: UICollectionViewCell.self) { testCell in
+        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
+            MTKTestCell(in: collectionView, at: indexPath, as: UICollectionViewCell.self) { _ in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }
@@ -82,8 +82,8 @@ class CollectionViewTestCellTests: MTKBaseTestCase {
         collectionView.dataSource = dataSource
         
         let description = "failed - Cell at \(indexPath) expected to be \(MockCollectionCellTypeA.self) was actually \(MockCollectionCellTypeB.self)"
-        expectTestFailure(TestFailureExpectation(description: description, lineNumber: #line+1)) {
-            MTKTestCell(in: collectionView, at: indexPath, as: MockCollectionCellTypeA.self) { testCell in
+        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
+            MTKTestCell(in: collectionView, at: indexPath, as: MockCollectionCellTypeA.self) { _ in
                 XCTFail("Test closure should not be called when cell can not be properly instantiated and cast.")
             }
         }

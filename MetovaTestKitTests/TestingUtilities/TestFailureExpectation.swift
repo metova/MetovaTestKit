@@ -1,9 +1,9 @@
 //
-//  FailureRecordingTests.swift
+//  TestFailureExpectation.swift
 //  MetovaTestKit
 //
-//  Created by Logan Gauthier on 5/2/17.
-//  Copyright © 2017 Metova. All rights reserved.
+//  Created by Nick Griffith on 2018-12-27.
+//  Copyright © 2016 Metova. All rights reserved.
 //
 //  MIT License
 //
@@ -27,26 +27,19 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-import XCTest
+enum TestVerificationResult {
+    case expected
+    case mismatch(String)
+}
 
-@testable import MetovaTestKit
+protocol TestFailureExpectation {
+    func verifyDescription(_ description: String) -> TestVerificationResult
+    func verifyFilePath(_ filePath: String) -> TestVerificationResult
+    func verifyLineNumber(_ lineNumber: Int) -> TestVerificationResult
+}
 
-class FailureRecordingTests: MTKBaseTestCase {
-    
-    func testFailureDescriptionFormation() {
-        
-        XCTAssertEqual(failureDescription(withMessage: "User Message", description: "Specific reason why test failed"), "Specific reason why test failed - User Message")
-        
-        XCTAssertEqual(failureDescription(withMessage: nil, description: "Specific reason why test failed"), "Specific reason why test failed")
-    }
-    
-    func testRecordingFailureWithMessageAndDescription() {
-        
-        let line: UInt = 100
-        let testFailureExpectation = BasicTestFailureExpectation(description: "failed - Description - Message", filePath: #file, lineNumber: line)
-        
-        expectTestFailure(testFailureExpectation) {
-            MTKRecordFailure(withMessage: "Message", description: "Description", file: #file, line: line)
-        }
-    }
+extension TestFailureExpectation {
+    func verifyDescription(_ description: String) -> TestVerificationResult { return .expected }
+    func verifyFilePath(_ filePath: String) -> TestVerificationResult { return .expected }
+    func verifyLineNumber(_ lineNumber: Int) -> TestVerificationResult { return .expected }
 }
