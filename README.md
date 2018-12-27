@@ -23,6 +23,7 @@ MetovaTestKit is a collection of useful test helpers designed to ease the burden
         - [UICollectionViewCell](#uicollectionviewcell)
         - [UITableViewCell](#uitableviewcell)
         - [UISegmentedControl](#uisegmentedcontrol)
+    - [Testing Dates](#testing-dates)
     - [Testing Auto Layout Constraints](#testing-auto-layout-constraints)
     - [Testing Exceptions](#testing-exceptions)
     - [Asynchronous Testing](#asynchronous-testing)
@@ -162,6 +163,23 @@ Verify that a `UISegmentedControl` has the segment titles you are expecting.
  
 ```swift
 MTKAssertSegmentedControl(segmentedControl, hasSegmentTitles: ["Followers", "Following"])
+```
+ 
+## Testing Dates
+ 
+You can use MetovaTestKit to assert two dates are equal when only considering specified components.
+
+```swift
+MTKAssertEqualDates(date1, date2, comparing: .year, .month, .day)
+```
+
+This assertion accepts components as a variadic argument or as a `Set<Calendar.Component>`.
+
+```swift
+let components: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
+MTKAssertEqualDates(date1, date2, comparing: components)
+MTKAssertEqualDates(date3, date4, comparing: components)
+MTKAssertEqualDates(date5, date6, comparing: components)
 ```
  
 ## Testing Auto Layout Constraints

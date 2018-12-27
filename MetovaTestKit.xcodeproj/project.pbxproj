@@ -41,6 +41,8 @@
 		4ADA98FE214AAA5400B91CF2 /* AsyncTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98FD214AAA5400B91CF2 /* AsyncTestingTests.swift */; };
 		4AE8F28521B099AC00417292 /* MTKTableViewTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE8F28421B099AC00417292 /* MTKTableViewTestCell.swift */; };
 		4AE8F28A21B0A29800417292 /* MTKTableViewTestCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE8F28921B0A29800417292 /* MTKTableViewTestCellTests.swift */; };
+		4AEFB76721D403D8007FA095 /* MTKDateTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFB76621D403D8007FA095 /* MTKDateTesting.swift */; };
+		4AEFB76921D403E2007FA095 /* MTKDateTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFB76821D403E2007FA095 /* MTKDateTestingTests.swift */; };
 		6E0D0B461F1FEE3900600571 /* UIBarButtonItemTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D0B451F1FEE3900600571 /* UIBarButtonItemTestingTests.swift */; };
 		6EC1A6B01EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1A6AF1EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift */; };
 		8C5DBD5EA5193DF58D0EF97C /* Pods_MetovaTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79631A34E94E032EB303D968 /* Pods_MetovaTestKit.framework */; };
@@ -104,6 +106,8 @@
 		4ADA98FD214AAA5400B91CF2 /* AsyncTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestingTests.swift; sourceTree = "<group>"; };
 		4AE8F28421B099AC00417292 /* MTKTableViewTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKTableViewTestCell.swift; sourceTree = "<group>"; };
 		4AE8F28921B0A29800417292 /* MTKTableViewTestCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKTableViewTestCellTests.swift; sourceTree = "<group>"; };
+		4AEFB76621D403D8007FA095 /* MTKDateTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKDateTesting.swift; sourceTree = "<group>"; };
+		4AEFB76821D403E2007FA095 /* MTKDateTestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKDateTestingTests.swift; sourceTree = "<group>"; };
 		6E0D0B451F1FEE3900600571 /* UIBarButtonItemTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTestingTests.swift; sourceTree = "<group>"; };
 		6E1816671F2796EB0034E26E /* badge.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = badge.svg; sourceTree = "<group>"; };
 		6E1816691F2796EB0034E26E /* highlight.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = highlight.css; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC1A6AE1EBCDD3F000DEFA6 /* AsynchronousTesting */,
+				4AEFB76421D403A5007FA095 /* DateTesting */,
 				4A3CFF241CDD60CE003EF6F0 /* ExceptionTesting */,
 				6E8D4B041EB7AD1B001284FD /* InternalUtilities */,
 				4A8AD4E71CDEA27E0085984D /* Testable */,
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC1A6B11EBCE2C7000DEFA6 /* AsynchronousTestingTests */,
+				4AEFB76521D403B7007FA095 /* DateTestingTests */,
 				4ADA98FF214AAA7900B91CF2 /* ExceptionTestingTests */,
 				6E8D4B1C1EB8D644001284FD /* InternalUtilitiesTests */,
 				4AD3B579214AAAC20089FA1E /* TestableProtocolTests */,
@@ -322,6 +328,22 @@
 				4AE8F28921B0A29800417292 /* MTKTableViewTestCellTests.swift */,
 			);
 			path = CellTestingTests;
+			sourceTree = "<group>";
+		};
+		4AEFB76421D403A5007FA095 /* DateTesting */ = {
+			isa = PBXGroup;
+			children = (
+				4AEFB76621D403D8007FA095 /* MTKDateTesting.swift */,
+			);
+			path = DateTesting;
+			sourceTree = "<group>";
+		};
+		4AEFB76521D403B7007FA095 /* DateTestingTests */ = {
+			isa = PBXGroup;
+			children = (
+				4AEFB76821D403E2007FA095 /* MTKDateTestingTests.swift */,
+			);
+			path = DateTestingTests;
 			sourceTree = "<group>";
 		};
 		634135A92DFE71D915C1E3B7 /* Pods */ = {
@@ -678,6 +700,7 @@
 				6EC1A6B01EBCDDAF000DEFA6 /* XCTestCase+AsyncTesting.swift in Sources */,
 				4ADA98D7214AA65200B91CF2 /* UIAlertControllerAssertions.swift in Sources */,
 				4ADA98E1214AA67B00B91CF2 /* MTKConstraintTester.swift in Sources */,
+				4AEFB76721D403D8007FA095 /* MTKDateTesting.swift in Sources */,
 				4AE8F28521B099AC00417292 /* MTKTableViewTestCell.swift in Sources */,
 				4ADA98ED214AA69B00B91CF2 /* MTKTestable.swift in Sources */,
 				4AA895E421C4160D0088C2CB /* MTKCollectionViewTestCell.swift in Sources */,
@@ -700,6 +723,7 @@
 				4ADA98FE214AAA5400B91CF2 /* AsyncTestingTests.swift in Sources */,
 				4AE8F28A21B0A29800417292 /* MTKTableViewTestCellTests.swift in Sources */,
 				4ADA98F5214AAA1400B91CF2 /* FailureRecordingTests.swift in Sources */,
+				4AEFB76921D403E2007FA095 /* MTKDateTestingTests.swift in Sources */,
 				4ADA98FB214AAA2D00B91CF2 /* UISegmentedControlTestingTests.swift in Sources */,
 				4A3CFFCE1CDE1548003EF6F0 /* ExceptionTestingTests.swift in Sources */,
 				4ADA98F6214AAA1400B91CF2 /* QuotedStringTests.swift in Sources */,
