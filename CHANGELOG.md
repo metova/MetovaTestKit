@@ -1,8 +1,9 @@
 # Metova Test Kit CHANGELOG
 
-## Unpublished
+## 2.3.0
 
  - Added assertion for comparing `Date` objects only by specified components.
+ - General test target improvements.
 
 ## 2.2.0
 
