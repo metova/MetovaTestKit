@@ -58,32 +58,31 @@ class MTKBaseTestCase: XCTestCase {
     
     override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: Int, expected: Bool) {
         
-        if let expectedFailure = expectingFailure, expected {
-            
-            var descriptionsForUnexpectedFailures = [String]()
-            
-            if case .mismatch(let failureReason) = expectedFailure.verifyDescription(description) {
-                descriptionsForUnexpectedFailures.append(failureReason)
-            }
+        guard let expectedFailure = expectingFailure, expected else {
+            super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
+            return
+        }
+        
+        var descriptionsForUnexpectedFailures = [String]()
+        
+        if case .mismatch(let failureReason) = expectedFailure.verifyDescription(description) {
+            descriptionsForUnexpectedFailures.append(failureReason)
+        }
 
-            if case .mismatch(let failureReason) = expectedFailure.verifyFilePath(filePath) {
-                descriptionsForUnexpectedFailures.append(failureReason)
-            }
-            
-            if case .mismatch(let failureReason) = expectedFailure.verifyLineNumber(lineNumber) {
-                descriptionsForUnexpectedFailures.append(failureReason)
-            }
-            
-            if descriptionsForUnexpectedFailures.isEmpty {
-                expectingFailure = nil
-            }
-            else {
-                descriptionForUnexpectedFailure = descriptionsForUnexpectedFailures.joined(separator: " ")
-                super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: true)
-            }
+        if case .mismatch(let failureReason) = expectedFailure.verifyFilePath(filePath) {
+            descriptionsForUnexpectedFailures.append(failureReason)
+        }
+        
+        if case .mismatch(let failureReason) = expectedFailure.verifyLineNumber(lineNumber) {
+            descriptionsForUnexpectedFailures.append(failureReason)
+        }
+        
+        if descriptionsForUnexpectedFailures.isEmpty {
+            expectingFailure = nil
         }
         else {
-            super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
+            descriptionForUnexpectedFailure = descriptionsForUnexpectedFailures.joined(separator: " ")
+            super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: true)
         }
     }
     
