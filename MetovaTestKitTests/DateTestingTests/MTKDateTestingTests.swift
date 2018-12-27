@@ -74,20 +74,27 @@ class DateTestingTests: MTKBaseTestCase {
         components.hour = 6
         components.minute = 57
         components.second = 42
+        components.nanosecond = 8675309
         guard let date1 = Calendar.current.date(from: components) else {
             XCTFail("Failed to instantiate test date 1!")
             return
         }
         
         components.second = 43
+        components.nanosecond = 0
         guard let date2 = Calendar.current.date(from: components) else {
             XCTFail("Failed to instantiate test date 2!")
             return
         }
         
-        let description = "failed - \n  second value (42) of lhs is not equal to second value (43) of rhs"
-        expectTestFailure(BasicTestFailureExpectation(description: description, lineNumber: #line+1)) {
-            MTKAssertEqualDates(date1, date2, comparing: .year, .month, .day, .hour, .minute, .second)
+        let descriptionParts = [
+            "failed -",
+            "second value (42) of lhs is not equal to second value (43) of rhs",
+            "nanosecond value (8675336) of lhs is not equal to nanosecond value (0) of rhs"
+        ]
+        
+        expectTestFailure(DetailedTestFailureExpectation(descriptionSubstrings: descriptionParts, lineNumber: #line+1)) {
+            MTKAssertEqualDates(date1, date2, comparing: .year, .month, .day, .hour, .minute, .second, .nanosecond)
         }
     }
     
