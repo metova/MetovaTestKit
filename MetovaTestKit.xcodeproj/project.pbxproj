@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A2294F421D5180200D093A6 /* TestFailureExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2294F321D5180200D093A6 /* TestFailureExpectation.swift */; };
 		4A2294F621D531B000D093A6 /* DetailedTestFailureExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2294F521D531B000D093A6 /* DetailedTestFailureExpectation.swift */; };
+		4A22950C21D564D500D093A6 /* BasicTestFailureExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22950B21D564D500D093A6 /* BasicTestFailureExpectation.swift */; };
 		4A3CFEFB1CDD5F37003EF6F0 /* MetovaTestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A3CFF021CDD5F37003EF6F0 /* MetovaTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */; };
 		4A3CFFCB1CDE1473003EF6F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CFFCA1CDE1473003EF6F0 /* XCTest.framework */; };
@@ -64,6 +65,7 @@
 		152CC7EA0C83675F6522A85B /* Pods-MetovaTestKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetovaTestKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetovaTestKit/Pods-MetovaTestKit.debug.xcconfig"; sourceTree = "<group>"; };
 		4A2294F321D5180200D093A6 /* TestFailureExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFailureExpectation.swift; sourceTree = "<group>"; };
 		4A2294F521D531B000D093A6 /* DetailedTestFailureExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTestFailureExpectation.swift; sourceTree = "<group>"; };
+		4A22950B21D564D500D093A6 /* BasicTestFailureExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTestFailureExpectation.swift; sourceTree = "<group>"; };
 		4A3CFEF71CDD5F37003EF6F0 /* MetovaTestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetovaTestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3CFEFA1CDD5F37003EF6F0 /* MetovaTestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetovaTestKit.h; sourceTree = "<group>"; };
 		4A3CFEFC1CDD5F37003EF6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				4A771FC81D4D534200EFD0B8 /* MTKBaseTestCase.swift */,
 				4A2294F321D5180200D093A6 /* TestFailureExpectation.swift */,
+				4A22950B21D564D500D093A6 /* BasicTestFailureExpectation.swift */,
 				4A2294F521D531B000D093A6 /* DetailedTestFailureExpectation.swift */,
 			);
 			path = TestingUtilities;
@@ -729,6 +732,7 @@
 			files = (
 				4A771F351D4C173300EFD0B8 /* ConstraintTestingTests.swift in Sources */,
 				4A771FC91D4D534200EFD0B8 /* MTKBaseTestCase.swift in Sources */,
+				4A22950C21D564D500D093A6 /* BasicTestFailureExpectation.swift in Sources */,
 				4A8AD4F41CDEB7A60085984D /* TestableProtocolTests.swift in Sources */,
 				4A2294F421D5180200D093A6 /* TestFailureExpectation.swift in Sources */,
 				4A2294F621D531B000D093A6 /* DetailedTestFailureExpectation.swift in Sources */,
