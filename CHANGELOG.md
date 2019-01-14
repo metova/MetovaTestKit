@@ -1,5 +1,9 @@
 # Metova Test Kit CHANGELOG
 
+## 2.3.1
+
+- Marked `MTKTestCell` functions as `public`.  Major oversight from their release.
+
 ## 2.3.0
 
  - Added assertion for comparing `Date` objects only by specified components.
