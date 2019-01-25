@@ -138,7 +138,7 @@ MTKAssertControl(testVC.loginButton, sends: #selector(LoginViewController.didTap
 Assert that a collection view returns a cell of a specific type for a given index path.  Pass a block of code to perform additional tests on the cell, if it exists.
 
 ```swift
-MTKTestCell(in: tableView, at: indexPath, as: MyCollectionViewCell.self) { testCell in 
+MTKTestCell(in: collectionView, at: indexPath, as: MyCollectionViewCell.self) { testCell in 
     XCTAssertEqual(testCell.label.text, "Hello World!")
 }
 ```
