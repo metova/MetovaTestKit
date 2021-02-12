@@ -1,5 +1,9 @@
 # Metova Test Kit CHANGELOG
 
+## 2.3.2
+
+- Updated for Swift 5.3.
+
 ## 2.3.1
 
 - Marked `MTKTestCell` functions as `public`.  Major oversight from their release.

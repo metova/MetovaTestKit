@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'MetovaTestKit'
-  s.version      = '2.3.1'
+  s.version      = '2.3.2'
   s.summary      = 'A collection of useful test helpers designed to ease the burden of writing tests for iOS applications.'
 
   s.homepage = 'http://metova.com'
@@ -9,13 +9,14 @@ Pod::Spec.new do |s|
     'Metova, Inc.' => 'pods@metova.com',
     'Nick Griffith' => 'nhgrif@gmail.com',
     'Logan Gauthier' => 'logan.paul.gauthier@gmail.com',
-    'Chris Martin' => 'schrismartin@me.com'
+    'Chris Martin' => 'schrismartin@me.com',
+    'Chris Dillard' => 'chris.dillard@metova.com'
   }
 
   s.source = { :git => 'https://github.com/metova/MetovaTestKit.git', :tag => s.version.to_s }
 
-  s.platform = :ios, '8.0'
-  s.swift_version = '4.2'
+  s.platform = :ios, '11.0'
+  s.swift_version = '5.0'
 
   s.frameworks            = 'XCTest'
   s.user_target_xcconfig  = { 'FRAMEWORK_SEARCH_PATHS' => '$(PLATFORM_DIR)/Developer/Library/Frameworks' }
