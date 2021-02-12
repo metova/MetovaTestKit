@@ -40,7 +40,7 @@ import XCTest
 ///   - file: The file in which failure occurred. Defaults to the file name of the test case in which this function was called.
 ///   - line: The line number on which failure occurred. Defaults to the line number on which this function was called.
 public func MTKAssertEqualDates(_ lhs: Date, _ rhs: Date, comparing components: Calendar.Component..., calendar: Calendar = .current, message: @autoclosure () -> String? = nil, file: StaticString = #file, line: UInt = #line) {
-    MTKAssertEqualDates(lhs, rhs, comparing: Set(components), calendar: calendar, message: message, file: file, line: line)
+    MTKAssertEqualDates(lhs, rhs, comparing: Set(components), calendar: calendar, message: message(), file: file, line: line)
 }
 
 /// Compares two dates using only the provided components.  If any of the provided components are mismatched between the two dates, the test fails.  If no components are provided, the test always passes.

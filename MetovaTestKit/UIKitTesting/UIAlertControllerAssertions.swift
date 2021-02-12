@@ -127,6 +127,8 @@ extension UIAlertController.Style: CustomStringConvertible {
             return ".actionSheet"
         case .alert:
             return ".alert"
+        @unknown default:
+            return "default"
         }
     }
 }
@@ -144,6 +146,8 @@ extension UIAlertAction.Style: CustomStringConvertible {
             return ".cancel"
         case .destructive:
             return ".destructive"
+        @unknown default:
+            return "default"
         }
     }
 }
